@@ -1,0 +1,75 @@
+{
+    "title": "Testimonial",
+    "uid": "testimonial",
+    "options": {
+      "is_page": false,
+      "singleton": false,
+      "title": "title",
+      "sub_title": []
+    },
+    "schema": [
+      {
+        "display_name": "Entry Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": true,
+        "field_metadata": {
+          "_default": true,
+          "description": "Internal identifier (e.g. 'Sarah & James - Wedding')"
+        }
+      },
+      {
+        "display_name": "Client Name",
+        "uid": "client_name",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "e.g., Sarah & James"
+        }
+      },
+      {
+        "display_name": "Client Title",
+        "uid": "client_title",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "e.g., Tuscany, Italy"
+        }
+      },
+      {
+        "display_name": "Review Text",
+        "uid": "review_text",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "multi_line": true,
+          "description": "The testimonial text"
+        }
+      },
+      {
+        "display_name": "Client Photo",
+        "uid": "client_photo",
+        "data_type": "file",
+        "mandatory": false
+      },
+      {
+        "display_name": "Event Type",
+        "uid": "event_type",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "e.g., Wedding, Elopement"
+        }
+      },
+      {
+        "display_name": "Rating",
+        "uid": "rating",
+        "data_type": "number",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "1-5 star rating"
+        }
+      }
+    ]
+  }

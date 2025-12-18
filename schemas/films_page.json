@@ -1,0 +1,388 @@
+{
+    "title": "Films Page",
+    "uid": "films_page",
+    "schema": [
+        {
+            "display_name": "Title",
+            "uid": "title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "_default": true,
+                "description": "Internal title for this entry",
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "URL",
+            "uid": "url",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "description": "URL slug (e.g., /films)",
+                "_default": true,
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Hero Section",
+            "field_metadata": {
+                "description": "Video background hero section at the top of the page",
+                "instruction": "Add a background video and hero text"
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Main heading (e.g., Films)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Tagline",
+                    "uid": "tagline",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Decorative script text below the title (e.g., Stories in Motion)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Brief description text",
+                        "multiline": true,
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Background Video URL",
+                    "uid": "background_video_url",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "URL to the background video (MP4 format recommended)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Fallback Image",
+                    "uid": "fallback_image",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Fallback image if video doesn't load"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "hero_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Films Section",
+            "field_metadata": {
+                "description": "Section heading for the films grid",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Subtitle",
+                    "uid": "subtitle",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Small uppercase label (e.g., Wedding Films)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Section title (e.g., Stories in Motion)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Section description",
+                        "multiline": true,
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "films_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Films",
+            "field_metadata": {
+                "description": "Individual wedding films with YouTube embeds",
+                "instruction": "Add wedding films with their YouTube video IDs and descriptions"
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Couple names (e.g., Akshaya & Ashwin)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Location",
+                    "uid": "location",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Wedding location (e.g., Bangalore, India)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "YouTube Video ID",
+                    "uid": "youtube_id",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "YouTube video ID (the part after v= in the URL)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Film description/caption",
+                        "multiline": true,
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Thumbnail",
+                    "uid": "thumbnail",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Custom thumbnail (optional, defaults to YouTube thumbnail)"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Order",
+                    "uid": "order",
+                    "data_type": "number",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Display order (lower numbers appear first)"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "films",
+            "mandatory": false,
+            "multiple": true,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Approach Section",
+            "field_metadata": {
+                "description": "Our Approach section content",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Subtitle",
+                    "uid": "subtitle",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Small label (e.g., Our Approach)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Section title (e.g., Cinematic Storytelling)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Content",
+                    "uid": "content",
+                    "data_type": "json",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "allow_json_rte": true,
+                        "embed_entry": false,
+                        "description": "Description paragraphs",
+                        "rich_text_type": "advanced"
+                    },
+                    "reference_to": [
+                        "sys_assets"
+                    ],
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "approach_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "CTA Section",
+            "field_metadata": {
+                "description": "Bottom call-to-action section",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "CTA heading",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "CTA description",
+                        "multiline": true,
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "CTA Button",
+                    "uid": "cta",
+                    "data_type": "link",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Button link",
+                        "default_value": {
+                            "title": "",
+                            "url": ""
+                        }
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "cta_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        }
+    ],
+    "options": {
+        "is_page": true,
+        "singleton": true,
+        "title": "title",
+        "sub_title": []
+    },
+    "description": "Films page with video background hero and YouTube video embeds"
+}
+
+
+

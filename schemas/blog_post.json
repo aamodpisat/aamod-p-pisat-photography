@@ -1,0 +1,91 @@
+{
+    "title": "Blog Post",
+    "uid": "blog_post",
+    "options": {
+      "is_page": true,
+      "singleton": false,
+      "title": "title",
+      "sub_title": [
+        "url"
+      ]
+    },
+    "schema": [
+      {
+        "display_name": "Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": true,
+        "field_metadata": {
+          "_default": true,
+          "description": "Post title"
+        }
+      },
+      {
+        "display_name": "URL",
+        "uid": "url",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": true,
+        "field_metadata": {
+          "description": "URL slug (e.g., /art-of-golden-hour)"
+        }
+      },
+      {
+        "display_name": "Excerpt",
+        "uid": "excerpt",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "multi_line": true,
+          "description": "Short summary"
+        }
+      },
+      {
+        "display_name": "Body",
+        "uid": "body",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "allow_rich_text": true,
+          "description": "Full article content"
+        }
+      },
+      {
+        "display_name": "Featured Image",
+        "uid": "featured_image",
+        "data_type": "file",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "Cover image"
+        }
+      },
+      {
+        "display_name": "Author",
+        "uid": "author",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "Author name"
+        }
+      },
+      {
+        "display_name": "Publish Date",
+        "uid": "publish_date",
+        "data_type": "isodate",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "Publication date"
+        }
+      },
+      {
+        "display_name": "Category",
+        "uid": "category",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "Post category"
+        }
+      }
+    ]
+  }

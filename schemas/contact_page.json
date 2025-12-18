@@ -1,0 +1,362 @@
+{
+    "title": "Contact Page",
+    "uid": "contact_page",
+    "schema": [
+        {
+            "display_name": "Title",
+            "uid": "title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "_default": true,
+                "description": "Internal title for this entry",
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "URL",
+            "uid": "url",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "description": "URL slug (e.g., /contact)",
+                "_default": true,
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Banner",
+            "field_metadata": {
+                "description": "",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Main heading displayed on the hero banner (e.g., Contact)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Tagline",
+                    "uid": "tagline",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Decorative script text below the title (e.g., Let's create something beautiful together)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Image",
+                    "uid": "image",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Background image for the banner section"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "banner",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Info Section",
+            "field_metadata": {
+                "description": "",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Main heading for the info section (e.g., I'd Love to Hear Your Story)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Subtitle",
+                    "uid": "subtitle",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Small uppercase text above the info title (e.g., Get In Touch)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Info Description",
+                    "uid": "info_description",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "multi_line": true,
+                        "description": "Introductory paragraph explaining how to get in touch",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "info_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "display_name": "Location",
+            "uid": "location",
+            "data_type": "text",
+            "mandatory": true,
+            "field_metadata": {
+                "description": "Your location/availability (e.g., Phoenix, Arizona — Available Worldwide)",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Form Labels",
+            "uid": "form_labels",
+            "data_type": "group",
+            "mandatory": false,
+            "multiple": false,
+            "field_metadata": {
+                "description": "Customize the labels for form fields"
+            },
+            "schema": [
+                {
+                    "display_name": "Name Label",
+                    "uid": "name_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Name *",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Email Label",
+                    "uid": "email_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Email *",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Phone Label",
+                    "uid": "phone_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Phone",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Event Date Label",
+                    "uid": "event_date_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Event Date",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Event Type Label",
+                    "uid": "event_type_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Event Type",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Location Label",
+                    "uid": "location_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Location",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "How Heard Label",
+                    "uid": "how_heard_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "How did you hear about me?",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Message Label",
+                    "uid": "message_label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Tell me about your vision *",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Submit Button Text",
+                    "uid": "submit_button_text",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Send Inquiry",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Event Type Options",
+            "uid": "event_type_options",
+            "data_type": "text",
+            "mandatory": false,
+            "multiple": true,
+            "field_metadata": {
+                "description": "Options for the Event Type dropdown (e.g., Wedding, Elopement, Engagement)",
+                "version": 3
+            },
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Referral Options",
+            "uid": "referral_options",
+            "data_type": "text",
+            "mandatory": false,
+            "multiple": true,
+            "field_metadata": {
+                "description": "Options for the 'How did you hear about me?' dropdown",
+                "version": 3
+            },
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Success ",
+            "field_metadata": {
+                "description": "",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Success Title",
+                    "uid": "success_title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Heading shown after form submission (e.g., Thank You!)",
+                        "default_value": "Thank You!",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Success Message",
+                    "uid": "success_message",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "multi_line": true,
+                        "description": "Message shown after successful form submission",
+                        "default_value": "Your message has been received. I'll be in touch within 48 hours.",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "success",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        }
+    ],
+    "options": {
+        "is_page": true,
+        "singleton": true,
+        "title": "title",
+        "sub_title": []
+    }
+}

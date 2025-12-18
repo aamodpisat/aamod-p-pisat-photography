@@ -1,0 +1,183 @@
+{
+    "title": "Contact Submission",
+    "uid": "contact_submission",
+    "schema": [
+        {
+            "display_name": "Title",
+            "uid": "title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "_default": true,
+                "description": "Auto-generated title (e.g., INQ-2024-001 - John Doe)",
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Inquiry ID",
+            "uid": "inquiry_id",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "description": "Unique inquiry reference number (e.g., INQ-2024-001)",
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Client Name",
+            "uid": "client_name",
+            "data_type": "text",
+            "mandatory": true,
+            "field_metadata": {
+                "description": "Full name of the client",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Email",
+            "uid": "email",
+            "data_type": "text",
+            "mandatory": true,
+            "field_metadata": {
+                "description": "Client email address",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Phone",
+            "uid": "phone",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Client phone number",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Event Date",
+            "uid": "event_date",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Preferred event date",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Event Type",
+            "uid": "event_type",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Type of event (Wedding, Pre-wedding, etc.)",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Location",
+            "uid": "location",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Event location",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "How Did You Hear About Us",
+            "uid": "referral_source",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Referral source",
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Message",
+            "uid": "message",
+            "data_type": "text",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Client's message",
+                "multiline": true,
+                "version": 3
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Status",
+            "uid": "status",
+            "data_type": "text",
+            "display_type": "dropdown",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Inquiry status",
+                "default_value": "New",
+                "version": 3
+            },
+            "enum": {
+                "advanced": false,
+                "choices": [
+                    { "value": "New" },
+                    { "value": "Contacted" },
+                    { "value": "In Discussion" },
+                    { "value": "Booked" },
+                    { "value": "Declined" }
+                ]
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "Submitted At",
+            "uid": "submitted_at",
+            "data_type": "isodate",
+            "mandatory": false,
+            "field_metadata": {
+                "description": "Date and time of submission"
+            },
+            "multiple": false,
+            "unique": false,
+            "non_localizable": false
+        }
+    ],
+    "options": {
+        "is_page": false,
+        "singleton": false,
+        "title": "title",
+        "sub_title": ["inquiry_id", "client_name"]
+    },
+    "description": "Contact form submissions from the website"
+}
+

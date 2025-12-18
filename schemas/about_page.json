@@ -1,0 +1,479 @@
+{
+    "created_at": "2025-12-18T07:40:45.264Z",
+    "updated_at": "2025-12-18T07:46:58.105Z",
+    "title": "About Page",
+    "uid": "about_page",
+    "_version": 3,
+    "inbuilt_class": false,
+    "schema": [
+        {
+            "display_name": "Title",
+            "uid": "title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "_default": true,
+                "description": "Internal title for this entry",
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "URL",
+            "uid": "url",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "description": "URL slug (e.g., /about)",
+                "_default": true,
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Banner",
+            "field_metadata": {
+                "description": "Hero banner section at the top of the page",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Main heading (e.g., About)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Tagline",
+                    "uid": "tagline",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Decorative script text below the title",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Image",
+                    "uid": "image",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Background image for the banner"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "banner",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Achievements",
+            "field_metadata": {
+                "description": "Awards and achievements section with numbered highlights",
+                "instruction": "Add 3-4 achievements to display"
+            },
+            "schema": [
+                {
+                    "display_name": "Number",
+                    "uid": "number",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Display number (e.g., 01, 02)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Achievement title (e.g., Among Top 100 Photographers)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Subtitle",
+                    "uid": "subtitle",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Source or additional info (e.g., Wedwar Magazine)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "data_type": "file",
+                    "display_name": "Image Logo",
+                    "uid": "image_logo",
+                    "extensions": [],
+                    "field_metadata": {
+                        "description": "",
+                        "rich_text_type": "standard"
+                    },
+                    "mandatory": false,
+                    "multiple": false,
+                    "non_localizable": false,
+                    "unique": false
+                }
+            ],
+            "uid": "achievements",
+            "mandatory": false,
+            "multiple": true,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Intro Section",
+            "field_metadata": {
+                "description": "The 'Hi, I am...' introduction section",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Greeting",
+                    "uid": "greeting",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Greeting text (e.g., Hi, I am)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Name",
+                    "uid": "name",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Your name",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Tagline",
+                    "uid": "tagline",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Brief tagline about your style",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "data_type": "text",
+                    "display_name": "Featured Content",
+                    "uid": "featured_content",
+                    "field_metadata": {
+                        "description": "This content will be rendered on the homepage.",
+                        "default_value": "",
+                        "multiline": true,
+                        "version": 3
+                    },
+                    "format": "",
+                    "error_messages": {
+                        "format": ""
+                    },
+                    "mandatory": false,
+                    "multiple": false,
+                    "non_localizable": false,
+                    "unique": false
+                },
+                {
+                    "data_type": "json",
+                    "display_name": "Description",
+                    "uid": "description",
+                    "field_metadata": {
+                        "allow_json_rte": true,
+                        "embed_entry": false,
+                        "description": "",
+                        "default_value": "",
+                        "multiline": false,
+                        "rich_text_type": "advanced",
+                        "options": []
+                    },
+                    "format": "",
+                    "error_messages": {
+                        "format": ""
+                    },
+                    "reference_to": [
+                        "sys_assets"
+                    ],
+                    "multiple": false,
+                    "non_localizable": false,
+                    "unique": false,
+                    "mandatory": false
+                },
+                {
+                    "display_name": "Signature",
+                    "uid": "signature",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Signature name displayed in script font",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "CTA",
+                    "uid": "cta",
+                    "data_type": "link",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Call to action button",
+                        "default_value": {
+                            "title": "",
+                            "url": ""
+                        }
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Image",
+                    "uid": "image",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Portrait image"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "intro_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Journey Section",
+            "field_metadata": {
+                "description": "The story/journey section",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Section title (e.g., The Journey!)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Content",
+                    "uid": "content",
+                    "data_type": "json",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "allow_json_rte": true,
+                        "embed_entry": false,
+                        "description": "Full story content",
+                        "rich_text_type": "advanced"
+                    },
+                    "reference_to": [
+                        "sys_assets"
+                    ],
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "journey_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Featured In",
+            "field_metadata": {
+                "description": "Publications and brands you've been featured in",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Label",
+                    "uid": "label",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Section label (e.g., Featured In)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Brands",
+                    "uid": "brands",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "List of brand/publication names",
+                        "version": 3
+                    },
+                    "multiple": true,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "featured_in",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "CTA Section",
+            "field_metadata": {
+                "description": "Bottom call-to-action section",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "CTA heading",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "CTA",
+                    "uid": "cta",
+                    "data_type": "link",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Button link",
+                        "default_value": {
+                            "title": "",
+                            "url": ""
+                        }
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Background Image",
+                    "uid": "background_image",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Background image for the CTA section"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "cta_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        }
+    ],
+    "last_activity": {},
+    "maintain_revisions": true,
+    "description": "",
+    "DEFAULT_ACL": [
+        {
+            "k": "others",
+            "v": {
+                "read": false,
+                "create": false
+            }
+        },
+        {
+            "k": "users.blta76707ccbfcb6b67",
+            "v": {
+                "read": true,
+                "sub_acl": {
+                    "read": true
+                }
+            }
+        }
+    ],
+    "SYS_ACL": {
+        "roles": []
+    },
+    "options": {
+        "is_page": true,
+        "singleton": true,
+        "title": "title",
+        "sub_title": []
+    },
+    "abilities": {
+        "get_one_object": true,
+        "get_all_objects": true,
+        "create_object": true,
+        "update_object": true,
+        "delete_object": true,
+        "delete_all_objects": true
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "title": "Portfolio Item",
+    "uid": "portfolio_item",
+    "options": {
+      "is_page": true,
+      "singleton": false,
+      "title": "title",
+      "sub_title": []
+    },
+    "schema": [
+      {
+        "display_name": "Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": true,
+        "field_metadata": {
+          "_default": true,
+          "description": "e.g., Sarah & James — Tuscany"
+        }
+      },
+      {
+        "display_name": "Description",
+        "uid": "description",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "multi_line": true,
+          "description": "Project description"
+        }
+      },
+      {
+        "display_name": "Category",
+        "uid": "category",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "e.g., Weddings, Elopements"
+        }
+      },
+      {
+        "display_name": "Featured Image",
+        "uid": "featured_image",
+        "data_type": "file",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "Main image"
+        }
+      },
+      {
+        "display_name": "Gallery Images",
+        "uid": "gallery_images",
+        "data_type": "file",
+        "mandatory": false,
+        "multiple": true,
+        "field_metadata": {
+          "description": "Additional images"
+        }
+      },
+      {
+        "display_name": "Location",
+        "uid": "location",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "e.g., Tuscany, Italy"
+        }
+      },
+      {
+        "display_name": "Date",
+        "uid": "date",
+        "data_type": "isodate",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "Event date"
+        }
+      },
+      {
+        "display_name": "Is Featured",
+        "uid": "is_featured",
+        "data_type": "boolean",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "Show on homepage"
+        }
+      },
+      {
+        "display_name": "URL",
+        "uid": "url",
+        "data_type": "text",
+        "mandatory": false,
+        "unique": true,
+        "field_metadata": {
+          "description": "Custom URL slug"
+        }
+      }
+    ]
+  }

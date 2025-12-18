@@ -1,0 +1,280 @@
+{
+    "title": "Site Configuration",
+    "uid": "site_config",
+    "options": {
+      "is_page": false,
+      "singleton": true,
+      "title": "title",
+      "sub_title": []
+    },
+    "schema": [
+      {
+        "display_name": "Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": true,
+        "field_metadata": {
+          "_default": true
+        }
+      },
+      {
+        "display_name": "Site Name",
+        "uid": "site_name",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "e.g., Aamod P. Pisat"
+        }
+      },
+      {
+        "display_name": "Site Subtitle",
+        "uid": "site_subtitle",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "e.g., Photography"
+        }
+      },
+      {
+        "display_name": "Tagline",
+        "uid": "tagline",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "e.g., Capturing the real emotions..."
+        }
+      },
+      {
+        "display_name": "Logo",
+        "uid": "logo",
+        "data_type": "file",
+        "mandatory": false
+      },
+      {
+        "display_name": "Contact Email",
+        "uid": "contact_email",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "hello@aamodphotography.com"
+        }
+      },
+      {
+        "display_name": "Contact Phone",
+        "uid": "contact_phone",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Contact Address",
+        "uid": "contact_address",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "multi_line": true
+        }
+      },
+      {
+        "display_name": "Instagram URL",
+        "uid": "instagram_url",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Pinterest URL",
+        "uid": "pinterest_url",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Vimeo URL",
+        "uid": "vimeo_url",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Facebook URL",
+        "uid": "facebook_url",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Footer Text",
+        "uid": "footer_text",
+        "data_type": "text",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "Copyright text"
+        }
+      },
+      {
+        "display_name": "Primary Navigation",
+        "uid": "primary_navigation",
+        "data_type": "group",
+        "mandatory": true,
+        "multiple": true,
+        "schema": [
+          {
+            "display_name": "Label",
+            "uid": "label",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Href",
+            "uid": "href",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Children",
+            "uid": "children",
+            "data_type": "group",
+            "mandatory": false,
+            "multiple": true,
+            "schema": [
+              {
+                "display_name": "Label",
+                "uid": "label",
+                "data_type": "text",
+                "mandatory": false
+              },
+              {
+                "display_name": "Href",
+                "uid": "href",
+                "data_type": "text",
+                "mandatory": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "display_name": "Secondary Navigation",
+        "uid": "secondary_navigation",
+        "data_type": "group",
+        "mandatory": true,
+        "multiple": true,
+        "schema": [
+          {
+            "display_name": "Label",
+            "uid": "label",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Href",
+            "uid": "href",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Children",
+            "uid": "children",
+            "data_type": "group",
+            "mandatory": false,
+            "multiple": true,
+            "schema": [
+              {
+                "display_name": "Label",
+                "uid": "label",
+                "data_type": "text",
+                "mandatory": false
+              },
+              {
+                "display_name": "Href",
+                "uid": "href",
+                "data_type": "text",
+                "mandatory": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "display_name": "Footer Left Navigation",
+        "uid": "footer_left_navigation",
+        "data_type": "group",
+        "mandatory": true,
+        "multiple": true,
+        "schema": [
+          {
+            "display_name": "Label",
+            "uid": "label",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Href",
+            "uid": "href",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Children",
+            "uid": "children",
+            "data_type": "group",
+            "mandatory": false,
+            "multiple": true,
+            "schema": [
+              {
+                "display_name": "Label",
+                "uid": "label",
+                "data_type": "text",
+                "mandatory": false
+              },
+              {
+                "display_name": "Href",
+                "uid": "href",
+                "data_type": "text",
+                "mandatory": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "display_name": "Footer Right Navigation",
+        "uid": "footer_right_navigation",
+        "data_type": "group",
+        "mandatory": true,
+        "multiple": true,
+        "schema": [
+          {
+            "display_name": "Label",
+            "uid": "label",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Href",
+            "uid": "href",
+            "data_type": "text",
+            "mandatory": true
+          },
+          {
+            "display_name": "Children",
+            "uid": "children",
+            "data_type": "group",
+            "mandatory": false,
+            "multiple": true,
+            "schema": [
+              {
+                "display_name": "Label",
+                "uid": "label",
+                "data_type": "text",
+                "mandatory": false
+              },
+              {
+                "display_name": "Href",
+                "uid": "href",
+                "data_type": "text",
+                "mandatory": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

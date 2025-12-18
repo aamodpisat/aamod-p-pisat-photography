@@ -192,7 +192,6 @@ This document contains all the Content Type schemas needed for the Aamod P. Pisa
   "secondary_navigation": [
     { "label": "About", "href": "/about" },
     { "label": "Info", "href": "/info", "children": [
-      { "label": "How It Works", "href": "/how-it-works" },
       { "label": "Services", "href": "/services" },
       { "label": "FAQ", "href": "/faq" }
     ]},
@@ -226,8 +225,7 @@ This document contains all the Content Type schemas needed for the Aamod P. Pisa
   "quick_links": [
     { "title": "Journal", "description": "Stories, tips & inspiration", "href": "/journal" },
     { "title": "Films", "description": "Cinematic wedding films", "href": "/films" },
-    { "title": "How It Works", "description": "Our process explained", "href": "/how-it-works" },
-    { "title": "Why Elope?", "description": "The case for intimacy", "href": "/why-elope" }
+    { "title": "Services", "description": "Our packages & pricing", "href": "/services" }
   ],
   "journal_subtitle": "Journal",
   "journal_title": "Stories & Insights",

@@ -28,7 +28,7 @@ A cinematic, fine-art photography portfolio website built with **Next.js 14** an
 ## 📁 Project Structure
 
 ```
-aamod-photography-frontend/
+aamod-p-pisat-photography/
 ├── src/
 │   ├── app/                    # Next.js App Router pages
 │   │   ├── about/              # About page
@@ -37,7 +37,6 @@ aamod-photography-frontend/
 │   │   ├── contact/            # Contact page
 │   │   ├── faq/                # FAQ page
 │   │   ├── films/              # Films page with video backgrounds
-│   │   ├── how-it-works/       # How it works page
 │   │   ├── info/               # Info page
 │   │   ├── journal/            # Blog/Journal page
 │   │   ├── portfolio/          # Portfolio with masonry gallery
@@ -79,7 +78,7 @@ aamod-photography-frontend/
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 22+ 
 - npm or yarn
 - Contentstack account with configured stack
 
@@ -222,27 +221,20 @@ npm run lint     # Run ESLint
 
 ## 🌐 Deployment
 
-### Contentstack Launch (Recommended)
+### Contentstack Launch
 
 For detailed instructions, see **[docs/CONTENTSTACK_LAUNCH_DEPLOYMENT.md](docs/CONTENTSTACK_LAUNCH_DEPLOYMENT.md)**
 
-Quick steps:
+**Quick steps:**
 1. Push code to GitHub/GitLab/Bitbucket
 2. Go to your Stack → Launch → New Project
 3. Connect your repository
 4. Add environment variables
 5. Deploy!
 
-### Vercel (Alternative)
+### Environment Variables
 
-1. Push to GitHub
-2. Import project in Vercel
-3. Add environment variables
-4. Deploy!
-
-### Environment Variables for Production
-
-Make sure to set all environment variables in your deployment platform:
+Make sure to set all environment variables in Contentstack Launch:
 - `CONTENTSTACK_API_KEY`
 - `CONTENTSTACK_DELIVERY_TOKEN`
 - `CONTENTSTACK_MANAGEMENT_TOKEN`
@@ -250,22 +242,6 @@ Make sure to set all environment variables in your deployment platform:
 - `CONTENTSTACK_REGION`
 - `NEXT_PUBLIC_SITE_URL`
 
-### Other Platforms
-
-The site can be deployed to any platform supporting Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- Self-hosted
-
-## 🎬 Adding Video Backgrounds
-
-For the Films page video hero:
-
-1. Place your video in `public/videos/`
-2. Update the `films_page` content type in Contentstack
-3. Set `background_video_url` to `/videos/your-video.mp4`
-4. Provide a fallback image for mobile/loading
 
 ## 📄 License
 

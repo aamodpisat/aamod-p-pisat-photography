@@ -1,0 +1,572 @@
+{
+ 
+  "title": "Homepage New",
+  "uid": "homepage_new",
+  "schema": [
+    {
+      "display_name": "Title",
+      "uid": "title",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "field_metadata": {
+        "_default": true,
+        "version": 3
+      },
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "URL",
+      "uid": "url",
+      "data_type": "text",
+      "mandatory": true,
+      "field_metadata": {
+        "_default": true,
+        "version": 3
+      },
+      "multiple": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "Featured Banner",
+      "field_metadata": {
+        "description": "",
+        "instruction": ""
+      },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Tagline",
+          "uid": "tagline",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "file",
+          "display_name": "Image",
+          "uid": "image",
+          "extensions": [],
+          "field_metadata": {
+            "description": "",
+            "rich_text_type": "standard"
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "link",
+          "display_name": "CTA",
+          "uid": "cta",
+          "field_metadata": {
+            "description": "",
+            "default_value": {
+              "title": "",
+              "url": ""
+            }
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "featured_banner",
+      "mandatory": false,
+      "multiple": true,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "Portfolio Section",
+      "field_metadata": {
+        "description": "",
+        "instruction": ""
+      },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Title",
+          "uid": "title",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "text",
+          "display_name": "Subtiitle",
+          "uid": "subtiitle",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "display_name": "Description",
+          "uid": "description",
+          "data_type": "text",
+          "mandatory": true,
+          "field_metadata": {
+            "multi_line": true,
+            "version": 3
+          },
+          "multiple": false,
+          "unique": false,
+          "non_localizable": false
+        },
+        {
+          "data_type": "link",
+          "display_name": "CTA",
+          "uid": "cta",
+          "field_metadata": {
+            "description": "",
+            "default_value": {
+              "title": "",
+              "url": ""
+            }
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "file",
+          "display_name": "Gallery Images",
+          "uid": "gallery_images",
+          "extensions": [],
+          "field_metadata": {
+            "description": "Upload images from your portfolio asset folder for the masonry gallery",
+            "rich_text_type": "standard"
+          },
+          "mandatory": false,
+          "multiple": true,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "portfolio_section",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "About Section",
+      "field_metadata": {
+        "description": "",
+        "instruction": ""
+      },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Title",
+          "uid": "title",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "text",
+          "display_name": "Description",
+          "uid": "description",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "multiline": true,
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "file",
+          "display_name": "Image",
+          "uid": "image",
+          "extensions": [],
+          "field_metadata": {
+            "description": "",
+            "rich_text_type": "standard"
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "link",
+          "display_name": "CTA",
+          "uid": "cta",
+          "field_metadata": {
+            "description": "",
+            "default_value": {
+              "title": "",
+              "url": ""
+            }
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "group",
+          "display_name": "Featured ",
+          "field_metadata": {
+            "description": "",
+            "instruction": ""
+          },
+          "schema": [
+            {
+              "data_type": "text",
+              "display_name": "Label",
+              "uid": "label",
+              "field_metadata": {
+                "description": "Write the text for the feature label ",
+                "default_value": "",
+                "version": 3
+              },
+              "format": "",
+              "error_messages": {
+                "format": ""
+              },
+              "mandatory": false,
+              "multiple": false,
+              "non_localizable": false,
+              "unique": false
+            },
+            {
+              "data_type": "text",
+              "display_name": "Featured In",
+              "uid": "featured_in",
+              "field_metadata": {
+                "description": "Featured in [Wedwar, Canvera]",
+                "default_value": "",
+                "isTitle": false,
+                "version": 3
+              },
+              "format": "",
+              "error_messages": {
+                "format": ""
+              },
+              "mandatory": false,
+              "multiple": true,
+              "non_localizable": false,
+              "unique": false
+            }
+          ],
+          "uid": "featured",
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "about_section",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "Testimonials Section",
+      "field_metadata": {
+        "description": "",
+        "instruction": ""
+      },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Title",
+          "uid": "title",
+          "field_metadata": {
+            "description": "Mr Shiv & Mrs. Parvati",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "json",
+          "display_name": "Content",
+          "uid": "content",
+          "field_metadata": {
+            "allow_json_rte": true,
+            "embed_entry": false,
+            "description": "",
+            "default_value": "",
+            "multiline": false,
+            "rich_text_type": "advanced",
+            "options": []
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "reference_to": [
+            "sys_assets"
+          ],
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false,
+          "mandatory": false
+        },
+        {
+          "data_type": "link",
+          "display_name": "CTA",
+          "uid": "cta",
+          "field_metadata": {
+            "description": "",
+            "default_value": {
+              "title": "",
+              "url": ""
+            }
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "testimonials_section",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "Journal Section",
+      "field_metadata": {
+        "description": "",
+        "instruction": ""
+      },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Title",
+          "uid": "title",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "text",
+          "display_name": "Subtitle",
+          "uid": "subtitle",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "json",
+          "display_name": "Description",
+          "uid": "description",
+          "field_metadata": {
+            "allow_json_rte": true,
+            "embed_entry": false,
+            "description": "",
+            "default_value": "",
+            "multiline": false,
+            "rich_text_type": "advanced",
+            "options": []
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "reference_to": [
+            "sys_assets"
+          ],
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false,
+          "mandatory": false
+        },
+        {
+          "data_type": "link",
+          "display_name": "CTA",
+          "uid": "cta",
+          "field_metadata": {
+            "description": "",
+            "default_value": {
+              "title": "",
+              "url": ""
+            }
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "journal_section",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    },
+    {
+      "data_type": "group",
+      "display_name": "Contact Section",
+      "field_metadata": {
+        "description": "",
+        "instruction": ""
+      },
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Title",
+          "uid": "title",
+          "field_metadata": {
+            "description": "",
+            "default_value": "",
+            "version": 3
+          },
+          "format": "",
+          "error_messages": {
+            "format": ""
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "display_name": "Description",
+          "uid": "description",
+          "data_type": "text",
+          "mandatory": true,
+          "field_metadata": {
+            "multi_line": true,
+            "version": 3
+          },
+          "multiple": false,
+          "unique": false,
+          "non_localizable": false
+        },
+        {
+          "data_type": "link",
+          "display_name": "CTA",
+          "uid": "cta",
+          "field_metadata": {
+            "description": "",
+            "default_value": {
+              "title": "",
+              "url": ""
+            }
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        },
+        {
+          "data_type": "file",
+          "display_name": "Background Image",
+          "uid": "background_image",
+          "extensions": [],
+          "field_metadata": {
+            "description": "",
+            "rich_text_type": "standard"
+          },
+          "mandatory": false,
+          "multiple": false,
+          "non_localizable": false,
+          "unique": false
+        }
+      ],
+      "uid": "contact_section",
+      "mandatory": false,
+      "multiple": false,
+      "non_localizable": false,
+      "unique": false
+    }
+  ],
+  "options": {
+    "is_page": true,
+    "singleton": true,
+    "title": "title",
+    "sub_title": []
+  }
+}

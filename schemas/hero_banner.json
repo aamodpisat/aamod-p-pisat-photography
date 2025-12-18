@@ -1,0 +1,64 @@
+{
+    "title": "Hero Banner",
+    "uid": "hero_banner",
+    "options": {
+      "is_page": false,
+      "singleton": false,
+      "title": "title",
+      "sub_title": []
+    },
+    "schema": [
+      {
+        "display_name": "Title",
+        "uid": "title",
+        "data_type": "text",
+        "mandatory": true,
+        "unique": false,
+        "field_metadata": {
+          "_default": true
+        }
+      },
+      {
+        "display_name": "Subtitle",
+        "uid": "subtitle",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Tagline",
+        "uid": "tagline",
+        "data_type": "text",
+        "mandatory": false,
+        "field_metadata": {
+          "description": "Script-style tagline"
+        }
+      },
+      {
+        "display_name": "Background Image",
+        "uid": "image",
+        "data_type": "file",
+        "mandatory": true
+      },
+      {
+        "display_name": "CTA Text",
+        "uid": "cta_text",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "CTA Link",
+        "uid": "cta_link",
+        "data_type": "text",
+        "mandatory": false
+      },
+      {
+        "display_name": "Order",
+        "uid": "order",
+        "data_type": "number",
+        "mandatory": true,
+        "field_metadata": {
+          "description": "Display order (1, 2, 3...)"
+        }
+      }
+    ]
+  }

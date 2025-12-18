@@ -9,12 +9,6 @@ export const metadata: Metadata = {
 
 const infoLinks = [
   {
-    title: 'How It Works',
-    description: 'Our step-by-step process from inquiry to gallery delivery.',
-    href: '/how-it-works',
-    image: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&q=80',
-  },
-  {
     title: 'Services & Pricing',
     description: 'Explore our photography and film packages.',
     href: '/services',
