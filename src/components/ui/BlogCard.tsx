@@ -34,7 +34,7 @@ export default function BlogCard({
         }}
         className="group"
       >
-        <Link href={`/journal/${post.slug}`} className="block">
+        <Link href={`/journal/${post.url}`} className="block">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {post.featured_image && (
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -97,7 +97,7 @@ export default function BlogCard({
         }}
         className="group border-b border-charcoal-200 py-6 first:pt-0 last:border-b-0"
       >
-        <Link href={`/journal/${post.slug}`} className="block">
+        <Link href={`/journal/${post.url}`} className="block">
           <time className="text-caption uppercase tracking-widest text-sepia-600 mb-2 block">
             {formattedDate}
           </time>
@@ -122,7 +122,7 @@ export default function BlogCard({
       }}
       className="group"
     >
-      <Link href={`/journal/${post.slug}`} className="block">
+      <Link href={`/journal/${post.url}`} className="block">
         {post.featured_image && (
           <div className="relative aspect-[4/3] overflow-hidden mb-6">
             <Image

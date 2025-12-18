@@ -19,6 +19,7 @@ const defaultContent = {
     tagline: 'Moment. Memory. Miracle.',
   },
   gallery_section: {
+    asset_folder_uid: undefined as string | undefined,
     button_text: 'More Work',
     button_link: { title: 'More Work', href: '/contact' },
   },
