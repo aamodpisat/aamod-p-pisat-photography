@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Output mode for serverless deployment (Contentstack Launch)
+  output: 'standalone',
+  
   // Image optimization
   images: {
     remotePatterns: [
