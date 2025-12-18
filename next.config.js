@@ -3,8 +3,9 @@ const nextConfig = {
   // Output mode for serverless deployment (Contentstack Launch)
   output: 'standalone',
   
-  // Image optimization
+  // Image optimization - disabled for serverless (read-only filesystem)
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
