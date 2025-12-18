@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Testimonial } from '@/lib/types';
 import { safeTextContent } from '@/lib/richtext-renderer';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface TestimonialsSectionProps {
   testimonials: Testimonial[];
@@ -115,7 +116,7 @@ export default function TestimonialsSection({
                 className="relative aspect-[4/5] w-full"
               >
                 <Image
-                  src={testimonialImage}
+                  src={ImagePresets.testimonialPhoto(testimonialImage)}
                   alt={`${currentTestimonial.client_name} testimonial`}
                   fill
                   className="object-cover"

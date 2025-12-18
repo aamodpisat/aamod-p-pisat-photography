@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { ContentstackAsset } from '@/lib/types';
 import { RichText, safeTextContent } from '@/lib/richtext-renderer';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface AboutPreviewProps {
   content: {
@@ -70,7 +71,7 @@ export default function AboutPreview({ content }: AboutPreviewProps) {
           >
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src={getImageUrl()}
+                src={ImagePresets.portrait(getImageUrl())}
                 alt={getImageAlt()}
                 fill
                 className="object-cover"

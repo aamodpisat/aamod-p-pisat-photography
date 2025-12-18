@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import { getAboutPageContent, getSiteConfig, getTestimonials } from '@/lib/contentstack';
 import { RichText, isPlainText } from '@/lib/richtext-renderer';
+import { ImagePresets, optimizeImage } from '@/lib/image-utils';
 
 export const metadata: Metadata = {
   title: 'About | Aamod P. Pisat Photography',
@@ -44,7 +45,7 @@ export default async function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src={banner?.image?.url || 'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1920&q=80'}
+            src={ImagePresets.hero(banner?.image?.url || 'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1920&q=80')}
             alt={banner?.title || 'About hero'}
             fill
             priority
@@ -83,7 +84,7 @@ export default async function AboutPage() {
                   {achievement.image_logo?.url ? (
                     <div className="mb-8 h-24 md:h-28 w-auto flex items-center justify-center">
                       <Image
-                        src={achievement.image_logo.url}
+                        src={optimizeImage(achievement.image_logo.url, { width: 180, quality: 80, format: 'webp' })}
                         alt={achievement.image_logo.title || achievement.title}
                         width={180}
                         height={100}
@@ -123,7 +124,7 @@ export default async function AboutPage() {
               <div className="relative order-2 lg:order-1">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
-                    src={intro.image?.url || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80'}
+                    src={ImagePresets.portrait(intro.image?.url || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80')}
                     alt={intro.name || 'Photographer portrait'}
                     fill
                     className="object-cover"
@@ -252,7 +253,7 @@ export default async function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src={ctaSection?.background_image?.url || 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80'}
+            src={ImagePresets.hero(ctaSection?.background_image?.url || 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920&q=80')}
             alt="Contact background"
             fill
             className="object-cover"

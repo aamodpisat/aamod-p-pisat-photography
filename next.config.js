@@ -3,9 +3,10 @@ const nextConfig = {
   // Output mode for serverless deployment (Contentstack Launch)
   output: 'standalone',
   
-  // Image optimization - disabled for serverless (read-only filesystem)
+  // Image optimization - using Contentstack Image Delivery API instead
+  // This avoids cache directory issues on serverless while still providing optimized images
   images: {
-    unoptimized: true,
+    unoptimized: false, // Contentstack's Image API handles optimization
     remotePatterns: [
       {
         protocol: 'https',

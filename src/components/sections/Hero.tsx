@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { HeroBanner } from '@/lib/types';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface HeroProps {
   slides: HeroBanner[];
@@ -116,7 +117,7 @@ export default function Hero({
           className="absolute inset-0"
         >
           <Image
-            src={currentSlide.image.url}
+            src={ImagePresets.hero(currentSlide.image.url)}
             alt={currentSlide.title}
             fill
             priority={currentIndex === 0}

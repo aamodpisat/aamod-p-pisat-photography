@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { ContentstackAsset } from '@/lib/types';
 import { RichText, isPlainText } from '@/lib/richtext-renderer';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface ContactCTAProps {
   content: {
@@ -29,7 +30,7 @@ export default function ContactCTA({ content }: ContactCTAProps) {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src={bgImageUrl}
+          src={ImagePresets.hero(bgImageUrl)}
           alt={bgImageAlt}
           fill
           className="object-cover"

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { ContentstackAsset } from '@/lib/types';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface PortfolioGalleryProps {
   content: {
@@ -74,7 +75,7 @@ export default function PortfolioGallery({ content, images }: PortfolioGalleryPr
                     className={`relative overflow-hidden group cursor-pointer ${aspectRatio}`}
                   >
                     <Image
-                      src={image.url}
+                      src={ImagePresets.galleryThumb(image.url)}
                       alt={image.title || `Portfolio image ${globalIndex + 1}`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"

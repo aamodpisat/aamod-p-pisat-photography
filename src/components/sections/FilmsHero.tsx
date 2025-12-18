@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface FilmsHeroProps {
   title?: string;
@@ -23,7 +24,8 @@ export default function FilmsHero({
   const defaultFallbackImage = 'https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=1920&q=80';
   
   const bgVideoUrl = videoUrl || defaultVideoUrl;
-  const bgFallbackImage = fallbackImage || defaultFallbackImage;
+  // Optimize fallback image for hero size
+  const bgFallbackImage = ImagePresets.hero(fallbackImage || defaultFallbackImage);
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -48,6 +50,7 @@ export default function FilmsHero({
             priority
             className="object-cover"
             sizes="100vw"
+            // Poster is already optimized via ImagePresets.hero()
           />
         )}
         {/* Overlay */}

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PortfolioItem } from '@/lib/types';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface PortfolioCardProps {
   item: PortfolioItem;
@@ -32,7 +33,7 @@ export default function PortfolioCard({
         <Link href={`/portfolio/${item.uid}`} className="block">
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src={item.featured_image.url}
+              src={ImagePresets.portfolioCard(item.featured_image.url)}
               alt={item.title}
               fill
               className="object-cover transition-transform duration-1000 ease-cinematic group-hover:scale-105"
@@ -72,7 +73,7 @@ export default function PortfolioCard({
         <Link href={`/portfolio/${item.uid}`} className="block">
           <div className="relative aspect-square overflow-hidden">
             <Image
-              src={item.featured_image.url}
+              src={ImagePresets.galleryThumb(item.featured_image.url)}
               alt={item.title}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -101,7 +102,7 @@ export default function PortfolioCard({
       <Link href={`/portfolio/${item.uid}`} className="block">
         <div className="relative aspect-[3/4] overflow-hidden mb-6">
           <Image
-            src={item.featured_image.url}
+            src={ImagePresets.portfolioCard(item.featured_image.url)}
             alt={item.title}
             fill
             className="object-cover transition-transform duration-1000 ease-cinematic group-hover:scale-105"

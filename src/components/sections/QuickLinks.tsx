@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { QuickLink } from '@/lib/types';
 import { safeTextContent } from '@/lib/richtext-renderer';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface QuickLinksProps {
   heading: string;
@@ -44,7 +45,7 @@ export default function QuickLinks({ heading, links }: QuickLinksProps) {
                 className="group block relative aspect-square overflow-hidden"
               >
                 <Image
-                  src={link.image.url}
+                  src={ImagePresets.galleryThumb(link.image.url)}
                   alt={safeTextContent(link.title)}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"

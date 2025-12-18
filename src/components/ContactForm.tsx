@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ContactPageContent, SiteConfig } from '@/lib/types';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface ContactFormProps {
   content: ContactPageContent;
@@ -106,7 +107,7 @@ export default function ContactForm({ content, siteConfig }: ContactFormProps) {
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src={banner?.image?.url || 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1920&q=80'}
+            src={ImagePresets.hero(banner?.image?.url || 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1920&q=80')}
             alt={banner?.title || 'Contact hero'}
             fill
             priority

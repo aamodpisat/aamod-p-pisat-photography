@@ -20,7 +20,6 @@ export const LIVE_PREVIEW_CONFIG = {
   },
 };
 
-console.log('LIVE_PREVIEW_CONFIG', process.env.CONTENTSTACK_LIVE_PREVIEW);
 
 // Check if we're in Live Preview mode
 export function isLivePreviewEnabled(): boolean {

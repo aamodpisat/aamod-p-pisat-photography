@@ -17,27 +17,13 @@ export default async function FilmsPage() {
   // Fetch content from Contentstack
   const content = await getFilmsPageContent();
   
-  // If no content, show minimal page
-  if (!content) {
-    return (
-      <section className="min-h-screen flex items-center justify-center bg-cream-100">
-        <div className="text-center">
-          <h1 className="font-serif text-heading-lg text-charcoal-900 mb-4">Films</h1>
-          <p className="text-charcoal-600 mb-8">Our cinematic wedding films are coming soon...</p>
-          <Button href="/contact" variant="outline">
-            Inquire About Films
-          </Button>
-        </div>
-      </section>
-    );
-  }
   
   // Extract sections
-  const heroSection = content.hero_section;
-  const filmsSection = content.films_section;
-  const films = content.films || [];
-  const approachSection = content.approach_section;
-  const ctaSection = content.cta_section;
+  const heroSection = content?.hero_section;
+  const filmsSection = content?.films_section;
+  const films = content?.films || [];
+  const approachSection = content?.approach_section;
+  const ctaSection = content?.cta_section;
 
   // Sort films by order if available
   const sortedFilms = [...films].sort((a, b) => (a.order || 0) - (b.order || 0));

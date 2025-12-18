@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { ContentstackAsset, PortfolioPageContent } from '@/lib/types';
+import { ImagePresets, optimizeImage } from '@/lib/image-utils';
 
 interface PortfolioClientProps {
   content: PortfolioPageContent;
@@ -113,7 +114,7 @@ function LightboxModal({
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={image.url}
+              src={ImagePresets.galleryLarge(image.url)}
               alt={image.title}
               width={1200}
               height={800}
@@ -172,7 +173,7 @@ export default function PortfolioClient({ content, galleryImages }: PortfolioCli
       <section className="relative h-screen min-h-[600px] flex items-center justify-center bg-white">
         <div className="absolute inset-0">
           <Image
-            src={heroSection?.background_image?.url || 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80'}
+            src={ImagePresets.hero(heroSection?.background_image?.url || 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')}
             alt={heroSection?.title || 'Portfolio'}
             fill
             priority
@@ -256,7 +257,7 @@ export default function PortfolioClient({ content, galleryImages }: PortfolioCli
                           className={`relative block overflow-hidden group ${aspectRatio} w-full`}
                         >
                           <Image
-                            src={image.url}
+                            src={ImagePresets.galleryThumb(image.url)}
                             alt={image.title}
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-105"

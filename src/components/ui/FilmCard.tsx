@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { getYouTubeThumbnail, getYouTubeEmbedUrl } from '@/lib/image-utils';
 
 interface Film {
   uid: string;
@@ -93,7 +94,7 @@ function VideoModal({
             onClick={(e) => e.stopPropagation()}
           >
             <iframe
-              src={`https://www.youtube.com/embed/${film.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
+              src={getYouTubeEmbedUrl(film.youtubeId, { autoplay: true })}
               title={film.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -121,8 +122,8 @@ function VideoModal({
 export default function FilmCard({ film }: FilmCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // YouTube thumbnail URL
-  const thumbnailUrl = `https://img.youtube.com/vi/${film.youtubeId}/maxresdefault.jpg`;
+  // YouTube thumbnail URL - use high quality for better compression vs maxres
+  const thumbnailUrl = getYouTubeThumbnail(film.youtubeId, 'standard');
 
   return (
     <>

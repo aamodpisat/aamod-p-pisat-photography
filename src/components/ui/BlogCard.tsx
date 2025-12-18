@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlogPost } from '@/lib/types';
+import { ImagePresets } from '@/lib/image-utils';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -39,7 +40,7 @@ export default function BlogCard({
             {post.featured_image && (
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src={post.featured_image.url}
+                  src={ImagePresets.blogFeatured(post.featured_image.url)}
                   alt={post.title}
                   fill
                   className="object-cover transition-transform duration-1000 ease-cinematic group-hover:scale-105"
@@ -126,7 +127,7 @@ export default function BlogCard({
         {post.featured_image && (
           <div className="relative aspect-[4/3] overflow-hidden mb-6">
             <Image
-              src={post.featured_image.url}
+              src={ImagePresets.blogThumb(post.featured_image.url)}
               alt={post.title}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
