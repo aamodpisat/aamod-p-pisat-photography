@@ -92,59 +92,59 @@ export const ImagePresets = {
     format: 'webp'
   }),
 
-  // Gallery thumbnails
+  // Gallery thumbnails (for grid display - high quality for sharp images)
   galleryThumb: (url: string) => optimizeImage(url, { 
-    width: 400, 
-    quality: 75,
+    width: 1200, 
+    quality: 90,
     format: 'webp'
   }),
 
   // Gallery medium (for lightbox preview)
   galleryMedium: (url: string) => optimizeImage(url, { 
-    width: 800, 
-    quality: 80,
+    width: 1600, 
+    quality: 92,
     format: 'webp'
   }),
 
-  // Gallery large (for lightbox full view)
+  // Gallery large (for lightbox full view - maximum quality)
   galleryLarge: (url: string) => optimizeImage(url, { 
-    width: 1600, 
-    quality: 85,
+    width: 2400, 
+    quality: 95,
     format: 'webp'
   }),
 
   // Portfolio card
   portfolioCard: (url: string) => optimizeImage(url, { 
-    width: 600, 
-    quality: 80,
+    width: 800, 
+    quality: 85,
     format: 'webp'
   }),
 
   // Blog/Journal featured image
   blogFeatured: (url: string) => optimizeImage(url, { 
     width: 1200, 
-    quality: 80,
+    quality: 85,
     format: 'webp'
   }),
 
   // Blog thumbnail
   blogThumb: (url: string) => optimizeImage(url, { 
-    width: 400, 
-    quality: 75,
+    width: 600, 
+    quality: 85,
     format: 'webp'
   }),
 
   // Testimonial photo
   testimonialPhoto: (url: string) => optimizeImage(url, { 
-    width: 600, 
-    quality: 80,
+    width: 800, 
+    quality: 85,
     format: 'webp'
   }),
 
   // About page portrait
   portrait: (url: string) => optimizeImage(url, { 
-    width: 800, 
-    quality: 85,
+    width: 1000, 
+    quality: 90,
     format: 'webp'
   }),
 

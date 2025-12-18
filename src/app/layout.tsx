@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   description:
     'Fine art, documentary & destination wedding photography. Cinematic, nostalgic storytelling for kindred souls. Based in Phoenix, available worldwide.',
   keywords: [
+    'Aamod P. Pisat Photography',
+    'Aamod P. Pisat',
+    'Photography',
+    'Indian Wedding Photographer',
+    'Indian Elopement Photographer',
+    'Indian Destination Wedding Photographer',
+    'Indian Fine Art Photographer',
+    'Indian Documentary Photographer',
+    'Indian Cinematic Wedding Photographer',
+    'Indian Luxury Wedding Photographer',
+    'Indian Wedding Photography',
     'wedding photography',
     'elopement photographer',
     'destination wedding',
@@ -83,8 +94,20 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   // Fetch site config from Contentstack
-  const siteConfig = await getSiteConfig() || defaultSiteConfig;
-
+  const siteConfig = await getSiteConfig();
+  if (!siteConfig) {
+    return (
+      <html lang="en">
+        <body className="antialiased">
+          <LivePreviewProvider>
+            <SiteConfigProvider siteConfig={defaultSiteConfig}>
+              <Layout>{children}</Layout>
+            </SiteConfigProvider>
+          </LivePreviewProvider>
+        </body>
+      </html>
+    );
+  }
   return (
     <html lang="en">
       <body className="antialiased">
