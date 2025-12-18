@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Image optimization
   images: {
     remotePatterns: [
       {
@@ -10,8 +11,25 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
     ],
   },
+  
+  // Production optimizations
+  swcMinify: true,
+  
+  // Strict mode for better React practices
+  reactStrictMode: true,
+  
+  // Powered by header (optional: set to false to hide)
+  poweredByHeader: false,
 };
 
 module.exports = nextConfig;

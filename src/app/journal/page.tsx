@@ -1,24 +1,19 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import BlogCard from '@/components/ui/BlogCard';
-import { sampleBlogPosts } from '@/lib/sampleData';
-
-// For SSG with Contentstack:
-// import { getBlogPosts } from '@/lib/contentstack';
+import { getBlogPosts } from '@/lib/contentstack';
 
 export const metadata: Metadata = {
   title: 'Journal',
   description: 'Stories, tips, and insights from behind the lens. Explore our blog for wedding photography inspiration and planning advice.',
 };
 
-// This would enable ISR when connected to Contentstack
-// export const revalidate = 3600; // Revalidate every hour
+// Enable ISR - revalidate every hour
+export const revalidate = 3600;
 
 export default async function JournalPage() {
-  // When Contentstack is connected:
-  // const posts = await getBlogPosts();
-  const posts = sampleBlogPosts;
+  // Fetch blog posts from Contentstack
+  const posts = await getBlogPosts();
 
   const featuredPost = posts[0];
   const otherPosts = posts.slice(1);
@@ -51,49 +46,66 @@ export default async function JournalPage() {
       {/* Blog Content */}
       <section className="section bg-cream-100">
         <div className="container-wide">
-          {/* Featured Post */}
-          {featuredPost && (
-            <div className="mb-20">
-              <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-8">
-                Latest Story
+          {posts.length > 0 ? (
+            <>
+              {/* Featured Post */}
+              {featuredPost && (
+                <div className="mb-20">
+                  <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-8">
+                    Latest Story
+                  </p>
+                  <BlogCard post={featuredPost} index={0} variant="featured" />
+                </div>
+              )}
+
+              {/* Divider */}
+              {otherPosts.length > 0 && (
+                <>
+                  <div className="w-full h-px bg-charcoal-200 mb-16" />
+
+                  {/* All Posts Grid */}
+                  <div>
+                    <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-10">
+                      All Stories
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                      {otherPosts.map((post, index) => (
+                        <BlogCard key={post.uid} post={post} index={index} />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+            </>
+          ) : (
+            <div className="text-center py-16">
+              <p className="text-charcoal-600 mb-4">Journal posts coming soon...</p>
+              <p className="text-charcoal-500 text-sm">
+                Check back later for stories, tips, and insights from behind the lens.
               </p>
-              <BlogCard post={featuredPost} index={0} variant="featured" />
             </div>
           )}
 
-          {/* Divider */}
-          <div className="w-full h-px bg-charcoal-200 mb-16" />
-
-          {/* All Posts Grid */}
-          <div>
-            <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-10">
-              All Stories
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {otherPosts.map((post, index) => (
-                <BlogCard key={post.uid} post={post} index={index} />
-              ))}
-            </div>
-          </div>
-
           {/* Pagination placeholder */}
-          <div className="mt-16 flex justify-center">
-            <nav className="flex items-center space-x-4">
-              <button
-                disabled
-                className="px-4 py-2 text-caption uppercase tracking-widest text-charcoal-400 cursor-not-allowed"
-              >
-                Previous
-              </button>
-              <span className="text-charcoal-600">1 of 1</span>
-              <button
-                disabled
-                className="px-4 py-2 text-caption uppercase tracking-widest text-charcoal-400 cursor-not-allowed"
-              >
-                Next
-              </button>
-            </nav>
-          </div>
+          {posts.length > 0 && (
+            <div className="mt-16 flex justify-center">
+              <nav className="flex items-center space-x-4">
+                <button
+                  disabled
+                  className="px-4 py-2 text-caption uppercase tracking-widest text-charcoal-400 cursor-not-allowed"
+                >
+                  Previous
+                </button>
+                <span className="text-charcoal-600">1 of 1</span>
+                <button
+                  disabled
+                  className="px-4 py-2 text-caption uppercase tracking-widest text-charcoal-400 cursor-not-allowed"
+                >
+                  Next
+                </button>
+              </nav>
+            </div>
+          )}
         </div>
       </section>
 
@@ -124,4 +136,3 @@ export default async function JournalPage() {
     </>
   );
 }
-

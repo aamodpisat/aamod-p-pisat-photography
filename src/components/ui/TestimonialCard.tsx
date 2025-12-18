@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Testimonial } from '@/lib/types';
+import { safeTextContent } from '@/lib/richtext-renderer';
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
@@ -12,6 +13,9 @@ export default function TestimonialCard({
   testimonial,
   index,
 }: TestimonialCardProps) {
+  // Get the review text - handle both plain text and JSON RTE
+  const reviewText = safeTextContent(testimonial.review_text);
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -38,7 +42,7 @@ export default function TestimonialCard({
         
         {/* Quote text */}
         <blockquote className="text-body-lg text-charcoal-700 leading-relaxed mb-8">
-          {testimonial.review_text}
+          {reviewText}
         </blockquote>
         
         {/* Client name */}
@@ -54,4 +58,3 @@ export default function TestimonialCard({
     </motion.article>
   );
 }
-

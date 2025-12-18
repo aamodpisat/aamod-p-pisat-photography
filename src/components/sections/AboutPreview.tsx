@@ -3,13 +3,59 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
-import { SiteConfig } from '@/lib/types';
+import { ContentstackAsset } from '@/lib/types';
+import { RichText, safeTextContent } from '@/lib/richtext-renderer';
 
 interface AboutPreviewProps {
-  config: SiteConfig;
+  content: {
+    featured_label: string;
+    featured_brands: string[] | undefined;
+    title: string;
+    description: unknown; // Can be string or JSON RTE
+    image: ContentstackAsset | undefined;
+    cta_text: string;
+    cta_link: string;
+  };
 }
 
-export default function AboutPreview({ config }: AboutPreviewProps) {
+export default function AboutPreview({ content }: AboutPreviewProps) {
+  // Get image URL safely - handle both direct URL and nested asset structure
+  const getImageUrl = (): string => {
+    if (!content.image) {
+      return 'https://images.unsplash.com/photo-1554080353-a576cf803bda?w=800&q=80'; // Fallback
+    }
+    
+    // Handle direct URL
+    if (typeof content.image === 'string') {
+      return content.image;
+    }
+    
+    // Handle Contentstack asset object
+    if (content.image.url) {
+      return content.image.url;
+    }
+    
+    // Handle nested asset structure (sometimes file fields return { url: ... } or { file: { url: ... } })
+    const asset = content.image as unknown as Record<string, unknown>;
+    if (asset.file && typeof asset.file === 'object') {
+      const file = asset.file as Record<string, unknown>;
+      if (file.url) return file.url as string;
+    }
+    
+    return 'https://images.unsplash.com/photo-1554080353-a576cf803bda?w=800&q=80'; // Fallback
+  };
+
+  const getImageAlt = (): string => {
+    if (!content.image) return 'Photographer';
+    if (typeof content.image === 'string') return 'Photographer';
+    return content.image.title || 'Photographer';
+  };
+
+  // Get featured brands safely - handle both array and undefined
+  const featuredBrands = Array.isArray(content.featured_brands) 
+    ? content.featured_brands 
+    : [];
+
   return (
     <section className="section bg-cream-200">
       <div className="container-wide">
@@ -24,8 +70,8 @@ export default function AboutPreview({ config }: AboutPreviewProps) {
           >
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800&q=80"
-                alt="Aamod P. Pisat - Photographer"
+                src={getImageUrl()}
+                alt={getImageAlt()}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -44,43 +90,44 @@ export default function AboutPreview({ config }: AboutPreviewProps) {
             className="lg:pl-8"
           >
             {/* Featured In badges */}
-            <div className="mb-8">
-              <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-4">
-                Featured In
-              </p>
-              <div className="flex flex-wrap gap-6 opacity-60">
-                <span className="font-serif text-lg text-charcoal-600">Vogue</span>
-                <span className="font-serif text-lg text-charcoal-600">Martha Stewart</span>
-                <span className="font-serif text-lg text-charcoal-600">The Knot</span>
+            {(content.featured_label || featuredBrands.length > 0) && (
+              <div className="mb-8">
+                {content.featured_label && (
+                  <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-4">
+                    {safeTextContent(content.featured_label)}
+                  </p>
+                )}
+                {featuredBrands.length > 0 && (
+                  <div className="flex flex-wrap gap-6 opacity-60">
+                    {featuredBrands.map((brand, index) => (
+                      <span key={index} className="font-serif text-lg text-charcoal-600">
+                        {safeTextContent(brand)}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
+            )}
 
             <h2 className="font-serif text-heading-lg md:text-heading-xl text-charcoal-900 mb-6">
-              I'm Aamod, the storyteller behind the lens.
+              {safeTextContent(content.title)}
             </h2>
 
-            <div className="space-y-6 text-body-lg text-charcoal-700 font-light">
-              <p>
-                My approach to photography is deeply rooted in capturing authentic 
-                moments—the quiet glances, the unscripted laughter, the raw emotions 
-                that make your story uniquely yours.
-              </p>
-              <p>
-                Nothing brings me more joy than documenting your love story through 
-                photography and creating something timeless out of it—something tangible 
-                that you can frame on your wall and pass down for generations.
-              </p>
-            </div>
+            <RichText 
+              content={content.description}
+              className="space-y-6 text-body-lg text-charcoal-700 font-light"
+            />
 
-            <div className="mt-10">
-              <Button href="/about" variant="outline">
-                More About Me
-              </Button>
-            </div>
+            {content.cta_text && content.cta_link && (
+              <div className="mt-10">
+                <Button href={content.cta_link} variant="outline">
+                  {content.cta_text}
+                </Button>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>
     </section>
   );
 }
-

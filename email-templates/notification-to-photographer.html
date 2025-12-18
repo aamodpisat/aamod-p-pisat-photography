@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Inquiry Received</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Georgia', serif; background-color: #f5f0e8;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f0e8;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color: #1a1a1a; padding: 30px 40px; text-align: center;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: normal; letter-spacing: 2px;">
+                                AAMOD P. PISAT
+                            </h1>
+                            <p style="margin: 8px 0 0 0; color: #d4b896; font-size: 12px; letter-spacing: 3px; text-transform: uppercase;">
+                                Photography
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Alert Banner -->
+                    <tr>
+                        <td style="background-color: #d4b896; padding: 15px 40px; text-align: center;">
+                            <p style="margin: 0; color: #1a1a1a; font-size: 14px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">
+                                🔔 New Inquiry Received
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <!-- Inquiry ID -->
+                            <div style="background-color: #f5f0e8; padding: 20px; border-radius: 4px; margin-bottom: 30px; text-align: center;">
+                                <p style="margin: 0 0 5px 0; color: #666666; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                                    Inquiry Reference
+                                </p>
+                                <p style="margin: 0; color: #1a1a1a; font-size: 24px; font-weight: bold; letter-spacing: 2px;">
+                                    {{entry.inquiry_id}}
+                                </p>
+                            </div>
+                            
+                            <!-- Client Details -->
+                            <h2 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: normal; border-bottom: 1px solid #e0d4c2; padding-bottom: 10px;">
+                                Client Details
+                            </h2>
+                            
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 30px;">
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Name:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px; font-weight: bold;">{{entry.client_name}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Email:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px;">
+                                        <a href="mailto:{{entry.email}}" style="color: #d4b896; text-decoration: none;">{{entry.email}}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Phone:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px;">
+                                        <a href="tel:{{entry.phone}}" style="color: #d4b896; text-decoration: none;">{{entry.phone}}</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Event Details -->
+                            <h2 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: normal; border-bottom: 1px solid #e0d4c2; padding-bottom: 10px;">
+                                Event Details
+                            </h2>
+                            
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 30px;">
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Event Type:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px; font-weight: bold;">{{entry.event_type}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Event Date:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px;">{{entry.event_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Location:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px;">{{entry.location}}</td>
+                                </tr>
+                                <tr>
+                                    <td width="140" style="padding: 10px 0; color: #888888; font-size: 14px; vertical-align: top;">Referral Source:</td>
+                                    <td style="padding: 10px 0; color: #1a1a1a; font-size: 14px;">{{entry.referral_source}}</td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Message -->
+                            <h2 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: normal; border-bottom: 1px solid #e0d4c2; padding-bottom: 10px;">
+                                Message
+                            </h2>
+                            
+                            <div style="background-color: #faf8f5; padding: 20px; border-left: 3px solid #d4b896; margin-bottom: 30px;">
+                                <p style="margin: 0; color: #444444; font-size: 14px; line-height: 1.8; font-style: italic;">
+                                    "{{entry.message}}"
+                                </p>
+                            </div>
+                            
+                            <!-- CTA Button -->
+                            <div style="text-align: center; margin-top: 30px;">
+                                <a href="https://app.contentstack.com" style="display: inline-block; background-color: #1a1a1a; color: #ffffff; text-decoration: none; padding: 15px 40px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; border-radius: 2px;">
+                                    View in Contentstack
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #1a1a1a; padding: 25px 40px; text-align: center;">
+                            <p style="margin: 0; color: #888888; font-size: 12px;">
+                                Submitted on {{entry.submitted_at}}
+                            </p>
+                            <p style="margin: 10px 0 0 0; color: #666666; font-size: 11px;">
+                                This is an automated notification from your website contact form.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

@@ -8,9 +8,16 @@ import { BlogPost } from '@/lib/types';
 
 interface JournalPreviewProps {
   posts: BlogPost[];
+  content: {
+    subtitle: string;
+    title: string;
+    description: unknown; // Can be string or JSON RTE
+    cta_text: string;
+    cta_link: string;
+  };
 }
 
-export default function JournalPreview({ posts }: JournalPreviewProps) {
+export default function JournalPreview({ posts, content }: JournalPreviewProps) {
   const latestPosts = posts.slice(0, 3);
   const featuredPost = latestPosts[0];
   const otherPosts = latestPosts.slice(1);
@@ -20,9 +27,9 @@ export default function JournalPreview({ posts }: JournalPreviewProps) {
       <div className="container-wide">
         {/* Section Header */}
         <SectionHeading
-          subtitle="Journal"
-          title="Stories & Insights"
-          description="Dive deeper into our world of photography, wedding planning tips, and behind-the-scenes stories."
+          subtitle={content.subtitle}
+          title={content.title}
+          description={content.description}
         />
 
         {/* Blog Grid */}
@@ -52,12 +59,11 @@ export default function JournalPreview({ posts }: JournalPreviewProps) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center mt-16"
         >
-          <Button href="/journal" variant="outline">
-            View All Posts
+          <Button href={content.cta_link} variant="outline">
+            {content.cta_text}
           </Button>
         </motion.div>
       </div>
     </section>
   );
 }
-

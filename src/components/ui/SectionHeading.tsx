@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { RichText, isJsonRTE, isPlainText } from '@/lib/richtext-renderer';
 
 interface SectionHeadingProps {
   subtitle?: string;
   title: string;
-  description?: string;
+  description?: unknown; // Can be string or JSON RTE
   alignment?: 'left' | 'center' | 'right';
   light?: boolean;
 }
@@ -21,6 +22,49 @@ export default function SectionHeading({
     left: 'text-left',
     center: 'text-center mx-auto',
     right: 'text-right ml-auto',
+  };
+
+  // Render description based on type
+  const renderDescription = () => {
+    if (!description) return null;
+    
+    // If it's plain text, render it directly in a p tag
+    if (isPlainText(description)) {
+      return (
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className={`mt-6 text-body-lg font-light ${
+            light ? 'text-cream-300' : 'text-charcoal-600'
+          }`}
+        >
+          {description}
+        </motion.p>
+      );
+    }
+    
+    // If it's JSON RTE or other object, use RichText renderer
+    if (isJsonRTE(description) || typeof description === 'object') {
+      return (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <RichText 
+            content={description} 
+            className={`mt-6 text-body-lg font-light ${
+              light ? 'text-cream-300' : 'text-charcoal-600'
+            }`}
+          />
+        </motion.div>
+      );
+    }
+    
+    return null;
   };
 
   return (
@@ -51,20 +95,7 @@ export default function SectionHeading({
       >
         {title}
       </h2>
-      {description && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className={`mt-6 text-body-lg font-light ${
-            light ? 'text-cream-300' : 'text-charcoal-600'
-          }`}
-        >
-          {description}
-        </motion.p>
-      )}
+      {renderDescription()}
     </motion.div>
   );
 }
-

@@ -139,32 +139,12 @@ export default function Hero({
             animate="visible"
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
           >
-            {/* Main Title */}
-            <motion.h1
-              custom={0.2}
-              variants={contentVariants}
-              className="font-serif text-display md:text-display-lg leading-none mb-2"
-            >
-              {currentSlide.title}
-            </motion.h1>
-
-            {/* Subtitle */}
-            {currentSlide.subtitle && (
-              <motion.h2
-                custom={0.4}
-                variants={contentVariants}
-                className="font-serif text-heading-lg md:text-display text-cream-200 mb-8"
-              >
-                {currentSlide.subtitle}
-              </motion.h2>
-            )}
-
             {/* Tagline */}
             {currentSlide.tagline && (
               <motion.p
                 custom={0.6}
                 variants={contentVariants}
-                className="font-script text-4xl md:text-5xl text-sepia-300 mb-12"
+                className="font-script text-4xl md:text-5xl text-cream-100 mb-12"
               >
                 {currentSlide.tagline}
               </motion.p>

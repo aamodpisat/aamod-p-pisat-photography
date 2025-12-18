@@ -4,13 +4,20 @@ import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/SectionHeading';
 import PortfolioCard from '@/components/ui/PortfolioCard';
 import Button from '@/components/ui/Button';
-import { PortfolioItem } from '@/lib/types';
+import { PortfolioItem, HomepageContent } from '@/lib/types';
 
 interface FeaturedWorkProps {
   items: PortfolioItem[];
+  content: {
+    subtitle: string;
+    title: string;
+    description: unknown; // Can be string or JSON RTE
+    cta_text: string;
+    cta_link: string;
+  };
 }
 
-export default function FeaturedWork({ items }: FeaturedWorkProps) {
+export default function FeaturedWork({ items, content }: FeaturedWorkProps) {
   const featuredItems = items.filter((item) => item.is_featured).slice(0, 6);
 
   return (
@@ -18,9 +25,9 @@ export default function FeaturedWork({ items }: FeaturedWorkProps) {
       <div className="container-wide">
         {/* Section Header */}
         <SectionHeading
-          subtitle="Portfolio"
-          title="Raw, timeless, nostalgic, cinematic"
-          description="Storytelling for kindred souls. My approach errs more on the cinematic, romantic side, all from a documentary perspective."
+          subtitle={content.subtitle}
+          title={content.title}
+          description={content.description}
         />
 
         {/* Gallery Grid */}
@@ -58,12 +65,11 @@ export default function FeaturedWork({ items }: FeaturedWorkProps) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center mt-16"
         >
-          <Button href="/portfolio" variant="outline">
-            View Full Portfolio
+          <Button href={content.cta_link} variant="outline">
+            {content.cta_text}
           </Button>
         </motion.div>
       </div>
     </section>
   );
 }
-

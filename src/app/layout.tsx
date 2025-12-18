@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import Layout from '@/components/layout/Layout';
+import { SiteConfigProvider } from '@/lib/SiteConfigContext';
+import { getSiteConfig } from '@/lib/contentstack';
+import LivePreviewProvider from '@/components/LivePreviewProvider';
 
 export const metadata: Metadata = {
   title: {
@@ -38,17 +41,59 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+// Disable caching for Live Preview support
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+// Default site config when Contentstack is not connected
+const defaultSiteConfig = {
+  uid: 'default-config',
+  title: 'Site Configuration',
+  site_name: 'Aamod P. Pisat',
+  site_subtitle: 'Photography',
+  tagline: 'Capturing the real emotions...',
+  contact_email: 'hello@aamodphotography.com',
+  footer_text: '© 2025 Aamod P. Pisat Photography | All Rights Reserved',
+  primary_navigation: [
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Films', href: '/films' },
+    { label: 'Testimonials', href: '/testimonials' },
+  ],
+  secondary_navigation: [
+    { label: 'About', href: '/about' },
+    { label: 'Journal', href: '/journal' },
+    { label: 'Contact', href: '/contact' },
+  ],
+  footer_left_navigation: [
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'FAQ', href: '/faq' },
+  ],
+  footer_right_navigation: [
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Films', href: '/films' },
+    { label: 'Journal', href: '/journal' },
+    { label: 'Contact', href: '/contact' },
+  ],
+};
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Fetch site config from Contentstack
+  const siteConfig = await getSiteConfig() || defaultSiteConfig;
+
   return (
     <html lang="en">
       <body className="antialiased">
-        <Layout>{children}</Layout>
+        <LivePreviewProvider>
+          <SiteConfigProvider siteConfig={siteConfig}>
+            <Layout>{children}</Layout>
+          </SiteConfigProvider>
+        </LivePreviewProvider>
       </body>
     </html>
   );
 }
-

@@ -2,24 +2,16 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { sampleSiteConfig } from '@/lib/sampleData';
+import { SiteConfig } from '@/lib/types';
 
-const footerNavLeft = [
-  { label: 'About', href: '/about' },
-  { label: 'Info', href: '/info' },
-  { label: 'How It Works', href: '/how-it-works' },
-  { label: 'FAQ', href: '/faq' },
-];
+interface FooterProps {
+  siteConfig: SiteConfig;
+}
 
-const footerNavRight = [
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Films', href: '/films' },
-  { label: 'Testimonials', href: '/testimonials' },
-  { label: 'Journal', href: '/journal' },
-  { label: 'Contact', href: '/contact' },
-];
+export default function Footer({ siteConfig }: FooterProps) {
+  const footerNavLeft = siteConfig.footer_left_navigation || [];
+  const footerNavRight = siteConfig.footer_right_navigation || [];
 
-export default function Footer() {
   return (
     <footer className="bg-charcoal-900 text-cream-100">
       {/* Main Footer */}
@@ -42,21 +34,21 @@ export default function Footer() {
           <div className="text-center">
             <Link href="/" className="inline-block">
               <h2 className="font-serif text-3xl md:text-4xl tracking-wide mb-3">
-                Aamod P. Pisat
+                {siteConfig.site_name}
               </h2>
               <p className="text-xs tracking-[0.3em] uppercase text-cream-400">
-                Photography
+                {siteConfig.site_subtitle}
               </p>
             </Link>
             <p className="font-script text-3xl text-sepia-400 mt-6">
-              {sampleSiteConfig.tagline}
+              {siteConfig.tagline}
             </p>
 
             {/* Social Links */}
             <div className="flex justify-center space-x-6 mt-8">
-              {sampleSiteConfig.social_links?.instagram && (
+              {siteConfig.instagram_url && (
                 <a
-                  href={sampleSiteConfig.social_links.instagram}
+                  href={siteConfig.instagram_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cream-400 hover:text-sepia-400 transition-colors"
@@ -67,9 +59,9 @@ export default function Footer() {
                   </svg>
                 </a>
               )}
-              {sampleSiteConfig.social_links?.pinterest && (
+              {siteConfig.pinterest_url && (
                 <a
-                  href={sampleSiteConfig.social_links.pinterest}
+                  href={siteConfig.pinterest_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cream-400 hover:text-sepia-400 transition-colors"
@@ -80,9 +72,9 @@ export default function Footer() {
                   </svg>
                 </a>
               )}
-              {sampleSiteConfig.social_links?.vimeo && (
+              {siteConfig.vimeo_url && (
                 <a
-                  href={sampleSiteConfig.social_links.vimeo}
+                  href={siteConfig.vimeo_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cream-400 hover:text-sepia-400 transition-colors"
@@ -90,6 +82,19 @@ export default function Footer() {
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z" />
+                  </svg>
+                </a>
+              )}
+              {siteConfig.facebook_url && (
+                <a
+                  href={siteConfig.facebook_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream-400 hover:text-sepia-400 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </a>
               )}
@@ -135,7 +140,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-charcoal-800">
         <div className="container-wide py-6 flex flex-col md:flex-row items-center justify-between text-xs text-cream-500 tracking-wider">
-          <p>{sampleSiteConfig.footer_text}</p>
+          <p>{siteConfig.footer_text}</p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="mt-4 md:mt-0 hover:text-sepia-400 transition-colors flex items-center space-x-2"
@@ -150,4 +155,3 @@ export default function Footer() {
     </footer>
   );
 }
-

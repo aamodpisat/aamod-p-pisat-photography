@@ -1,15 +1,16 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
-import { sampleServicePackages } from '@/lib/sampleData';
+import { getServicePackages } from '@/lib/contentstack';
 
 export const metadata: Metadata = {
   title: 'Services',
   description: 'Wedding and elopement photography packages tailored to your unique love story.',
 };
 
-export default function ServicesPage() {
-  const services = sampleServicePackages;
+export default async function ServicesPage() {
+  // Fetch services from Contentstack
+  const services = await getServicePackages();
 
   return (
     <>
@@ -55,76 +56,87 @@ export default function ServicesPage() {
           </div>
 
           {/* Packages Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <article
-                key={service.uid}
-                className={`bg-cream-50 p-8 md:p-10 relative ${
-                  service.is_popular
-                    ? 'ring-2 ring-sepia-500 md:-mt-4 md:mb-4'
-                    : ''
-                }`}
-              >
-                {service.is_popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-sepia-600 text-cream-100 text-xs uppercase tracking-widest px-4 py-2">
-                      Most Popular
-                    </span>
+          {services.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {services.map((service) => (
+                <article
+                  key={service.uid}
+                  className={`bg-cream-50 p-8 md:p-10 relative ${
+                    service.is_popular
+                      ? 'ring-2 ring-sepia-500 md:-mt-4 md:mb-4'
+                      : ''
+                  }`}
+                >
+                  {service.is_popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <span className="bg-sepia-600 text-cream-100 text-xs uppercase tracking-widest px-4 py-2">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <h3 className="font-serif text-xl md:text-2xl text-charcoal-900 mb-2">
+                      {service.name}
+                    </h3>
+                    <p className="text-caption uppercase tracking-widest text-sepia-600 mb-4">
+                      {service.category}
+                    </p>
+                    <p className="text-body text-charcoal-600 mb-6">
+                      {service.description}
+                    </p>
+                    <p className="font-serif text-2xl text-charcoal-900">
+                      {service.price}
+                    </p>
                   </div>
-                )}
 
-                <div className="text-center mb-8">
-                  <h3 className="font-serif text-xl md:text-2xl text-charcoal-900 mb-2">
-                    {service.name}
-                  </h3>
-                  <p className="text-caption uppercase tracking-widest text-sepia-600 mb-4">
-                    {service.category}
-                  </p>
-                  <p className="text-body text-charcoal-600 mb-6">
-                    {service.description}
-                  </p>
-                  <p className="font-serif text-2xl text-charcoal-900">
-                    {service.price}
-                  </p>
-                </div>
-
-                <div className="border-t border-charcoal-200 pt-8">
-                  <p className="text-caption uppercase tracking-widest text-charcoal-500 mb-4">
-                    Includes
-                  </p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start text-charcoal-700"
-                      >
-                        <svg
-                          className="w-5 h-5 text-sepia-500 mr-3 mt-0.5 flex-shrink-0"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                  <div className="border-t border-charcoal-200 pt-8">
+                    <p className="text-caption uppercase tracking-widest text-charcoal-500 mb-4">
+                      Includes
+                    </p>
+                    <ul className="space-y-3">
+                      {service.features.map((feature, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start text-charcoal-700"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                          <svg
+                            className="w-5 h-5 text-sepia-500 mr-3 mt-0.5 flex-shrink-0"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                <div className="mt-8 text-center">
-                  <Button href="/contact" variant="outline" className="w-full">
-                    Inquire
-                  </Button>
-                </div>
-              </article>
-            ))}
-          </div>
+                  <div className="mt-8 text-center">
+                    <Button href="/contact" variant="outline" className="w-full">
+                      Inquire
+                    </Button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <p className="text-charcoal-600 mb-8">
+                Service packages are being updated. Please contact us for current pricing.
+              </p>
+              <Button href="/contact" variant="outline">
+                Contact Us
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -239,4 +251,3 @@ export default function ServicesPage() {
     </>
   );
 }
-
