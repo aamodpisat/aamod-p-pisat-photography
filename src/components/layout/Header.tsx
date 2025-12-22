@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavItem, SiteConfig } from '@/lib/types';
@@ -9,12 +10,22 @@ interface HeaderProps {
   siteConfig: SiteConfig;
 }
 
+// Pages that have light backgrounds at the top (no dark hero)
+const LIGHT_BACKGROUND_PAGES = ['/stories', '/journal', '/faq', '/services', '/info'];
+
 export default function Header({ siteConfig }: HeaderProps) {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const primaryNav = siteConfig.primary_navigation || [];
   const secondaryNav = siteConfig.secondary_navigation || [];
+
+  // Check if current page has a light background (needs dark header from start)
+  const isLightBackgroundPage = LIGHT_BACKGROUND_PAGES.some(page => pathname?.startsWith(page));
+
+  // Use dark header if scrolled OR if on a light background page
+  const useDarkHeader = isScrolled || isLightBackgroundPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,8 +49,8 @@ export default function Header({ siteConfig }: HeaderProps) {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-cinematic ${
-          isScrolled
-            ? 'bg-cream-100/95 backdrop-blur-sm py-4 shadow-sm'
+          useDarkHeader
+            ? 'bg-white/95 backdrop-blur-sm py-4 shadow-sm'
             : 'bg-transparent py-6'
         }`}
       >
@@ -53,7 +64,7 @@ export default function Header({ siteConfig }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   className={`text-caption uppercase tracking-widest link-underline transition-colors duration-300 whitespace-nowrap ${
-                    isScrolled ? 'text-charcoal-800' : 'text-white'
+                    useDarkHeader ? 'text-charcoal-800' : 'text-white'
                   }`}
                 >
                   {item.label}
@@ -71,14 +82,14 @@ export default function Header({ siteConfig }: HeaderProps) {
               >
                 <h1
                   className={`font-serif font-semibold text-xl md:text-2xl tracking-wide transition-colors duration-300 bg-transparent whitespace-nowrap ${
-                    isScrolled ? 'text-charcoal-900' : 'text-white'
+                    useDarkHeader ? 'text-charcoal-900' : 'text-white'
                   }`}
                 >
                   {siteConfig.site_name}
                 </h1>
                 <p
                   className={`text-xs tracking-[0.25em] uppercase mt-1 transition-colors duration-300 whitespace-nowrap ${
-                    isScrolled ? 'text-charcoal-600' : 'text-white/80'
+                    useDarkHeader ? 'text-charcoal-600' : 'text-white/80'
                   }`}
                   style={{ fontFamily: '"Times New Roman", serif' }}
                 >
@@ -94,7 +105,7 @@ export default function Header({ siteConfig }: HeaderProps) {
                   <Link
                     href={item.href}
                     className={`text-caption uppercase tracking-widest link-underline transition-colors duration-300 whitespace-nowrap ${
-                      isScrolled ? 'text-charcoal-800' : 'text-white'
+                      useDarkHeader ? 'text-charcoal-800' : 'text-white'
                     }`}
                   >
                     {item.label}
@@ -131,14 +142,14 @@ export default function Header({ siteConfig }: HeaderProps) {
               >
                 <h1
                   className={`font-serif font-semibold text-lg tracking-wide transition-colors duration-300 bg-transparent whitespace-nowrap ${
-                    isScrolled ? 'text-charcoal-900' : 'text-white'
+                    useDarkHeader ? 'text-charcoal-900' : 'text-white'
                   }`}
                 >
                   {siteConfig.site_name}
                 </h1>
                 <p
                   className={`text-[10px] tracking-[0.2em] uppercase mt-0.5 transition-colors duration-300 whitespace-nowrap ${
-                    isScrolled ? 'text-charcoal-600' : 'text-white/80'
+                    useDarkHeader ? 'text-charcoal-600' : 'text-white/80'
                   }`}
                   style={{ fontFamily: '"Times New Roman", serif' }}
                 >
@@ -154,7 +165,7 @@ export default function Header({ siteConfig }: HeaderProps) {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`z-50 w-10 h-10 flex flex-col items-center justify-center space-y-1.5 transition-colors ${
-                isMobileMenuOpen ? 'text-cream-100' : isScrolled ? 'text-charcoal-800' : 'text-white'
+                isMobileMenuOpen ? 'text-cream-100' : useDarkHeader ? 'text-charcoal-800' : 'text-white'
               }`}
               aria-label="Toggle menu"
             >

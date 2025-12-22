@@ -1,14 +1,14 @@
 import Hero from '@/components/sections/Hero';
 import PortfolioGallery from '@/components/sections/PortfolioGallery';
 import AboutPreview from '@/components/sections/AboutPreview';
+import StoriesPreview from '@/components/sections/StoriesPreview';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import JournalPreview from '@/components/sections/JournalPreview';
 import ContactCTA from '@/components/sections/ContactCTA';
 import {
   getHomepageContent,
   getTestimonials,
-  getBlogPosts,
   getAboutPageContent,
+  getFeaturedStories,
 } from '@/lib/contentstack';
 import { HeroBanner, FeaturedBanner } from '@/lib/types';
 
@@ -35,13 +35,13 @@ export default async function HomePage() {
   const [
     homepageContent,
     testimonials,
-    blogPosts,
     aboutPageContent,
+    featuredStories,
   ] = await Promise.all([
     getHomepageContent(),
     getTestimonials(4),
-    getBlogPosts({ limit: 3 }),
     getAboutPageContent(),
+    getFeaturedStories(4),
   ]);
 
   // Get featured banners from homepage content
@@ -53,7 +53,6 @@ export default async function HomePage() {
   // Extract grouped sections with defaults
   const portfolioSection = homepageContent?.portfolio_section;
   const testimonialsSection = homepageContent?.testimonials_section;
-  const journalSection = homepageContent?.journal_section;
   const contactSection = homepageContent?.contact_section;
 
   return (
@@ -89,6 +88,20 @@ export default async function HomePage() {
         }}
       />
 
+      {/* Featured Stories - Only shows stories with is_featured: true */}
+      {featuredStories.length > 0 && (
+        <StoriesPreview 
+          stories={featuredStories}
+          content={{
+            subtitle: 'Exclusive Stories',
+            title: 'Featured Stories & Insights',
+            description: 'Every story is unique. Here are some of our favorites.',
+            cta_text: 'View All Stories',
+            cta_link: '/stories',
+          }}
+        />
+      )}
+
       {/* Testimonials */}
       {testimonials.length > 0 && (
         <TestimonialsSection 
@@ -98,20 +111,6 @@ export default async function HomePage() {
             title: testimonialsSection?.title || 'What Our Clients Say',
             cta_text: testimonialsSection?.cta?.title || 'Read More Testimonials',
             cta_link: testimonialsSection?.cta?.href || '/testimonials',
-          }}
-        />
-      )}
-
-      {/* Journal Preview */}
-      {blogPosts.length > 0 && (
-        <JournalPreview 
-          posts={blogPosts}
-          content={{
-            subtitle: journalSection?.subtitle || 'Journal',
-            title: journalSection?.title || 'Stories & Insights',
-            description: journalSection?.description || '',
-            cta_text: journalSection?.cta?.title || 'View All Posts',
-            cta_link: journalSection?.cta?.href || '/journal',
           }}
         />
       )}

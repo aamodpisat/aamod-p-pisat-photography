@@ -12,13 +12,13 @@ import {
   HomepageContent, 
   PortfolioItem, 
   Testimonial, 
-  BlogPost, 
   ServicePackage,
   ContactPageContent,
   AboutPageContent,
   FilmsPageContent,
   PortfolioPageContent,
-  ContentstackAsset 
+  ContentstackAsset,
+  StoryPost 
 } from './types';
 
 // Helper function to map region string to Region enum
@@ -91,12 +91,12 @@ export const CONTENT_TYPES = {
   HOMEPAGE: 'homepage_new', // Updated to match actual content type UID
   PORTFOLIO_ITEM: 'portfolio_item',
   TESTIMONIAL: 'testimonial',
-  BLOG_POST: 'blog_post',
   SERVICE_PACKAGE: 'service_package',
   CONTACT_PAGE: 'contact_page',
   ABOUT_PAGE: 'about_page',
   FILMS_PAGE: 'films_page',
   PORTFOLIO_PAGE: 'portfolio_page',
+  STORIES_POST: 'stories_post',
 } as const;
 
 /**
@@ -234,56 +234,6 @@ export async function getTestimonials(limit?: number): Promise<Testimonial[]> {
   } catch (error) {
     console.error('Error fetching testimonials:', error);
     return [];
-  }
-}
-
-/**
- * Fetch all blog posts
- */
-export async function getBlogPosts(options?: {
-  limit?: number;
-  skip?: number;
-}): Promise<BlogPost[]> {
-  try {
-    let query = stack
-      .contentType(CONTENT_TYPES.BLOG_POST)
-      .entry()
-      .query();
-
-    if (options?.limit) {
-      query = query.limit(options.limit);
-    }
-
-    if (options?.skip) {
-      query = query.skip(options.skip);
-    }
-
-    const result = await query.find();
-    return (result.entries as BlogPost[]) || [];
-  } catch (error) {
-    console.error('Error fetching blog posts:', error);
-    return [];
-  }
-}
-
-/**
- * Fetch single blog post by slug
- */
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
-  try {
-    const query = stack
-      .contentType(CONTENT_TYPES.BLOG_POST)
-      .entry()
-      .query()
-      .equalTo('url', `/${slug}`)
-      .limit(1);
-
-    const result = await query.find();
-    const entries = result.entries as BlogPost[];
-    return entries && entries.length > 0 ? entries[0] : null;
-  } catch (error) {
-    console.error('Error fetching blog post:', error);
-    return null;
   }
 }
 
@@ -433,7 +383,6 @@ export async function getHomePageData() {
     homepageContent,
     portfolioItems,
     testimonials,
-    blogPosts,
     aboutPageContent,
   ] = await Promise.all([
     getSiteConfig(),
@@ -441,7 +390,6 @@ export async function getHomePageData() {
     getHomepageContent(),
     getPortfolioItems({ featuredOnly: true, limit: 6 }),
     getTestimonials(4),
-    getBlogPosts({ limit: 3 }),
     getAboutPageContent(),
   ]);
 
@@ -451,9 +399,142 @@ export async function getHomePageData() {
     homepageContent,
     portfolioItems,
     testimonials,
-    blogPosts,
     aboutPageContent,
   };
+}
+
+/**
+ * Fetch all story posts
+ */
+export async function getStoryPosts(options?: {
+  limit?: number;
+  skip?: number;
+  featuredOnly?: boolean;
+  taxonomyTerm?: string;
+}): Promise<StoryPost[]> {
+  try {
+    let query = stack
+      .contentType(CONTENT_TYPES.STORIES_POST)
+      .entry()
+      .query();
+
+    // Filter by featured stories
+    if (options?.featuredOnly) {
+      query = query.equalTo('is_featured', true);
+    }
+
+    if (options?.limit) {
+      query = query.limit(options.limit);
+    }
+
+    if (options?.skip) {
+      query = query.skip(options.skip);
+    }
+
+    const result = await query.find();
+    let stories = (result.entries as StoryPost[]) || [];
+
+    // Filter by taxonomy term if provided
+    if (options?.taxonomyTerm && options.taxonomyTerm !== 'all') {
+      stories = stories.filter(story => 
+        story.taxonomies?.some(tax => 
+          tax.term_uid === options.taxonomyTerm || 
+          tax.name?.toLowerCase() === options.taxonomyTerm?.toLowerCase()
+        )
+      );
+    }
+
+    return stories;
+  } catch (error) {
+    console.error('Error fetching story posts:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetch featured story posts for homepage
+ */
+export async function getFeaturedStories(limit: number = 4): Promise<StoryPost[]> {
+  return getStoryPosts({ featuredOnly: true, limit });
+}
+
+/**
+ * Fetch single story post by URL slug
+ */
+export async function getStoryBySlug(slug: string): Promise<StoryPost | null> {
+  try {
+    // Try with leading slash first
+    let query = stack
+      .contentType(CONTENT_TYPES.STORIES_POST)
+      .entry()
+      .query()
+      .equalTo('url', slug.startsWith('/') ? slug : `/${slug}`)
+      .limit(1);
+
+    let result = await query.find();
+    let entries = result.entries as StoryPost[];
+    
+    if (entries && entries.length > 0) {
+      return entries[0];
+    }
+
+    // Try without leading slash
+    query = stack
+      .contentType(CONTENT_TYPES.STORIES_POST)
+      .entry()
+      .query()
+      .equalTo('url', slug.replace(/^\//, ''))
+      .limit(1);
+
+    result = await query.find();
+    entries = result.entries as StoryPost[];
+    
+    return entries && entries.length > 0 ? entries[0] : null;
+  } catch (error) {
+    console.error('Error fetching story post:', error);
+    return null;
+  }
+}
+
+/**
+ * Get all story categories by extracting from published stories
+ * This avoids needing the Management Token for Taxonomy API
+ */
+export async function getStoryCategories(): Promise<{ uid: string; name: string }[]> {
+  try {
+    // Fetch all stories to extract their taxonomy terms
+    const stories = await getStoryPosts();
+    
+    // Extract unique categories from stories
+    const categoriesMap = new Map<string, string>();
+    
+    stories.forEach(story => {
+      story.taxonomies?.forEach(tax => {
+        if (tax.term_uid && tax.name) {
+          categoriesMap.set(tax.term_uid, tax.name);
+        }
+      });
+    });
+
+    // Convert map to array and sort alphabetically
+    const categories = Array.from(categoriesMap.entries())
+      .map(([uid, name]) => ({ uid, name }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    // Always include "All" as the first option
+    return [
+      { uid: 'all', name: 'All' },
+      ...categories,
+    ];
+  } catch (error) {
+    console.error('Error fetching story categories:', error);
+    // Return fallback categories if extraction fails
+    return [
+      { uid: 'all', name: 'All' },
+      { uid: 'wedding', name: 'Wedding' },
+      { uid: 'couple-shoot', name: 'Couple Shoot' },
+    ];
+  }
 }
 
 // Export stack for advanced usage

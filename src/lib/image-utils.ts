@@ -120,20 +120,6 @@ export const ImagePresets = {
     format: 'webp'
   }),
 
-  // Blog/Journal featured image
-  blogFeatured: (url: string) => optimizeImage(url, { 
-    width: 1200, 
-    quality: 85,
-    format: 'webp'
-  }),
-
-  // Blog thumbnail
-  blogThumb: (url: string) => optimizeImage(url, { 
-    width: 600, 
-    quality: 85,
-    format: 'webp'
-  }),
-
   // Testimonial photo
   testimonialPhoto: (url: string) => optimizeImage(url, { 
     width: 800, 

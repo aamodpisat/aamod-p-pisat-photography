@@ -20,7 +20,6 @@ function analyzeImage(url: string) {
     { name: 'Gallery Thumbnail (400px)', url: ImagePresets.galleryThumb(url) },
     { name: 'Gallery Large (1600px)', url: ImagePresets.galleryLarge(url) },
     { name: 'Portfolio Card (600px)', url: ImagePresets.portfolioCard(url) },
-    { name: 'Blog Featured (1200px)', url: ImagePresets.blogFeatured(url) },
     { name: 'OG Image (1200x630)', url: ImagePresets.ogImage(url) },
   ];
 

@@ -179,20 +179,6 @@ export interface Testimonial {
   date?: string;
 }
 
-// Blog Post Content Type
-export interface BlogPost {
-  uid: string;
-  title: string;
-  url: string;
-  excerpt?: string;
-  body: RichTextField; // Rich text body
-  featured_image?: ContentstackAsset;
-  author?: string;
-  publish_date: string;
-  category?: string;
-  tags?: string[];
-}
-
 // Service Package Content Type
 export interface ServicePackage {
   uid: string;
@@ -360,6 +346,28 @@ export interface PortfolioPageContent {
     title?: string;
     cta?: CTALink;
   };
+}
+
+// Taxonomy Term type
+export interface TaxonomyTerm {
+  taxonomy_uid: string;
+  term_uid: string;
+  name?: string;
+}
+
+// Story Post Content Type (similar to Blog but for wedding stories)
+export interface StoryPost {
+  uid: string;
+  title: string;
+  url: string;
+  is_featured?: boolean;
+  thumbnail_image?: ContentstackAsset;
+  featured_image: ContentstackAsset;
+  excerpt?: RichTextField;
+  body?: RichTextField;
+  gallery_images: ContentstackAsset[];
+  publish_date: string;
+  taxonomies?: TaxonomyTerm[];
 }
 
 // Page metadata
