@@ -18,7 +18,8 @@ import {
   FilmsPageContent,
   PortfolioPageContent,
   ContentstackAsset,
-  StoryPost 
+  StoryPost,
+  PackagesPageContent
 } from './types';
 
 // Helper function to map region string to Region enum
@@ -97,6 +98,7 @@ export const CONTENT_TYPES = {
   FILMS_PAGE: 'films_page',
   PORTFOLIO_PAGE: 'portfolio_page',
   STORIES_POST: 'stories_post',
+  PACKAGES_PAGE: 'packages_page',
 } as const;
 
 /**
@@ -534,6 +536,26 @@ export async function getStoryCategories(): Promise<{ uid: string; name: string 
       { uid: 'wedding', name: 'Wedding' },
       { uid: 'couple-shoot', name: 'Couple Shoot' },
     ];
+  }
+}
+
+/**
+ * Fetch packages page content
+ */
+export async function getPackagesPageContent(): Promise<PackagesPageContent | null> {
+  try {
+    const result = await stack
+      .contentType(CONTENT_TYPES.PACKAGES_PAGE)
+      .entry()
+      .query()
+      .limit(1)
+      .find();
+    
+    const entries = result.entries as PackagesPageContent[];
+    return entries && entries.length > 0 ? entries[0] : null;
+  } catch (error) {
+    console.error('Error fetching packages page content:', error);
+    return null;
   }
 }
 

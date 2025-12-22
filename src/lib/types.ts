@@ -376,3 +376,69 @@ export interface PageMeta {
   description?: string;
   ogImage?: string;
 }
+
+// Package item within a category
+export interface PackageItem {
+  package_name: string;
+  price: string;
+  features: string[];
+  is_popular?: boolean;
+  badge_text?: string;
+}
+
+// Package category (e.g., Wedding, Engagement, etc.)
+export interface PackageCategory {
+  category_id: string;
+  category_name: string;
+  category_tagline?: string;
+  icon?: string;
+  packages: PackageItem[];
+}
+
+// Album add-on
+export interface AlbumOption {
+  name: string;
+  description?: string;
+  why_it_connects?: string;
+  price: string;
+}
+
+// Packages Page Content Type
+export interface PackagesPageContent {
+  uid: string;
+  title: string;
+  url?: string;
+  // Hero Section
+  hero_section?: {
+    title?: string;
+    tagline?: string;
+    description?: string;
+    background_image?: ContentstackAsset;
+  };
+  // Intro Section
+  intro_section?: {
+    subtitle?: string;
+    title?: string;
+    description?: string;
+  };
+  // Package Categories
+  package_categories: PackageCategory[];
+  // Album Section
+  album_section?: {
+    title?: string;
+    albums?: AlbumOption[];
+  };
+  // Terms and Conditions
+  terms_conditions?: string[];
+  // Booking Form Section
+  booking_form_section?: {
+    title?: string;
+    description?: string;
+    submit_button_text?: string;
+  };
+  // Success Message
+  success_message?: {
+    title?: string;
+    message?: string;
+  };
+}

@@ -1,0 +1,507 @@
+{
+    "title": "Packages Page",
+    "uid": "packages_page",
+    "schema": [
+        {
+            "display_name": "Title",
+            "uid": "title",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "_default": true,
+                "description": "Internal title for this entry",
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "display_name": "URL",
+            "uid": "url",
+            "data_type": "text",
+            "mandatory": true,
+            "unique": true,
+            "field_metadata": {
+                "description": "URL slug (e.g., /packages)",
+                "_default": true,
+                "version": 3
+            },
+            "multiple": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Hero Section",
+            "field_metadata": {
+                "description": "Hero banner configuration",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Main heading displayed on the hero banner",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Tagline",
+                    "uid": "tagline",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Decorative script text below the title",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "multi_line": true,
+                        "description": "Brief description shown on the hero",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Background Image",
+                    "uid": "background_image",
+                    "data_type": "file",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Background image for the hero section"
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "hero_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Intro Section",
+            "field_metadata": {
+                "description": "Introduction section below hero",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Subtitle",
+                    "uid": "subtitle",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Small uppercase text above the title",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Main heading for intro section",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "multi_line": true,
+                        "description": "Introductory paragraph about packages",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "intro_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "display_name": "Package Categories",
+            "uid": "package_categories",
+            "data_type": "group",
+            "mandatory": true,
+            "multiple": true,
+            "field_metadata": {
+                "description": "Define package categories (e.g., Wedding, Engagement, Pre-Wedding)"
+            },
+            "schema": [
+                {
+                    "display_name": "Category ID",
+                    "uid": "category_id",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Unique identifier (e.g., wedding, engagement, pre-wedding)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Category Name",
+                    "uid": "category_name",
+                    "data_type": "text",
+                    "mandatory": true,
+                    "field_metadata": {
+                        "description": "Display name (e.g., Wedding Packages)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Category Tagline",
+                    "uid": "category_tagline",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Tagline shown below category name",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Icon",
+                    "uid": "icon",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Icon name for category (camera, heart, baby, etc.)",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Packages",
+                    "uid": "packages",
+                    "data_type": "group",
+                    "mandatory": true,
+                    "multiple": true,
+                    "field_metadata": {
+                        "description": "List of packages in this category"
+                    },
+                    "schema": [
+                        {
+                            "display_name": "Package Name",
+                            "uid": "package_name",
+                            "data_type": "text",
+                            "mandatory": true,
+                            "field_metadata": {
+                                "description": "Name of the package (e.g., The First Frame)",
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Price",
+                            "uid": "price",
+                            "data_type": "text",
+                            "mandatory": true,
+                            "field_metadata": {
+                                "description": "Price with currency (e.g., INR 9,999/-)",
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Features",
+                            "uid": "features",
+                            "data_type": "text",
+                            "mandatory": true,
+                            "multiple": true,
+                            "field_metadata": {
+                                "description": "List of features included in this package",
+                                "version": 3
+                            },
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Is Popular",
+                            "uid": "is_popular",
+                            "data_type": "boolean",
+                            "mandatory": false,
+                            "field_metadata": {
+                                "description": "Mark as most popular package"
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Badge Text",
+                            "uid": "badge_text",
+                            "data_type": "text",
+                            "mandatory": false,
+                            "field_metadata": {
+                                "description": "Optional badge text (e.g., Most Popular, Best Value)",
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        }
+                    ],
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Album Section",
+            "field_metadata": {
+                "description": "Album add-ons section",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Section title for albums",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Albums",
+                    "uid": "albums",
+                    "data_type": "group",
+                    "mandatory": false,
+                    "multiple": true,
+                    "field_metadata": {
+                        "description": "Album options"
+                    },
+                    "schema": [
+                        {
+                            "display_name": "Name",
+                            "uid": "name",
+                            "data_type": "text",
+                            "mandatory": true,
+                            "field_metadata": {
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Description",
+                            "uid": "description",
+                            "data_type": "text",
+                            "mandatory": false,
+                            "field_metadata": {
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Why It Connects",
+                            "uid": "why_it_connects",
+                            "data_type": "text",
+                            "mandatory": false,
+                            "field_metadata": {
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        },
+                        {
+                            "display_name": "Price",
+                            "uid": "price",
+                            "data_type": "text",
+                            "mandatory": true,
+                            "field_metadata": {
+                                "version": 3
+                            },
+                            "multiple": false,
+                            "unique": false,
+                            "non_localizable": false
+                        }
+                    ],
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "album_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "display_name": "Terms and Conditions",
+            "uid": "terms_conditions",
+            "data_type": "text",
+            "mandatory": false,
+            "multiple": true,
+            "field_metadata": {
+                "description": "List of terms and conditions",
+                "version": 3
+            },
+            "unique": false,
+            "non_localizable": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Booking Form Section",
+            "field_metadata": {
+                "description": "Configuration for the booking form",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "description": "Form section title",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Description",
+                    "uid": "description",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "multi_line": true,
+                        "description": "Description above the form",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Submit Button Text",
+                    "uid": "submit_button_text",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Book Session",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "booking_form_section",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        },
+        {
+            "data_type": "group",
+            "display_name": "Success Message",
+            "field_metadata": {
+                "description": "Message shown after successful booking",
+                "instruction": ""
+            },
+            "schema": [
+                {
+                    "display_name": "Title",
+                    "uid": "title",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "default_value": "Booking Confirmed!",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                },
+                {
+                    "display_name": "Message",
+                    "uid": "message",
+                    "data_type": "text",
+                    "mandatory": false,
+                    "field_metadata": {
+                        "multi_line": true,
+                        "default_value": "Thank you for your booking. We'll reach out within 24 hours to confirm your session details.",
+                        "version": 3
+                    },
+                    "multiple": false,
+                    "unique": false,
+                    "non_localizable": false
+                }
+            ],
+            "uid": "success_message",
+            "mandatory": false,
+            "multiple": false,
+            "non_localizable": false,
+            "unique": false
+        }
+    ],
+    "options": {
+        "is_page": true,
+        "singleton": true,
+        "title": "title",
+        "sub_title": []
+    }
+}
+
