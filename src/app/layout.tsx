@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import '@/styles/globals.css';
 import Layout from '@/components/layout/Layout';
 import { SiteConfigProvider } from '@/lib/SiteConfigContext';
 import { getSiteConfig } from '@/lib/contentstack';
 import LivePreviewProvider from '@/components/LivePreviewProvider';
+import GoogleAnalytics, { GA_MEASUREMENT_ID } from '@/components/GoogleAnalytics';
 
 export const metadata: Metadata = {
   title: {
@@ -98,7 +100,29 @@ export default async function RootLayout({
   if (!siteConfig) {
     return (
       <html lang="en">
+        <head>
+          {/* Google Analytics - only load if configured */}
+          {GA_MEASUREMENT_ID && (
+            <>
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script id="google-analytics" strategy="afterInteractive">
+                {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `}
+              </Script>
+            </>
+          )}
+        </head>
         <body className="antialiased">
+          {GA_MEASUREMENT_ID && <GoogleAnalytics />}
           <LivePreviewProvider>
             <SiteConfigProvider siteConfig={defaultSiteConfig}>
               <Layout>{children}</Layout>
@@ -110,7 +134,29 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics - only load if configured */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+      </head>
       <body className="antialiased">
+        {GA_MEASUREMENT_ID && <GoogleAnalytics />}
         <LivePreviewProvider>
           <SiteConfigProvider siteConfig={siteConfig}>
             <Layout>{children}</Layout>
