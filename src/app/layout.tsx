@@ -5,7 +5,10 @@ import Layout from '@/components/layout/Layout';
 import { SiteConfigProvider } from '@/lib/SiteConfigContext';
 import { getSiteConfig } from '@/lib/contentstack';
 import LivePreviewProvider from '@/components/LivePreviewProvider';
-import GoogleAnalytics, { GA_MEASUREMENT_ID } from '@/components/GoogleAnalytics';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+// Get GA Measurement ID from server environment variable
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || '';
 
 export const metadata: Metadata = {
   title: {
@@ -122,7 +125,7 @@ export default async function RootLayout({
           )}
         </head>
         <body className="antialiased">
-          {GA_MEASUREMENT_ID && <GoogleAnalytics />}
+          <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
           <LivePreviewProvider>
             <SiteConfigProvider siteConfig={defaultSiteConfig}>
               <Layout>{children}</Layout>
@@ -156,7 +159,7 @@ export default async function RootLayout({
         )}
       </head>
       <body className="antialiased">
-        {GA_MEASUREMENT_ID && <GoogleAnalytics />}
+        <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
         <LivePreviewProvider>
           <SiteConfigProvider siteConfig={siteConfig}>
             <Layout>{children}</Layout>

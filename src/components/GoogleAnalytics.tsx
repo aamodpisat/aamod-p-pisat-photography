@@ -3,13 +3,14 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
 
-// Get GA Measurement ID from environment variable
-export const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || '';
+interface GoogleAnalyticsProps {
+  measurementId: string;
+}
 
-// Track page views
-export const pageview = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_MEASUREMENT_ID, {
+// Track page views - requires measurementId to be passed
+export const pageview = (measurementId: string, url: string) => {
+  if (typeof window !== 'undefined' && window.gtag && measurementId) {
+    window.gtag('config', measurementId, {
       page_path: url,
     });
   }
@@ -37,25 +38,27 @@ export const event = ({
 };
 
 // Component to track route changes
-function GoogleAnalyticsTracker() {
+function GoogleAnalyticsTracker({ measurementId }: GoogleAnalyticsProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
+    if (pathname && measurementId) {
       const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
-      pageview(url);
+      pageview(measurementId, url);
     }
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams, measurementId]);
 
   return null;
 }
 
 // Wrap with Suspense for useSearchParams
-export default function GoogleAnalytics() {
+export default function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
+  if (!measurementId) return null;
+  
   return (
     <Suspense fallback={null}>
-      <GoogleAnalyticsTracker />
+      <GoogleAnalyticsTracker measurementId={measurementId} />
     </Suspense>
   );
 }
@@ -71,4 +74,3 @@ declare global {
     dataLayer: unknown[];
   }
 }
-
