@@ -31,7 +31,7 @@ export default function StoriesClient({ stories, categories }: StoriesClientProp
       {/* Spacer for fixed header - ensures header is visible */}
       <div className="h-20 md:h-24 bg-white" />
 
-      {/* Page Header - Rohan Shinde style */}
+      {/* Page Header  */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container-wide">
           {/* Title */}
@@ -42,7 +42,7 @@ export default function StoriesClient({ stories, categories }: StoriesClientProp
             className="text-center mb-12"
           >
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-900">
-              Wedding Stories
+              Stories & Insights
             </h1>
           </motion.div>
 
@@ -135,9 +135,9 @@ function StoryCard({ story, index }: { story: StoryPost; index: number }) {
   
   // Get category names from taxonomies
   const categoryNames = story.taxonomies
-    ?.map(tax => tax.name)
+    ?.map(tax => tax.term_uid)
     .filter(Boolean)
-    .join(', ') || 'Wedding';
+    .join(', ');
 
   // Build the story URL
   const storyUrl = `/stories${story.url.startsWith('/') ? story.url : `/${story.url}`}`;

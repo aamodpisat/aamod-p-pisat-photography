@@ -1,13 +1,11 @@
 import Hero from '@/components/sections/Hero';
 import PortfolioGallery from '@/components/sections/PortfolioGallery';
-import AboutPreview from '@/components/sections/AboutPreview';
 import StoriesPreview from '@/components/sections/StoriesPreview';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ContactCTA from '@/components/sections/ContactCTA';
 import {
   getHomepageContent,
   getTestimonials,
-  getAboutPageContent,
   getFeaturedStories,
 } from '@/lib/contentstack';
 import { HeroBanner, FeaturedBanner } from '@/lib/types';
@@ -35,12 +33,10 @@ export default async function HomePage() {
   const [
     homepageContent,
     testimonials,
-    aboutPageContent,
     featuredStories,
   ] = await Promise.all([
     getHomepageContent(),
     getTestimonials(4),
-    getAboutPageContent(),
     getFeaturedStories(4),
   ]);
 
@@ -73,19 +69,6 @@ export default async function HomePage() {
           cta_link: portfolioSection?.cta?.href || '/portfolio',
         }}
         images={portfolioSection?.gallery_images || []}
-      />
-
-      {/* About Preview - Content from About Page */}
-      <AboutPreview 
-        content={{
-          featured_label: aboutPageContent?.featured_in?.label || 'Featured In',
-          featured_brands: aboutPageContent?.featured_in?.brands || [],
-          title: aboutPageContent?.intro_section?.name || 'Aamod P. Pisat',
-          description: aboutPageContent?.intro_section?.featured_content || '',
-          image: aboutPageContent?.intro_section?.image,
-          cta_text: aboutPageContent?.intro_section?.cta?.title || 'More About Me',
-          cta_link: aboutPageContent?.intro_section?.cta?.href || '/about',
-        }}
       />
 
       {/* Featured Stories - Only shows stories with is_featured: true */}

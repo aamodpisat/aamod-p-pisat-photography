@@ -512,8 +512,8 @@ export async function getStoryCategories(): Promise<{ uid: string; name: string 
     
     stories.forEach(story => {
       story.taxonomies?.forEach(tax => {
-        if (tax.term_uid && tax.name) {
-          categoriesMap.set(tax.term_uid, tax.name);
+        if (tax.term_uid) {
+          categoriesMap.set(tax.term_uid, tax.term_uid);
         }
       });
     });

@@ -78,9 +78,9 @@ function StoryPreviewCard({ story, index }: { story: StoryPost; index: number })
   
   // Get category names from taxonomies
   const categoryNames = story.taxonomies
-    ?.map(tax => tax.name)
+    ?.map(tax => tax.term_uid)
     .filter(Boolean)
-    .join(', ') || 'Wedding';
+    .join(', ');
   
   // Build the story URL
   const storyUrl = `/stories${story.url.startsWith('/') ? story.url : `/${story.url}`}`;
