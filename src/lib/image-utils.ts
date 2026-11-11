@@ -80,14 +80,14 @@ export function optimizeImage(url: string, options: ImageTransformOptions = {}):
 export const ImagePresets = {
   // Hero/Banner images (full width)
   hero: (url: string) => optimizeImage(url, { 
-    width: 1920, 
-    quality: 85,
+    width: 2560,
+    quality: 80,
     format: 'webp'
   }),
   
   // Hero mobile
   heroMobile: (url: string) => optimizeImage(url, { 
-    width: 768, 
+    width: 1200,
     quality: 80,
     format: 'webp'
   }),
@@ -95,42 +95,42 @@ export const ImagePresets = {
   // Gallery thumbnails (for grid display - high quality for sharp images)
   galleryThumb: (url: string) => optimizeImage(url, { 
     width: 1200, 
-    quality: 90,
+    quality: 80,
     format: 'webp'
   }),
 
   // Gallery medium (for lightbox preview)
   galleryMedium: (url: string) => optimizeImage(url, { 
     width: 1600, 
-    quality: 92,
+    quality: 82,
     format: 'webp'
   }),
 
   // Gallery large (for lightbox full view - maximum quality)
   galleryLarge: (url: string) => optimizeImage(url, { 
     width: 2400, 
-    quality: 95,
+    quality: 85,
     format: 'webp'
   }),
 
   // Portfolio card
   portfolioCard: (url: string) => optimizeImage(url, { 
-    width: 800, 
-    quality: 85,
+    width: 1400,
+    quality: 80,
     format: 'webp'
   }),
 
   // Testimonial photo
   testimonialPhoto: (url: string) => optimizeImage(url, { 
-    width: 800, 
-    quality: 85,
+    width: 1200,
+    quality: 80,
     format: 'webp'
   }),
 
   // About page portrait
   portrait: (url: string) => optimizeImage(url, { 
-    width: 1000, 
-    quality: 90,
+    width: 1400,
+    quality: 82,
     format: 'webp'
   }),
 

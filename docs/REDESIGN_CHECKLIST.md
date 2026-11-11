@@ -96,3 +96,13 @@ The section now shows four curated portrait assets from the published Contentsta
 - [x] Restart the local server for review.
 
 The Stories listing now has three equal portrait frames, consistent card spacing, and refined category tabs. The published Sushmita story uses a portrait image from its gallery in the listing. All 13 active routes passed the browser script at desktop and mobile sizes; the production build and type check passed. Review the live page at `http://localhost:3000/stories`.
+
+## Image clarity and loading
+
+- [x] Audit delivered image dimensions and compression on desktop and mobile screens.
+- [x] Deliver one responsive image variant directly from Contentstack rather than re-encoding it in Next.js.
+- [x] Correct homepage image size hints and defer inactive carousel slides.
+- [x] Verify image loading, sharpness budgets, and transfer size in the browser.
+- [x] Run the production build and leave the local preview ready for review.
+
+At 1440px with a 2× display density, the homepage hero now receives a 2560px WebP image instead of a 1920px image processed a second time. The four homepage cards receive 750px WebP variants instead of 800px images that were enlarged and re-encoded. On first load, measured homepage image transfer dropped from 1.95 MB to 1.13 MB on desktop and from 0.66 MB to 0.43 MB on mobile. All 13 routes passed the browser checks at desktop and mobile widths, including the new high density image checks; the production build passed.

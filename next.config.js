@@ -8,11 +8,17 @@ const nextConfig = {
   },
   // Output mode for serverless deployment (Contentstack Launch)
   output: 'standalone',
+
+  // The environment name is safe to expose; the delivery token stays server-side.
+  env: {
+    NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT: process.env.CONTENTSTACK_ENVIRONMENT || 'development',
+  },
   
-  // Image optimization - using Contentstack Image Delivery API instead
-  // This avoids cache directory issues on serverless while still providing optimized images
+  // Let Contentstack resize once for each responsive <Image> candidate.
   images: {
-    unoptimized: false, // Contentstack's Image API handles optimization
+    loader: 'custom',
+    loaderFile: './src/lib/contentstack-image-loader.ts',
+    deviceSizes: [640, 750, 828, 1080, 1200, 1600, 1920, 2560],
     remotePatterns: [
       {
         protocol: 'https',

@@ -13,6 +13,7 @@ Read this file before exploring the repository. Open only the route or component
 - Hosting: Contentstack Launch. Keep `next.config.js` standalone output.
 - Published content: Contentstack Delivery SDK in `src/lib/contentstack.ts`. `CONTENTSTACK_API_KEY`, `CONTENTSTACK_DELIVERY_TOKEN`, and `CONTENTSTACK_ENVIRONMENT` are server environment variables. Use `development` for local checks. Never commit a token or place one in a client component. Live Preview loads after hydration via `src/lib/contentstack-live-preview.ts`.
 - CMS field types: `src/lib/types.ts`; schemas: `schemas/`. The credential-free published reference is `docs/contentstack-development-snapshot.json` (10 November 2026 snapshot; refresh when content changes).
+- Image delivery: `src/lib/image-utils.ts` sets per-use width and quality ceilings. `src/lib/contentstack-image-loader.ts` turns Next `<Image>` candidates into direct Contentstack CDN URLs with responsive widths, the published environment, and WebP with progressive JPEG fallback. `next.config.js` selects this loader; do not send Contentstack images through Next's built-in `/_next/image` optimizer again. Keep accurate `sizes` props on each image so small cards do not download hero-sized files.
 - Approved design: `docs/design-prototype.html` and `docs/prototypes/`. Progress checklist: `docs/REDESIGN_CHECKLIST.md`.
 
 ## Fast route map
@@ -34,7 +35,7 @@ Use white backgrounds, the Playfair Display and DM Sans pairing, restrained oliv
 
 ## One check command
 
-`npm run test:redesign` starts the site, visits all 13 active routes at desktop and mobile sizes, checks layout, image loading, the uniform homepage and Stories grids, and retired URL redirects, captures screenshots in `/private/tmp/aamod-redesign-screenshots`, and exercises the homepage carousel, Stories filters and links, portfolio lightbox, on-page film dialog, FAQ, contact validation, and mobile menu. Set the three Contentstack variables above before running. `npx tsc --noEmit` checks types; `npm run build` checks production compilation. The check script is `scripts/test-redesign.mjs`.
+`npm run test:redesign` starts the site, visits all 13 active routes at desktop and mobile sizes, checks layout, image loading, responsive Contentstack image widths on high density screens, the uniform homepage and Stories grids, and retired URL redirects, captures screenshots in `/private/tmp/aamod-redesign-screenshots`, and exercises the homepage carousel, Stories filters and links, portfolio lightbox, on-page film dialog, FAQ, contact validation, and mobile menu. Set the three Contentstack variables above before running. `npx tsc --noEmit` checks types; `npm run build` checks production compilation. The check script is `scripts/test-redesign.mjs`.
 
 ## Known details
 

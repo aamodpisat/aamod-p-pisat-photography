@@ -173,6 +173,30 @@ try {
     }
     await context.close();
   }
+  for (const [name, width, density] of [['desktop', 1440, 2], ['mobile', 390, 3]]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, deviceScaleFactor: density, reducedMotion: 'reduce' });
+    const imageResponses = [];
+    page.on('response', response => {
+      if (response.url().startsWith('https://images.contentstack.io/')) imageResponses.push(response);
+    });
+    await page.goto(base, { waitUntil: 'networkidle' });
+    const hero = page.locator('.home-carousel-slide.is-active img');
+    const heroDelivery = await hero.evaluate(image => {
+      const url = new URL(image.currentSrc);
+      return { host: url.hostname, environment: url.searchParams.get('environment'), width: Number(url.searchParams.get('width')), displayed: image.getBoundingClientRect().width, loaded: image.complete && image.naturalWidth > 0 };
+    });
+    check(heroDelivery.loaded && heroDelivery.host === 'images.contentstack.io' && heroDelivery.environment === 'development' && heroDelivery.width >= heroDelivery.displayed * density * .85, `${name} /: hero is undersized or still re-encoded by Next.js`);
+    check(await page.locator('.home-carousel-slide img').count() <= 2, `${name} /: carousel downloads too many full-screen images at first load`);
+    await page.locator('#work').scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => [...document.querySelectorAll('#work img')].length === 4 && [...document.querySelectorAll('#work img')].every(image => image.complete && image.naturalWidth > 0));
+    const galleryDelivery = await page.locator('#work img').evaluateAll(images => images.map(image => {
+      const url = new URL(image.currentSrc);
+      return { host: url.hostname, width: Number(url.searchParams.get('width')), displayed: image.getBoundingClientRect().width };
+    }));
+    check(galleryDelivery.every(image => image.host === 'images.contentstack.io' && image.width >= image.displayed * density), `${name} /: homepage gallery image is too small for the display`);
+    check(imageResponses.some(response => response.headers()['content-type']?.startsWith('image/webp')), `${name} /: responsive Contentstack images are not arriving as WebP`);
+    await page.close();
+  }
   const autoPage = await browser.newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: 'no-preference' });
   await autoPage.goto(base, { waitUntil: 'domcontentloaded' });
   await autoPage.locator('.home-carousel-count').waitFor();

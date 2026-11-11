@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ImagePresets } from '@/lib/image-utils';
 import FilmHeroMedia from '@/components/FilmHeroMedia';
 
-export function Photo({ src, alt, contain = false, priority = false, className = '' }: { src?: string; alt: string; contain?: boolean; priority?: boolean; className?: string }) {
+export function Photo({ src, alt, contain = false, priority = false, className = '', sizes = '(max-width: 680px) 100vw, 50vw' }: { src?: string; alt: string; contain?: boolean; priority?: boolean; className?: string; sizes?: string }) {
   return <div className={`editorial-photo ${contain ? 'contain' : ''} ${className}`}>
-    {src ? <Image src={ImagePresets.portfolioCard(src)} alt={alt} fill priority={priority} sizes="(max-width: 680px) 100vw, 50vw" /> : null}
+    {src ? <Image src={ImagePresets.portfolioCard(src)} alt={alt} fill priority={priority} sizes={sizes} /> : null}
   </div>;
 }
 
