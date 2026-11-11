@@ -1,142 +1,20 @@
-import { Metadata } from 'next';
-import Button from '@/components/ui/Button';
-import FilmsHero from '@/components/sections/FilmsHero';
-import FilmCard from '@/components/ui/FilmCard';
+import Image from 'next/image';
+import { InquiryBand, PageHero, SectionHeader } from '@/components/editorial';
+import FilmsGallery from '@/components/FilmsGallery';
 import { getFilmsPageContent } from '@/lib/contentstack';
-import { RichText, isPlainText } from '@/lib/richtext-renderer';
+import { ImagePresets } from '@/lib/image-utils';
+import { safeTextContent } from '@/lib/richtext-renderer';
 
-export const metadata: Metadata = {
-  title: 'Films | Aamod P. Pisat Photography',
-  description: 'Cinematic wedding films that capture the emotion, movement, and magic of your day.',
-};
-
-// Enable ISR - revalidate every hour
 export const revalidate = 3600;
+export const metadata = { title: 'Films | Aamod P. Pisat Photography', description: 'Cinematic wedding films that preserve the feeling of your day.' };
 
 export default async function FilmsPage() {
-  // Fetch content from Contentstack
   const content = await getFilmsPageContent();
-  
-  
-  // Extract sections
-  const heroSection = content?.hero_section;
-  const filmsSection = content?.films_section;
-  const films = content?.films || [];
-  const approachSection = content?.approach_section;
-  const ctaSection = content?.cta_section;
-
-  // Sort films by order if available
-  const sortedFilms = [...films].sort((a, b) => (a.order || 0) - (b.order || 0));
-
-  return (
-    <>
-      {/* Video Background Hero */}
-      <FilmsHero 
-        title={heroSection?.title}
-        tagline={heroSection?.tagline}
-        description={heroSection?.description}
-        videoUrl={heroSection?.background_video_url}
-        fallbackImage={heroSection?.fallback_image?.url}
-      />
-
-      {/* Films Grid */}
-      <section className="py-16 md:py-24 bg-cream-100">
-        <div className="container-wide">
-          {/* Section Intro */}
-          <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
-            {filmsSection?.subtitle && (
-              <p className="text-caption uppercase tracking-[0.2em] text-sepia-600 mb-4">
-                {filmsSection.subtitle}
-              </p>
-            )}
-            {filmsSection?.title && (
-              <h2 className="font-serif text-heading-lg text-charcoal-900 mb-6">
-                {filmsSection.title}
-              </h2>
-            )}
-            {filmsSection?.description && (
-              <p className="text-body-lg text-charcoal-600 font-light">
-                {filmsSection.description}
-              </p>
-            )}
-          </div>
-
-          {/* Films Grid */}
-          {sortedFilms.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-              {sortedFilms.map((film, index) => (
-                <FilmCard 
-                  key={index} 
-                  film={{
-                    uid: `film-${index}`,
-                    title: film.title,
-                    location: film.location || '',
-                    youtubeId: film.youtube_id,
-                    description: film.description || '',
-                  }} 
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <p className="text-charcoal-600">Films coming soon...</p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Our Approach */}
-      {approachSection && (
-        <section className="py-20 md:py-28 bg-charcoal-900 text-cream-100">
-          <div className="container-narrow text-center">
-            {approachSection.subtitle && (
-              <p className="text-caption uppercase tracking-[0.2em] text-sepia-400 mb-4">
-                {approachSection.subtitle}
-              </p>
-            )}
-            {approachSection.title && (
-              <h2 className="font-serif text-heading-lg mb-8">
-                {approachSection.title}
-              </h2>
-            )}
-            {approachSection.content && (
-              isPlainText(approachSection.content) ? (
-                <p className="text-body-lg text-cream-300 font-light">
-                  {approachSection.content as string}
-                </p>
-              ) : (
-                <RichText 
-                  content={approachSection.content} 
-                  className="text-body-lg text-cream-300 font-light"
-                />
-              )
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* Contact CTA */}
-      {ctaSection && (
-        <section className="py-20 md:py-28 bg-sepia-100">
-          <div className="container-narrow text-center">
-            {ctaSection.title && (
-              <h2 className="font-serif text-heading-lg text-charcoal-900 mb-6">
-                {ctaSection.title}
-              </h2>
-            )}
-            {ctaSection.description && (
-              <p className="text-body-lg text-charcoal-600 font-light mb-8 max-w-xl mx-auto">
-                {ctaSection.description}
-              </p>
-            )}
-            {ctaSection.cta && (
-              <Button href={ctaSection.cta.href || '/contact'} variant="primary">
-                {ctaSection.cta.title || 'Inquire About Films'}
-              </Button>
-            )}
-          </div>
-        </section>
-      )}
-    </>
-  );
+  const films = [...(content?.films || [])].sort((a, b) => (a.order || 0) - (b.order || 0));
+  return <>
+    <PageHero eyebrow="Wedding films" title="Films that bring you back to the moment" description={content?.films_section?.title?.replaceAll('"', '') || 'Your story, beautifully captured in motion.'} image={content?.hero_section?.fallback_image?.url} video={content?.hero_section?.background_video_url} tag="Published film teaser" ctaText="See the films" ctaHref="#films" />
+    <section id="films" className="section"><div className="inner"><SectionHeader eyebrow={content?.films_section?.subtitle || 'Our films'} title="Stories in motion" /><FilmsGallery films={films} fallbackImage={content?.hero_section?.fallback_image?.url} /></div></section>
+    {content?.approach_section && <section className="section sand"><div className="inner feature-split"><div><p className="eyebrow">{content.approach_section.subtitle}</p><h2>{content.approach_section.title}</h2><p className="copy">{safeTextContent(content.approach_section.content)}</p></div><div className="editorial-photo" style={{ position: 'relative' }}>{films[1]?.thumbnail?.url && <Image src={ImagePresets.portrait(films[1].thumbnail.url)} alt="Wedding film still" fill sizes="(max-width: 680px) 100vw, 50vw" style={{ objectFit: 'cover' }} />}</div></div></section>}
+    <InquiryBand title={content?.cta_section?.title} description={content?.cta_section?.description} button={content?.cta_section?.cta?.title} />
+  </>;
 }

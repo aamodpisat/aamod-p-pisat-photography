@@ -11,10 +11,10 @@ const config: Config = {
       colors: {
         // Cinematic color palette - warm earth tones with deep contrasts
         cream: {
-          50: '#FEFDFB',
-          100: '#FBF9F5',
-          200: '#F5F0E8',
-          300: '#EDE5D8',
+          50: '#FFFFFF',
+          100: '#FFFFFF',
+          200: '#F5F3EE',
+          300: '#E7E5DE',
           400: '#E0D4C2',
           500: '#D4C4AC',
         },
@@ -27,18 +27,18 @@ const config: Config = {
           500: '#616161',
           600: '#424242',
           700: '#303030',
-          800: '#212121',
-          900: '#121212',
+          800: '#292923',
+          900: '#24231F',
           950: '#0A0A0A',
         },
         sepia: {
-          100: '#F5E6D3',
-          200: '#E8D0B5',
-          300: '#D4B896',
-          400: '#C4A57C',
-          500: '#B08B5B',
-          600: '#8C6E48',
-          700: '#6B5438',
+          100: '#F5F3EE',
+          200: '#E7E5DE',
+          300: '#B9BEA3',
+          400: '#898F70',
+          500: '#6C7154',
+          600: '#62684B',
+          700: '#4D523B',
         },
         film: {
           grain: 'rgba(255, 255, 255, 0.03)',
@@ -48,9 +48,9 @@ const config: Config = {
       },
       fontFamily: {
         // Elegant serif for headings - cinematic feel
-        serif: ['Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
         // Clean sans-serif for body
-        sans: ['Josefin Sans', 'Montserrat', 'Helvetica Neue', 'sans-serif'],
+        sans: ['DM Sans', 'Helvetica Neue', 'sans-serif'],
         // Script for accents
         script: ['Tangerine', 'Dancing Script', 'cursive'],
       },

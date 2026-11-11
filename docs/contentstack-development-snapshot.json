@@ -1,0 +1,3539 @@
+{
+  "source": "Contentstack Content Delivery API",
+  "environment": "development",
+  "branch": "main",
+  "fetched_at": "2026-11-10T17:52:11.311Z",
+  "content_types": {
+    "site_config": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "blt7b975de70e6ccbb1",
+          "locale": "en-us",
+          "contact_address": "Mumbai, Maharashtra, India",
+          "contact_email": "aamodpisat@gmail.com",
+          "contact_phone": "+91-9028270771",
+          "facebook_url": "https://www.facebook.com/aamodpphotography/",
+          "footer_left_navigation": [
+            {
+              "label": "Home",
+              "href": "/",
+              "children": []
+            },
+            {
+              "label": "Quick Portfolio",
+              "href": "/portfolio",
+              "children": []
+            },
+            {
+              "label": "Films",
+              "href": "/films",
+              "children": []
+            },
+            {
+              "label": "Stories",
+              "href": "/stories",
+              "children": []
+            }
+          ],
+          "footer_right_navigation": [
+            {
+              "label": "About",
+              "href": "/about",
+              "children": []
+            },
+            {
+              "label": "Contact Us",
+              "href": "/contact",
+              "children": []
+            }
+          ],
+          "footer_text": "Copyright reserved @2026",
+          "instagram_url": "https://www.instagram.com/aamodpisatphotography/?hl=en",
+          "logo": {
+            "uid": "bltdef13304423bf87c",
+            "title": "Black and White Minimalist Professional Initial Logo (Business Cards (Landscape)) (1).png",
+            "content_type": "image/png",
+            "file_size": "21360",
+            "filename": "Black_and_White_Minimalist_Professional_Initial_Logo_(Business_Cards_(Landscape))_(1).png",
+            "parent_uid": null,
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltdef13304423bf87c/69416e18f27a23c149fc0cc7/Black_and_White_Minimalist_Professional_Initial_Logo_(Business_Cards_(Landscape))_(1).png"
+          },
+          "pinterest_url": "",
+          "primary_navigation": [
+            {
+              "label": "Home",
+              "href": "/",
+              "children": []
+            },
+            {
+              "label": "Quick Portfolio",
+              "href": "/portfolio",
+              "children": [
+                {
+                  "label": "Wedding",
+                  "href": "/portfolio/wedding"
+                }
+              ]
+            },
+            {
+              "label": "About ",
+              "href": "/about",
+              "children": []
+            }
+          ],
+          "secondary_navigation": [
+            {
+              "label": "Films",
+              "href": "/films",
+              "children": []
+            },
+            {
+              "label": "Stories",
+              "href": "/stories",
+              "children": []
+            },
+            {
+              "label": "Packages",
+              "href": "/packages",
+              "children": []
+            },
+            {
+              "label": "Contact Us",
+              "href": "/contact",
+              "children": []
+            }
+          ],
+          "site_name": "Aamod P. Pisat Photography",
+          "site_subtitle": "Capturing the real emotions....",
+          "tagline": "Capturing the real emotions...",
+          "tags": [],
+          "title": "Site Configuration | Aamod P. Pisat Photography",
+          "vimeo_url": ""
+        }
+      ]
+    },
+    "homepage_new": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "blt083333d8be09e460",
+          "locale": "en-us",
+          "about_section": {
+            "cta": {
+              "title": "About",
+              "href": "/about"
+            },
+            "description": "I'm not just a photographer; I'm a storyteller with a camera, capturing the essence of love in its most genuine form. My passion lies in preserving those fleeting moments of joy, laughter, and silent promises that make each wedding unique. With an international award-winning portfolio, I've mastered the art of blending traditional, candid, and cinematic styles to create visual narratives that resonate with the heart.\n\nPicture a wedding day where every glance, every tear, and every smile is captured with such authenticity that it feels like reliving the moment each time you look at the photos. My approach is all about capturing the real emotions, ensuring that each couple's story is told beautifully and truthfully. It's not just about taking pictures; it's about crafting a timeless story that will be cherished for generations.\n\nMy philosophy is simple yet profound: every love story deserves to be remembered just as it was felt. Whether it's an intimate ceremony or a grand celebration, I bring emotion, artistry, and storytelling together to create a lasting impact. Photography is not just about images; it's about preserving the essence of a moment, a feeling, a story.",
+            "featured": {
+              "featured_in": [
+                "Wedwar",
+                "Canvera",
+                "WeddingSutra"
+              ],
+              "label": "Featured In"
+            },
+            "image": {
+              "uid": "blt5ed1d3c5f79c2a91",
+              "title": "RGT_6690.jpg",
+              "parent_uid": "blta162932da08a9244",
+              "content_type": "image/jpeg",
+              "file_size": "11646699",
+              "filename": "RGT_6690.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt5ed1d3c5f79c2a91/694264e013c89982e4e61cd1/RGT_6690.jpg"
+            },
+            "title": "I'm Aamod Pisat, the storyteller behind the lens."
+          },
+          "contact_section": {
+            "background_image": {
+              "uid": "bltbc29c7f9c9bede4b",
+              "title": "cover.jpg",
+              "parent_uid": "blt72e133fbcba24294",
+              "content_type": "image/jpeg",
+              "file_size": "1050792",
+              "filename": "cover.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltbc29c7f9c9bede4b/6942651bca96fc35b82edb08/cover.jpg"
+            },
+            "cta": {
+              "title": "Get In Touch",
+              "href": "/contact"
+            },
+            "description": "Ready to tell your story? I'd love to hear about your vision and explore how we can capture your most meaningful moments together.",
+            "title": "Let's Create Something Beautiful"
+          },
+          "featured_banner": [
+            {
+              "tagline": "\"Where the endless sky meets your endless love story...\"",
+              "image": {
+                "uid": "blt2d6565db84bbff6a",
+                "is_dir": false,
+                "content_type": "image/jpeg",
+                "description": "",
+                "file_size": "16131794",
+                "filename": "APP03058.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "tags": [],
+                "title": "_YG_0073.jpg",
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2d6565db84bbff6a/69c37cb2cac70d01dc7e8c0c/APP03058.jpg"
+              },
+              "cta": {
+                "title": "",
+                "href": ""
+              }
+            },
+            {
+              "tagline": "Capturing the real emotions...",
+              "image": {
+                "uid": "bltb108f67c8e99aedd",
+                "title": "_03A8448.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "32044947",
+                "filename": "_03A8448.jpg",
+                "parent_uid": null,
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb108f67c8e99aedd/667a6e25ad7b943508db5e7c/_03A8448.jpg"
+              },
+              "cta": {
+                "title": "View Portfolio",
+                "href": "/portfolio"
+              }
+            },
+            {
+              "tagline": "“Moments of joy, captured with elegance.”",
+              "image": {
+                "uid": "bltf49b766576863aaf",
+                "parent_uid": "bltc068a266b94e3199",
+                "title": "APP00818.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "19418542",
+                "filename": "APP00818.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltf49b766576863aaf/694298bad9ae214689c17d40/APP00818.jpg"
+              },
+              "cta": {
+                "title": "View Portfolio",
+                "href": "/portfolio"
+              }
+            },
+            {
+              "tagline": "\"Whispers of love captured before vows, where glances tell their own stories.\"\n",
+              "image": {
+                "uid": "blt3319ba60c6101f57",
+                "title": "APP00794.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "content_type": "image/jpeg",
+                "file_size": "10600717",
+                "filename": "APP00794.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3319ba60c6101f57/6953dd658d742abd7fcb398f/APP00794.jpg"
+              },
+              "cta": {
+                "title": "View Portfolio",
+                "href": "/portfolio"
+              }
+            },
+            {
+              "tagline": "\"Timeless Beauty, Endless Love: Your Story, Our Lens\"",
+              "image": {
+                "uid": "blt0cd0adaf0d9376ca",
+                "title": "APP06705.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "content_type": "image/jpeg",
+                "file_size": "14350942",
+                "filename": "APP06705.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt0cd0adaf0d9376ca/69563eae762a59188220c92c/APP06705.jpg"
+              },
+              "cta": {
+                "title": "View Portfolio",
+                "href": "/portfolio"
+              }
+            }
+          ],
+          "journal_section": {
+            "cta": {
+              "title": "View all posts",
+              "href": "/stories"
+            },
+            "description": {
+              "type": "doc",
+              "uid": "8d58d12b7c1c44f9a061bbbfc905bb3f",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "p",
+                  "attrs": {},
+                  "uid": "ba9a90a1144441a88f98f6cd7aabbfb4",
+                  "children": [
+                    {
+                      "text": "Dive deeper into the enchanting and captivating world of our stories."
+                    }
+                  ]
+                }
+              ]
+            },
+            "subtitle": "Journal",
+            "title": "Stories & Insights"
+          },
+          "portfolio_section": {
+            "cta": {
+              "title": "Quick Portfolio",
+              "href": "/portfolio"
+            },
+            "description": "Storytelling for kindred souls. My approach errs more on the cinematic, romantic side, all from a documentary perspective.",
+            "subtiitle": "Top 200 Wedding Photographers in India.",
+            "title": "Raw, timeless, nostalgic, cinematic",
+            "gallery_images": [
+              {
+                "uid": "bltb7a5751684ff85c8",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "APP08391.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "14542688",
+                "filename": "APP08391.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb7a5751684ff85c8/6943036ddc686ee756d0fd9e/APP08391.jpg"
+              },
+              {
+                "uid": "blt184550f5c5df2d75",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "_03A8474.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "33245752",
+                "filename": "_03A8474.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt184550f5c5df2d75/694304e213c899728ee62036/_03A8474.jpg"
+              },
+              {
+                "uid": "blt3cf475f01e28c334",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "_03A8390.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "4104572",
+                "filename": "_03A8390.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3cf475f01e28c334/694304cd1b4aca24d12d06e6/_03A8390.jpg"
+              },
+              {
+                "uid": "blt051c5dd3b1d90c54",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "APP05274.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "10378028",
+                "filename": "APP05274.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt051c5dd3b1d90c54/69430364ca96fcefac2edf26/APP05274.jpg"
+              },
+              {
+                "uid": "blt2c8c7d6d4bb87422",
+                "title": "engagement.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "content_type": "image/jpeg",
+                "file_size": "130841",
+                "filename": "engagement.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2c8c7d6d4bb87422/6942a07277fa9f8163750201/engagement.jpg"
+              },
+              {
+                "uid": "blte750f3cff33b49fa",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "APP05265.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "19177187",
+                "filename": "APP05265.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte750f3cff33b49fa/694303777e86295a7dfd7f25/APP05265.jpg"
+              },
+              {
+                "uid": "bltddfc96b26c458d64",
+                "title": "_03A9756.jpg",
+                "parent_uid": "blt07fd1362244dae90",
+                "content_type": "image/jpeg",
+                "file_size": "4747023",
+                "filename": "_03A9756.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltddfc96b26c458d64/6943ceca5379f15519242dc5/_03A9756.jpg"
+              },
+              {
+                "uid": "blt37987a8c27f6197f",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "APP05383.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "18258895",
+                "filename": "APP05383.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt37987a8c27f6197f/694303778528d7fe6b2a9bb6/APP05383.jpg"
+              },
+              {
+                "uid": "blt63529ffad37796fc",
+                "title": "APP00157.jpg",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "content_type": "image/jpeg",
+                "file_size": "16093178",
+                "filename": "APP00157.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt63529ffad37796fc/6943cfd7d9ae2148f2c18331/APP00157.jpg"
+              },
+              {
+                "uid": "bltb848e673423d6621",
+                "title": "APP07591.jpg",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "content_type": "image/jpeg",
+                "file_size": "21204033",
+                "filename": "APP07591.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb848e673423d6621/6943d112c47879f7bfbfb6f6/APP07591.jpg"
+              },
+              {
+                "uid": "bltfcc7e5914fc72a83",
+                "title": "APP00551.jpg",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "content_type": "image/jpeg",
+                "file_size": "16770297",
+                "filename": "APP00551.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltfcc7e5914fc72a83/6943d71b7d8e35b88f7115e8/APP00551.jpg"
+              },
+              {
+                "uid": "blt8562764277e3f142",
+                "title": "APP00775.jpg",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "content_type": "image/jpeg",
+                "file_size": "17460565",
+                "filename": "APP00775.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8562764277e3f142/6943d7b213c8997574e6232a/APP00775.jpg"
+              },
+              {
+                "uid": "bltafbf7258cac0247c",
+                "parent_uid": "blt830d254dde2185e0",
+                "title": "APP05244.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "695688",
+                "filename": "APP05244.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltafbf7258cac0247c/694567a2d5587fb25f533c7b/APP05244.jpg"
+              },
+              {
+                "uid": "blt571a9519aa691a83",
+                "title": "APP00793.jpg",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "content_type": "image/jpeg",
+                "file_size": "16727725",
+                "filename": "APP00793.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt571a9519aa691a83/6953dcabea53f4556865b354/APP00793.jpg"
+              },
+              {
+                "uid": "blt7537a87b270fc664",
+                "title": "APP09922-3.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "content_type": "image/jpeg",
+                "file_size": "9873866",
+                "filename": "APP09922-3.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt7537a87b270fc664/69563e5c3296b836c0c27aea/APP09922-3.jpg"
+              },
+              {
+                "uid": "blt8d9845e2c0e29a6e",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "DSC00093.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "13669027",
+                "filename": "DSC00093.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8d9845e2c0e29a6e/695642853296b838c0c27af0/DSC00093.jpg"
+              },
+              {
+                "uid": "bltaec341bd620f7656",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "APP04746.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "15474159",
+                "filename": "APP04746.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltaec341bd620f7656/69564285b5904a7b47353c2b/APP04746.jpg"
+              },
+              {
+                "uid": "bltcec99381be0fcf0e",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "title": "_03A9455.jpg",
+                "content_type": "image/jpeg",
+                "file_size": "30381322",
+                "filename": "_03A9455.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcec99381be0fcf0e/694304e18528d74b242a9bc7/_03A9455.jpg"
+              }
+            ]
+          },
+          "tags": [],
+          "testimonials_section": {
+            "content": {
+              "uid": "93068b78355e4604acb0176fd9cb5cea",
+              "type": "doc",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "p",
+                  "attrs": {},
+                  "uid": "c9ba06796bc74083a842a277dbc4ac4b",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "cta": {
+              "title": "Read More Testimonials",
+              "href": "/testimonials"
+            },
+            "title": "What Our Clients Say"
+          },
+          "title": "Homepage New",
+          "url": "/"
+        }
+      ]
+    },
+    "portfolio_item": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "bltfc2f73962e42b7bb",
+          "locale": "en-us",
+          "category": "Wedding",
+          "date": "2023-01-26",
+          "description": "Wedding Celebration - Dr. Trushang & Vaishnavi's Special Day",
+          "featured_image": {
+            "uid": "blte18983384137ec8a",
+            "title": "_03A8474.jpg",
+            "parent_uid": "blt9fd92a486ceed7f6",
+            "content_type": "image/jpeg",
+            "file_size": "33245752",
+            "filename": "_03A8474.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte18983384137ec8a/6942a49d31ed5e171eaf7319/_03A8474.jpg"
+          },
+          "gallery_images": [
+            {
+              "uid": "bltb108f67c8e99aedd",
+              "title": "_03A8448.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "32044947",
+              "filename": "_03A8448.jpg",
+              "parent_uid": null,
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb108f67c8e99aedd/667a6e25ad7b943508db5e7c/_03A8448.jpg"
+            },
+            {
+              "uid": "bltcbe9c7f6708228b5",
+              "title": "_03A8390.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "4104572",
+              "filename": "_03A8390.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcbe9c7f6708228b5/6942a470d9ae2127c2c17dc9/_03A8390.jpg"
+            },
+            {
+              "uid": "blt1bbafe7eb345d49e",
+              "title": "_03A8573.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "13500141",
+              "filename": "_03A8573.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt1bbafe7eb345d49e/6942a489c726001070f4b75b/_03A8573.jpg"
+            },
+            {
+              "uid": "blt9a751e48764c8bb6",
+              "title": "_03A8505.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "21302800",
+              "filename": "_03A8505.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt9a751e48764c8bb6/6942a48fe99cb7e261675bb2/_03A8505.jpg"
+            },
+            {
+              "uid": "blt29fce960c32787f7",
+              "title": "_03A9327.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "25829898",
+              "filename": "_03A9327.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt29fce960c32787f7/6942a4998528d76b962a9940/_03A9327.jpg"
+            },
+            {
+              "uid": "bltcff5fe9890927af2",
+              "title": "_03A9432.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "28877063",
+              "filename": "_03A9432.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcff5fe9890927af2/6942a49b1b4aca4c7b2d0455/_03A9432.jpg"
+            },
+            {
+              "uid": "blta9cad4bb63fa4a26",
+              "title": "_03A9455.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "30381322",
+              "filename": "_03A9455.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blta9cad4bb63fa4a26/6942a49c1c8295719b52b058/_03A9455.jpg"
+            },
+            {
+              "uid": "blte18983384137ec8a",
+              "title": "_03A8474.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "33245752",
+              "filename": "_03A8474.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte18983384137ec8a/6942a49d31ed5e171eaf7319/_03A8474.jpg"
+            },
+            {
+              "uid": "bltea23a1c62fcb402e",
+              "title": "_03A9026.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "25632943",
+              "filename": "_03A9026.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltea23a1c62fcb402e/6942a4a128be5ae9c39f2bce/_03A9026.jpg"
+            }
+          ],
+          "is_featured": true,
+          "location": "Mumbai, Maharashtra, India ",
+          "tags": [],
+          "title": "Wedding - Dr. Trushang & Vaishnavi",
+          "url": "/wedding-dr-trushang-vaishnavi"
+        }
+      ]
+    },
+    "testimonial": {
+      "count": 4,
+      "entries": [
+        {
+          "uid": "blt508f3e1f825d0a34",
+          "locale": "en-us",
+          "client_name": "Mrs. Renuka & Mr. Pranav ",
+          "client_photo": {
+            "uid": "blt3a9904b6f30be817",
+            "title": "APP00757-2-3.jpg",
+            "parent_uid": "blt07fd1362244dae90",
+            "content_type": "image/jpeg",
+            "file_size": "6847094",
+            "filename": "APP00757-2-3.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3a9904b6f30be817/695649e8e6527e868f7ab3fc/APP00757-2-3.jpg"
+          },
+          "client_title": "Mrs. Renuka & Mr. Pranav ",
+          "event_type": "Wedding",
+          "rating": 5,
+          "review_text": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "6890409730ab463b8a39961e08aa3085",
+            "children": [
+              {
+                "uid": "e9b79a049975413192243175c11b6f6f",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "“Aamod is such a talented photographer. We were thrilled to see the results of his work. After seeing each picture it felt like we are reliving that exact moment. Thanks for capturing all our emotional moments and seizing them in a video!!!"
+                  }
+                ]
+              },
+              {
+                "uid": "38bf7ebf07fc47d49754c9f4bcaaddf2",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Lucky to have you as our wedding photographer!”"
+                  }
+                ]
+              }
+            ]
+          },
+          "tags": [],
+          "title": "Renuka & Pranav - Wedding"
+        },
+        {
+          "uid": "blt25f8b6260d91b7c4",
+          "locale": "en-us",
+          "client_name": "Dr. Trushang & Vaishnavi",
+          "client_photo": {
+            "uid": "blt4039833971e8c41e",
+            "title": "_G1A0501.jpg",
+            "parent_uid": "blt07fd1362244dae90",
+            "content_type": "image/jpeg",
+            "file_size": "20743885",
+            "filename": "_G1A0501.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt4039833971e8c41e/69564707ea53f4769665b869/_G1A0501.jpg"
+          },
+          "client_title": "Dr. Trushang & Vaishnavi",
+          "event_type": "Engagement, Prewedding, Wedding, Maternity, Baby Naming Ceremony",
+          "rating": 5,
+          "review_text": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "d6979ed7b2a04817a6e62750b39a6038",
+            "children": [
+              {
+                "type": "p",
+                "attrs": {},
+                "uid": "3681c7e81bd64bb5b831095b2cfc2fe5",
+                "children": [
+                  {
+                    "text": "“Aamod is a dam good photographer. He was so professional from setting up a great deal to the delivery of the album. He has an amazing team too, during the event they never made us uncomfortable in any way neither they were in between any of the events, but have captured each and every detail precisely. Hats off to such a talented team and his undoubtedly amazing skill. Thank you.”"
+                  }
+                ]
+              }
+            ]
+          },
+          "tags": [],
+          "title": "Dr. Trushang & Vaishnavi - Engagement"
+        },
+        {
+          "uid": "blt9df11e0fca0b709a",
+          "locale": "en-us",
+          "client_name": "Mr. Angiras & Mrs. Ashlesha",
+          "client_photo": {
+            "uid": "blt887d170a04c35c32",
+            "title": "APP06800.jpg",
+            "parent_uid": "blt07fd1362244dae90",
+            "content_type": "image/jpeg",
+            "file_size": "12057765",
+            "filename": "APP06800.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt887d170a04c35c32/6943d1521f4bd5e51193556c/APP06800.jpg"
+          },
+          "client_title": "Mr. Angiras & Mrs. Ashlesha",
+          "event_type": "Wedding",
+          "rating": 5,
+          "review_text": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "0f587ac1f0884a5a8b81d794620435a2",
+            "children": [
+              {
+                "type": "p",
+                "attrs": {},
+                "uid": "229e62d920cf4137949812f2d09368af",
+                "children": [
+                  {
+                    "text": "Asking Aamod to be my wedding photographer has been one of the best decisions of my life. Best photos and perfect moments captured without any disturbance in the rituals. Manages the time and also supports emotionally."
+                  },
+                  {
+                    "text": "\n",
+                    "break": true
+                  }
+                ]
+              }
+            ]
+          },
+          "tags": [],
+          "title": "Angiras & Ashlesha - Wedding"
+        },
+        {
+          "uid": "blt561e3c3a13fbf6db",
+          "locale": "en-us",
+          "client_name": "Sushmita Shinde",
+          "client_photo": {
+            "uid": "bltddfc96b26c458d64",
+            "title": "_03A9756.jpg",
+            "parent_uid": "blt07fd1362244dae90",
+            "content_type": "image/jpeg",
+            "file_size": "4747023",
+            "filename": "_03A9756.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltddfc96b26c458d64/6943ceca5379f15519242dc5/_03A9756.jpg"
+          },
+          "client_title": "Engagament - Mumbai",
+          "event_type": "Engagement, Prewedding",
+          "rating": 5,
+          "review_text": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "f47285ccd93646a4931568c8594f3069",
+            "children": [
+              {
+                "type": "p",
+                "attrs": {},
+                "uid": "bab7bfb4749f431b89686c706dc612ba",
+                "children": [
+                  {
+                    "text": "Aamod is a great photographer, his professionalism, quality of work are remarkable. I wholeheartedly recommend him to anyone seeking extraordinary photographs and an unforgettable experience."
+                  },
+                  {
+                    "text": "\n",
+                    "break": true
+                  }
+                ]
+              }
+            ]
+          },
+          "tags": [],
+          "title": "Sushmita Shinde - Engagement"
+        }
+      ]
+    },
+    "contact_page": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "bltea0fd0ab96182358",
+          "locale": "en-us",
+          "banner": {
+            "title": "Contact",
+            "tagline": "Let's create something beautiful together...",
+            "image": {
+              "uid": "blt4b3a92b529f08b8e",
+              "title": "prewedding.jpg",
+              "parent_uid": "bltc068a266b94e3199",
+              "content_type": "image/jpeg",
+              "file_size": "371677",
+              "filename": "prewedding.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt4b3a92b529f08b8e/6943f18e13c89935a3e6238b/prewedding.jpg"
+            }
+          },
+          "event_type_options": [
+            "Wedding",
+            "Pre-Wedding",
+            "Engagement",
+            "Maternity ",
+            "Baby Shower",
+            "New Born Baby",
+            "Baby Naming Ceremony",
+            "Portraits",
+            "Thread Ceremony",
+            "Corporate Events",
+            "Other"
+          ],
+          "form_labels": {
+            "name_label": "Name *",
+            "email_label": "Email *",
+            "phone_label": "Phone",
+            "event_date_label": "Event Date",
+            "event_type_label": "Event Type",
+            "location_label": "Location",
+            "how_heard_label": "How did you hear about me?",
+            "message_label": "Tell me about your requirement *",
+            "submit_button_text": "Send Inquiry"
+          },
+          "info_section": {
+            "title": "I'd Love to Hear Your Story",
+            "subtitle": "Get in touch",
+            "info_description": "Whether you're planning an intimate elopement or a grand celebration, I'm here to help you preserve your most meaningful moments. Fill out the form and I'll be in touch within 24 hours."
+          },
+          "location": "Available across india",
+          "referral_options": [
+            "Instagram",
+            "Facebook",
+            "Google",
+            "Linkedin",
+            "Friends, Relatives or Colleagues"
+          ],
+          "success": {
+            "success_title": "Thank You!",
+            "success_message": "Your message has been received. I'll be in touch within 48 hours."
+          },
+          "tags": [],
+          "title": "Contact Page",
+          "url": "/contact"
+        }
+      ]
+    },
+    "about_page": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "bltd2e0d98f57807679",
+          "locale": "en-us",
+          "achievements": [
+            {
+              "number": "1",
+              "title": "International Award Winning Wedding Photographer",
+              "subtitle": "Wedwar Adwards",
+              "image_logo": {
+                "uid": "blt84119a2e5e7ebccb",
+                "title": "wedwar-about.png",
+                "parent_uid": "blta162932da08a9244",
+                "content_type": "image/png",
+                "file_size": "69527",
+                "filename": "wedwar-about.png",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt84119a2e5e7ebccb/6943b32c1308b805730b16b2/wedwar-about.png"
+              }
+            },
+            {
+              "number": "2",
+              "title": "Best Wedding Photographer in Mumbai",
+              "subtitle": "Canvera",
+              "image_logo": {
+                "uid": "blt37f683953312f334",
+                "is_dir": false,
+                "content_type": "image/png",
+                "file_size": "14898",
+                "filename": "idvp_ictbJ_1766047685989.png",
+                "parent_uid": "blta162932da08a9244",
+                "tags": [],
+                "title": "idvp_ictbJ_1766047685989.png",
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt37f683953312f334/6943bfffe99cb71df0676119/idvp_ictbJ_1766047685989.png"
+              }
+            },
+            {
+              "number": "3",
+              "title": "Among Top 200 photographers ",
+              "subtitle": "Wedwar Magazine",
+              "image_logo": {
+                "uid": "blt84119a2e5e7ebccb",
+                "title": "wedwar-about.png",
+                "parent_uid": "blta162932da08a9244",
+                "content_type": "image/png",
+                "file_size": "69527",
+                "filename": "wedwar-about.png",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt84119a2e5e7ebccb/6943b32c1308b805730b16b2/wedwar-about.png"
+              }
+            },
+            {
+              "number": "4",
+              "title": "Featured In",
+              "subtitle": "Wedding sutra",
+              "image_logo": {
+                "uid": "blt358e3f6f8704b982",
+                "title": "WS-final.png",
+                "parent_uid": "blta162932da08a9244",
+                "content_type": "image/png",
+                "file_size": "44479",
+                "filename": "WS-final.png",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt358e3f6f8704b982/6943bef228be5a33bf9f30f9/WS-final.png"
+              }
+            }
+          ],
+          "banner": {
+            "title": "International Award Winning Wedding Photographer",
+            "tagline": "",
+            "image": {
+              "uid": "bltbc29c7f9c9bede4b",
+              "title": "cover.jpg",
+              "parent_uid": "blt72e133fbcba24294",
+              "content_type": "image/jpeg",
+              "file_size": "1050792",
+              "filename": "cover.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltbc29c7f9c9bede4b/6942651bca96fc35b82edb08/cover.jpg"
+            }
+          },
+          "cta_section": {
+            "title": "Capture your wonderful moments and amazing story with us. Get in touch!",
+            "cta": {
+              "title": "Contact Now!",
+              "href": "/contact"
+            },
+            "background_image": {
+              "uid": "bltbc29c7f9c9bede4b",
+              "title": "cover.jpg",
+              "parent_uid": "blt72e133fbcba24294",
+              "content_type": "image/jpeg",
+              "file_size": "1050792",
+              "filename": "cover.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltbc29c7f9c9bede4b/6942651bca96fc35b82edb08/cover.jpg"
+            }
+          },
+          "featured_in": {
+            "label": "Featured In",
+            "brands": [
+              "Wedwar",
+              "WeddingSutra",
+              "Canvera"
+            ]
+          },
+          "intro_section": {
+            "greeting": "Hi, I am",
+            "name": "Aamod P. Pisat",
+            "tagline": "Real, Modern, and Artistic - Three words that define who I am and how I tell your story.",
+            "featured_content": "Where Every Frame Tells a Love Story.\n\nAt Aamod P. Pisat Photography, we specialise in capturing weddings with a perfect blend of candid charm and traditional elegance. Based in Mumbai and recognised internationally, our mission is to preserve your most heartfelt moments—raw, real, and timeless.\n\nFrom pre-wedding shoots to destination weddings and baby showers, we turn emotions into cinematic memories. With over 10+  years of experience and a passion for storytelling, we ensure your celebration is remembered with grace, beauty, and authenticity.\n\nLet us frame your love—beautifully and forever.",
+            "description": {
+              "uid": "7c3c44a7d18f471e92d2babc8487d910",
+              "type": "doc",
+              "attrs": {},
+              "children": [
+                {
+                  "uid": "b5173b2d44a64bf1863deb4dd1fc1fce",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Crafting Love Stories. One Frame at a Time.",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "uid": "e6e0f2a52cea4033878404fe9e468000",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Every love story is unique—and we believe your wedding memories should be just as extraordinary. At "
+                    },
+                    {
+                      "text": "Aamod P. Pisat Photography",
+                      "bold": true
+                    },
+                    {
+                      "text": ", we don’t just take photos—we create timeless visual stories that are as real, raw, and radiant as the moments themselves."
+                    }
+                  ]
+                },
+                {
+                  "uid": "e9f18996aabf4cc2bf29e843991c5135",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Based in Mumbai and capturing celebrations across India and beyond, we specialise in candid and traditional photography, cinematic & traditional videography, pre-wedding shoots, and destination weddings. With over "
+                    },
+                    {
+                      "text": "10+",
+                      "bold": true
+                    },
+                    {
+                      "text": " years of experience and the honour of being "
+                    },
+                    {
+                      "text": "International Award-winning",
+                      "bold": true
+                    },
+                    {
+                      "text": ", our work reflects passion, creativity, and an eye for the moments that truly matter."
+                    }
+                  ]
+                },
+                {
+                  "uid": "b35371a572b9489ca0f89f1130f210b5",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "From the quiet emotions of a bride’s smile to the joy of a groom’s dance, we focus on capturing genuine emotions—not staged poses. Our team blends into your celebration like family, ensuring that every tear, laugh, and loving glance is preserved in its purest form."
+                    }
+                  ]
+                },
+                {
+                  "uid": "17678267221746fa863afd529011299b",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Whether it’s the grand celebration of a wedding, the warmth of a baby shower, or the magic of a pre-wedding getaway, we deliver more than just images—we give you "
+                    },
+                    {
+                      "text": "memories that move you",
+                      "bold": true
+                    },
+                    {
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "uid": "81b18118871a4fb9bf90460b74f44c9e",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "With flexible payment options and a commitment to a stress-free experience, we’re here to make your big day beautifully unforgettable."
+                    }
+                  ]
+                },
+                {
+                  "uid": "9b4d89ecbfbb4677bfbad1db50377d90",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Your story deserves to be told with heart. Let us capture yours—with grace, depth, and timeless elegance.",
+                      "bold": true
+                    }
+                  ]
+                }
+              ]
+            },
+            "signature": "Aamod",
+            "cta": {
+              "title": "",
+              "href": ""
+            },
+            "image": {
+              "uid": "blt3fa7b3c4ebba0297",
+              "title": "2L4A0535-2.jpg",
+              "parent_uid": "blta162932da08a9244",
+              "content_type": "image/jpeg",
+              "file_size": "12048543",
+              "filename": "2L4A0535-2.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3fa7b3c4ebba0297/6943d80dc478790488bfb715/2L4A0535-2.jpg"
+            }
+          },
+          "journey_section": {
+            "title": "My Journey",
+            "content": {
+              "uid": "5f5f4c219d7648d1891bf30b84473ce0",
+              "type": "doc",
+              "attrs": {},
+              "children": [
+                {
+                  "uid": "ba118c280b0940e089ec48c75d1b8dce",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "My photography journey began quietly during my college days — sparked by curiosity, shaped by emotion, and driven by a deep love for storytelling. What started with a basic smartphone and candid moments among friends soon revealed my instinct for capturing genuine expressions and real emotions. Over time, this inner passion evolved into a clear purpose: creating timeless photographs and films that preserve memories, feelings, and stories for a lifetime."
+                    }
+                  ]
+                },
+                {
+                  "uid": "ccb230fd3cfd4aeeb96692f993c0f43b",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "I graduated from "
+                    },
+                    {
+                      "text": "Sardar Patel Institute of Technology (SPIT), University of Mumbai",
+                      "bold": true
+                    },
+                    {
+                      "text": ", with a "
+                    },
+                    {
+                      "text": "Bachelor of Engineering in Information Technology",
+                      "bold": true
+                    },
+                    {
+                      "text": ". Alongside my professional career, I began assisting some of the finest photographers in the industry. Working closely with them provided invaluable exposure, real-world experience, and a strong foundation that helped refine both my technical and creative skills. Armed with this learning, I took the leap to build something of my own — seamlessly balancing passion with responsibility by leveraging both my creative vision and technical expertise."
+                    }
+                  ]
+                },
+                {
+                  "uid": "1744336ef4d845359b288bd4716df59e",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Today, "
+                    },
+                    {
+                      "text": "Aamod P. Pisat Photography",
+                      "bold": true
+                    },
+                    {
+                      "text": " is a dedicated team that works relentlessly to bring your vision to life. We specialise in documenting stories of love, life, and emotion through thoughtfully crafted photographs and cinematic films. Based in "
+                    },
+                    {
+                      "text": "Mumbai",
+                      "bold": true
+                    },
+                    {
+                      "text": ", we are proud to be a trusted choice for many couples seeking authenticity, elegance, and heartfelt storytelling."
+                    }
+                  ]
+                },
+                {
+                  "uid": "67305e12ddff41e885e82babef858c8a",
+                  "type": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Recognised among the "
+                    },
+                    {
+                      "text": "Top 200 Photographers in India",
+                      "bold": true
+                    },
+                    {
+                      "text": " and honoured with an "
+                    },
+                    {
+                      "text": "International Award",
+                      "bold": true
+                    },
+                    {
+                      "text": ", we continue to raise the bar — always striving to add new milestones, elevate our craft, and create work that truly stands the test of time."
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "tags": [],
+          "title": "About Page",
+          "url": "/about"
+        }
+      ]
+    },
+    "films_page": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "blt418f35cbe937d5c5",
+          "locale": "en-us",
+          "approach_section": {
+            "subtitle": "Our Approach",
+            "title": "Cinematic Storytelling",
+            "content": {
+              "type": "doc",
+              "attrs": {},
+              "uid": "2e9433232b8849aa95eed5e5fbed3c39",
+              "children": [
+                {
+                  "type": "p",
+                  "attrs": {},
+                  "uid": "da4c6f59efb04b50a845579030bbfa16",
+                  "children": [
+                    {
+                      "text": "We believe wedding films should feel like cinema—beautifully composed, thoughtfully edited, and emotionally resonant. Our films prioritise authentic moments over staged shots, natural audio over forced interviews. The result? A film that feels like stepping back into your day, experiencing every laugh, tear, and whispered promise all over again."
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "cta_section": {
+            "title": "Let's Create Something Beautiful",
+            "description": "Ready to tell your story? I'd love to hear about your vision and explore how we can capture your most meaningful moments together.",
+            "cta": {
+              "title": "Get In Touch",
+              "href": "/contact"
+            }
+          },
+          "films": [
+            {
+              "title": "Dr. Trushang & Mrs. Vaishnavi",
+              "location": "Mumbai, Maharashtra, india",
+              "youtube_id": "1VK16Bxt9l0",
+              "description": "Witness a love story woven with generations of warmth. Dr Trushang & Mrs Vaishnavi's Mumbai wedding, captured by us, is more than a ceremony; it’s a tapestry of cherished moments. From the joy of parents witnessing their union to the quiet certainty of a love that’s bloomed in perfect time, this film invites you to share in their timeless celebration.",
+              "thumbnail": {
+                "uid": "blt8b0c2b567a07c607",
+                "title": "APP05226.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "content_type": "image/jpeg",
+                "file_size": "21231591",
+                "filename": "APP05226.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8b0c2b567a07c607/69429bd88528d748b62a9902/APP05226.jpg"
+              },
+              "order": 1
+            },
+            {
+              "title": "Mr. Pranav & Mrs. Renuka",
+              "location": "Mumbai, Maharashtra, india",
+              "youtube_id": "L58Rt8gvqvE",
+              "description": "Pranav and Renuka's wedding, beautifully captured by Aamod P. Pisat Photography, is a celebration of love, tradition, and joy. The presence and blessings of family and friends make the event even brighter. The stunning visuals showcase every detail, from the heartfelt ceremonies to the joyous celebrations. We artfully document the vibrant colours, emotional moments, and the couple’s radiant happiness as they embark on their new journey together.",
+              "thumbnail": {
+                "uid": "blt453b2717edd278fa",
+                "title": "APP09891.jpg",
+                "parent_uid": "blt6cd508605d5d7cef",
+                "content_type": "image/jpeg",
+                "file_size": "14824383",
+                "filename": "APP09891.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt453b2717edd278fa/6943e0ddca96fc44692ee29e/APP09891.jpg"
+              },
+              "order": 2
+            },
+            {
+              "title": "Mr. Sreejil & Mrs. Radhika",
+              "location": "Mumbai, Maharashtra, india",
+              "youtube_id": "wzudCiOennA",
+              "description": "Beautifully captured by Aamod P. Pisat Photography, Sreejil and Radhika's wedding is a stunning celebration of tradition and love. Every moment is filled with happiness and love, made even more special by the involvement and excitement of family and friends. Our expert cinematography showcases the joy and emotions of their special day, providing the perfect start to their new life together.",
+              "thumbnail": {
+                "uid": "blt0f5d5be62012afaf",
+                "title": "wedding-south-indian.jpg",
+                "parent_uid": "bltc068a266b94e3199",
+                "content_type": "image/jpeg",
+                "file_size": "80238",
+                "filename": "wedding-south-indian.jpg",
+                "is_dir": false,
+                "tags": [],
+                "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt0f5d5be62012afaf/6943deddd5587f485e533620/wedding-south-indian.jpg"
+              },
+              "order": 3
+            },
+            {
+              "title": "Mr. Kunal & Mrs. Bhagyashree ",
+              "location": "Navi Mumbai, India, Maharashtra",
+              "youtube_id": "_QqeCxV98bw",
+              "description": "Step into the world of Kunal and Bhagyashree's wedding, where tradition meets modern elegance. From the bride’s stunning red lehenga to every carefully captured moment, this cinematic teaser brings their special day to life. With timeless beauty, style, and a touch of magic, each frame tells a story of love and celebration.",
+              "thumbnail": null,
+              "order": 4
+            }
+          ],
+          "films_section": {
+            "subtitle": "Our Films ",
+            "title": "\"Your story, beautifully captured in motion, to be cherished forever.\"",
+            "description": ""
+          },
+          "hero_section": {
+            "title": "Films",
+            "tagline": "Capturing the real emotions..",
+            "description": "",
+            "background_video_url": "https://assets.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltc8482011c4e87999/6943e335414d9666238d6e9d/Wedding_Teaser_Coming_Soon_Dr._Trushang_Vaishnavi_1080P.mp4",
+            "fallback_image": {
+              "uid": "blt8b0c2b567a07c607",
+              "title": "APP05226.jpg",
+              "parent_uid": "bltc068a266b94e3199",
+              "content_type": "image/jpeg",
+              "file_size": "21231591",
+              "filename": "APP05226.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8b0c2b567a07c607/69429bd88528d748b62a9902/APP05226.jpg"
+            }
+          },
+          "tags": [],
+          "title": "Film Page",
+          "url": "/films"
+        }
+      ]
+    },
+    "portfolio_page": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "blt9449c36497033bff",
+          "locale": "en-us",
+          "cta_section": {
+            "title": "Let's Create Something Beautiful",
+            "cta": {
+              "title": "Get In Touch",
+              "href": "/contact"
+            }
+          },
+          "gallery_section": {
+            "asset_folder_uid": "blt6cd508605d5d7cef",
+            "button_text": "More Work",
+            "button_link": {
+              "title": "Click here",
+              "href": "/stories"
+            }
+          },
+          "hero_section": {
+            "title": "Our Portfolio",
+            "tagline": "Real moments. Pure emotions. Forever memories.",
+            "background_image": {
+              "uid": "bltfbaa49bc552dda05",
+              "title": "DSC01062.jpg",
+              "parent_uid": "bltc068a266b94e3199",
+              "content_type": "image/jpeg",
+              "file_size": "12351702",
+              "filename": "DSC01062.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltfbaa49bc552dda05/69564021b3d4873cd31fbf5e/DSC01062.jpg"
+            }
+          },
+          "tags": [],
+          "title": "Portfolio Page",
+          "url": "/portfolio"
+        }
+      ]
+    },
+    "stories_post": {
+      "count": 3,
+      "entries": [
+        {
+          "uid": "blt8d3b97bb46d2c9a6",
+          "locale": "en-us",
+          "body": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "0c9d4e8a07864892a97bdb14946c46cc",
+            "children": [
+              {
+                "uid": "a67b708ca47548809c807a5e4661df1c",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "uid": "c78f303ae3aa4071aa44ba8d818f6a63",
+                "type": "h2",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Dr Trushang & Vaishnavi — A Three-Day Celebration of Love",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "41c852df09e149769910326641c3a9de",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "26 January 2023 | Mumbai",
+                    "italic": true
+                  }
+                ]
+              },
+              {
+                "uid": "0d4fe7389e5a402da785c3ebdcdb1701",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Some love stories feel like home. Dr Trushang and Vaishnavi’s wedding was exactly that—warm, joyful, and deeply emotional. Their three-day celebration in Mumbai was a beautiful journey of love, family, and togetherness, marking the beginning of a lifelong bond."
+                  }
+                ]
+              },
+              {
+                "uid": "7ece884a2c9b4e909011e89821c8ccad",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Day 1 – Sangeet: Joy in Every Beat",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "115ba124fab346d68407b0d92b9a88af",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The festivities opened with a vibrant Sangeet filled with music, dance, and heartfelt performances. Surrounded by friends and family, Trushang and Vaishnavi shared quiet smiles and meaningful glances, radiating happiness. Every frame reflected celebration, pride, and pure joy."
+                  }
+                ]
+              },
+              {
+                "uid": "ef771d4f34c34a7f903b618031a22f24",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Day 2 – Haldi: Intimate & Full of Colour",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "0b66dcb841f3423881c1586205c2b19d",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The Haldi ceremony was bright, playful, and filled with laughter. From candid moments to emotional blessings, the day felt effortless and genuine. An early morning couple shoot later captured the two in calm, natural light—simple, quiet moments that spoke volumes about their connection."
+                  }
+                ]
+              },
+              {
+                "uid": "0f9e89512bc54fc5a130b3032b0db2b5",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Day 3 – The Wedding: A Promise for Life",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "e62ce5c1064e49149ac6a0ed506a15ed",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The wedding day was graceful and deeply moving. As rituals unfolded, emotions flowed naturally—tears of joy, heartfelt blessings, and smiles that said everything. Each moment, from the pheras to intimate family exchanges, was filled with meaning and love."
+                  }
+                ]
+              },
+              {
+                "uid": "b49cbbe36a8d4158ba252d8fd600c0e4",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Our Storytelling Journey",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "02d1fded2f624f518428e6d194b6a894",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "At "
+                  },
+                  {
+                    "text": "Aamod P. Pisat Photography",
+                    "bold": true
+                  },
+                  {
+                    "text": ", we focus on documenting emotions as they happen. With a seamless team and a shared vision, we captured every golden moment—candid, honest, and timeless."
+                  }
+                ]
+              },
+              {
+                "uid": "1cb16ca26f2b4354a6f8f1f4cbb38a0c",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "A Story to Treasure Forever",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "72148af6baaa433f930c96fd23225339",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "More than a wedding, this was a celebration of love, respect, and genuine connection. Trushang and Vaishnavi, thank you for trusting us with your story. Your journey will always remain special to us."
+                  }
+                ]
+              },
+              {
+                "uid": "722adceb14ef443c85e739eb7e34083b",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "— "
+                  },
+                  {
+                    "text": "Captured with love,",
+                    "italic": true
+                  },
+                  {
+                    "text": "\n",
+                    "break": true
+                  },
+                  {
+                    "text": "Aamod P. Pisat Photography",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "84a9796a2bf54cd094621c031d9d4cc0",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          "excerpt": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "ecb11d00e54745ff98097f7607326dad",
+            "children": [
+              {
+                "type": "p",
+                "attrs": {},
+                "uid": "6d093704a0a7412cbd14bfe88b3148ec",
+                "children": [
+                  {
+                    "text": "Dr. Trushang & Vaishnavi’s three-day destination wedding in Mumbai was a heartfelt celebration of love, emotions, and togetherness. From joyful Sangeet nights to emotional wedding rituals, Aamod P. Pisat Photography captured real moments, early morning couple shoots, and timeless memories filled with happiness and love."
+                  }
+                ]
+              }
+            ]
+          },
+          "featured_image": {
+            "uid": "blt2c8c7d6d4bb87422",
+            "title": "engagement.jpg",
+            "parent_uid": "bltc068a266b94e3199",
+            "content_type": "image/jpeg",
+            "file_size": "130841",
+            "filename": "engagement.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2c8c7d6d4bb87422/6942a07277fa9f8163750201/engagement.jpg"
+          },
+          "gallery_images": [
+            {
+              "uid": "blta9cad4bb63fa4a26",
+              "title": "_03A9455.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "30381322",
+              "filename": "_03A9455.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blta9cad4bb63fa4a26/6942a49c1c8295719b52b058/_03A9455.jpg"
+            },
+            {
+              "uid": "bltcff5fe9890927af2",
+              "title": "_03A9432.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "28877063",
+              "filename": "_03A9432.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcff5fe9890927af2/6942a49b1b4aca4c7b2d0455/_03A9432.jpg"
+            },
+            {
+              "uid": "blt29fce960c32787f7",
+              "title": "_03A9327.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "25829898",
+              "filename": "_03A9327.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt29fce960c32787f7/6942a4998528d76b962a9940/_03A9327.jpg"
+            },
+            {
+              "uid": "bltea23a1c62fcb402e",
+              "title": "_03A9026.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "25632943",
+              "filename": "_03A9026.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltea23a1c62fcb402e/6942a4a128be5ae9c39f2bce/_03A9026.jpg"
+            },
+            {
+              "uid": "blt1bbafe7eb345d49e",
+              "title": "_03A8573.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "13500141",
+              "filename": "_03A8573.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt1bbafe7eb345d49e/6942a489c726001070f4b75b/_03A8573.jpg"
+            },
+            {
+              "uid": "blt9a751e48764c8bb6",
+              "title": "_03A8505.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "21302800",
+              "filename": "_03A8505.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt9a751e48764c8bb6/6942a48fe99cb7e261675bb2/_03A8505.jpg"
+            },
+            {
+              "uid": "blte18983384137ec8a",
+              "title": "_03A8474.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "33245752",
+              "filename": "_03A8474.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte18983384137ec8a/6942a49d31ed5e171eaf7319/_03A8474.jpg"
+            },
+            {
+              "uid": "bltcbe9c7f6708228b5",
+              "title": "_03A8390.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "4104572",
+              "filename": "_03A8390.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcbe9c7f6708228b5/6942a470d9ae2127c2c17dc9/_03A8390.jpg"
+            },
+            {
+              "uid": "blt76741d2c9bf25133",
+              "title": "_G1A0639.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "19212718",
+              "filename": "_G1A0639.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt76741d2c9bf25133/695a9277d079132fd90be4c8/_G1A0639.jpg"
+            },
+            {
+              "uid": "blt42f50fbd96ec1831",
+              "title": "_03A8421.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "38591776",
+              "filename": "_03A8421.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt42f50fbd96ec1831/695a92788d742a4cf9cb4270/_03A8421.jpg"
+            },
+            {
+              "uid": "bltd671c4965a21d5d5",
+              "title": "_G1A0653.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "22270727",
+              "filename": "_G1A0653.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltd671c4965a21d5d5/695a934fb6d249051d69175d/_G1A0653.jpg"
+            },
+            {
+              "uid": "blt0601eba1bbf1422a",
+              "title": "_03A0126.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "7124826",
+              "filename": "_03A0126.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt0601eba1bbf1422a/695a99442ca2bb8387ac6a7c/_03A0126.jpg"
+            },
+            {
+              "uid": "blt31d8a1f8a82ecfc1",
+              "title": "_03A0088.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "22564988",
+              "filename": "_03A0088.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt31d8a1f8a82ecfc1/695a9949b6d249a6e8691761/_03A0088.jpg"
+            },
+            {
+              "uid": "blt0ee4449b1f3e959f",
+              "title": "_03A8659.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "23437751",
+              "filename": "_03A8659.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt0ee4449b1f3e959f/695a994aea53f4bfee65bcce/_03A8659.jpg"
+            },
+            {
+              "uid": "blt76892e0e705ee15e",
+              "title": "_03A9683.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "25111383",
+              "filename": "_03A9683.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt76892e0e705ee15e/695a994a908bb126a5c772a2/_03A9683.jpg"
+            },
+            {
+              "uid": "blt9f884e184abdd7f4",
+              "title": "_03A9088.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "27750568",
+              "filename": "_03A9088.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt9f884e184abdd7f4/695a994bef8f442097b4e7e6/_03A9088.jpg"
+            },
+            {
+              "uid": "blt3e5f6de991160bf7",
+              "title": "_03A9614.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "28456904",
+              "filename": "_03A9614.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3e5f6de991160bf7/695a994ba88d5c5678b344bb/_03A9614.jpg"
+            },
+            {
+              "uid": "bltb12121d6726a53e1",
+              "title": "_03A9692.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "25082352",
+              "filename": "_03A9692.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb12121d6726a53e1/695a994d0276831b5ab92bca/_03A9692.jpg"
+            },
+            {
+              "uid": "blt776b995bf7d58a8b",
+              "title": "_G1A0653.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "22270727",
+              "filename": "_G1A0653.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt776b995bf7d58a8b/695a9950762a59933b20cd49/_G1A0653.jpg"
+            },
+            {
+              "uid": "bltf9264987039746e1",
+              "title": "_03A9643.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "26153536",
+              "filename": "_03A9643.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltf9264987039746e1/695a9950d07913bb510be4d1/_03A9643.jpg"
+            },
+            {
+              "uid": "blt18735dae3b1e68d5",
+              "title": "_03A9646.jpg",
+              "parent_uid": "blt9fd92a486ceed7f6",
+              "content_type": "image/jpeg",
+              "file_size": "28123466",
+              "filename": "_03A9646.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt18735dae3b1e68d5/695a9951d07913f88d0be4d5/_03A9646.jpg"
+            }
+          ],
+          "is_featured": true,
+          "publish_date": "2025-12-20T14:07:43.000Z",
+          "tags": [],
+          "taxonomies": [
+            {
+              "taxonomy_uid": "wedding",
+              "term_uid": "wedding"
+            }
+          ],
+          "thumbnail_image": {
+            "uid": "blt9a751e48764c8bb6",
+            "title": "_03A8505.jpg",
+            "parent_uid": "blt9fd92a486ceed7f6",
+            "content_type": "image/jpeg",
+            "file_size": "21302800",
+            "filename": "_03A8505.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt9a751e48764c8bb6/6942a48fe99cb7e261675bb2/_03A8505.jpg"
+          },
+          "title": "Dr. Trushang & Vaishnavi",
+          "url": "/trushang-and-vaishnavi"
+        },
+        {
+          "uid": "blt15e3b7c8928bf33d",
+          "locale": "en-us",
+          "body": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "bf2e4b9c706249b1be4057b9a44d8b3f",
+            "children": [
+              {
+                "uid": "7f64fb256c5f445b961c7366832eb610",
+                "type": "h2",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Yuvraj Hatkar’s Upanayanam Ceremony — A Sacred Beginning",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "9f259aae3c2e46518090c3aaf01d4614",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Some moments are timeless, rooted in tradition yet filled with heartfelt emotion. Yuvraj Hatkar’s Upanayanam (Thread) ceremony was one such day — a beautiful blend of spirituality, family bonds, and new beginnings. Our team at "
+                  },
+                  {
+                    "text": "Aamod P. Pisat Photography",
+                    "bold": true
+                  },
+                  {
+                    "text": " was honored to document this meaningful milestone, capturing genuine emotions and cherished moments as they naturally unfolded."
+                  }
+                ]
+              },
+              {
+                "uid": "4e0e5b1331cf4b3c937184ef50c2f770",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "A Ceremony of Tradition & Blessings",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "b498b8b6c0be47538a61e958c737e7a2",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The Upanayanam ceremony marks a significant rite of passage, symbolizing a child’s initiation into spiritual learning and cultural values. As Yuvraj embraced this sacred moment, the atmosphere was calm, devotional, and filled with pride. Surrounded by his family, every ritual carried deep meaning, reflecting generations of faith and tradition."
+                  }
+                ]
+              },
+              {
+                "uid": "b720e51e46144cef89fb1fc0e88a5e3a",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Moments That Truly Matter",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "5e9a64c336b34b42bf30e1495a27f38d",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The day began with early morning rituals, gentle smiles, and quiet blessings from loved ones. As Yuvraj sat with the priest, dressed in traditional attire, emotions flowed effortlessly — from his parents’ proud glances to the warmth shared among family members. These were not posed moments, but real, heartfelt expressions that defined the essence of the ceremony."
+                  }
+                ]
+              },
+              {
+                "uid": "be84703c89c8433b902d6de790df55eb",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "When the sacred thread was bestowed upon Yuvraj, the room fell into a reverent silence. It was a powerful moment — one that symbolized responsibility, learning, and a new chapter in his life. Our focus remained on capturing these authentic emotions — the joy, the devotion, and the love that surrounded him."
+                  }
+                ]
+              },
+              {
+                "uid": "0c46deb53c2e487a89d2df6bce116944",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "A Celebration of Love & Connection",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "f67bf05be5234506bdda4cfed9aac88e",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Beyond the rituals, the ceremony was filled with laughter, conversations, and togetherness. From intimate family portraits to candid interactions between cousins and elders, every frame reflected connection and warmth. Each photograph tells a story — not just of a ritual, but of relationships and memories that will be treasured forever."
+                  }
+                ]
+              },
+              {
+                "uid": "b2e55027a54d4c9b812e7204f1cc1fc4",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "A Memory Preserved Forever",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "683ed76aa0b34225b8b0af356af916fc",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Yuvraj’s Upanayanam was more than a ceremony — it was a celebration of heritage, family, and heartfelt blessings. We are grateful to have been part of this special day and to preserve these moments as timeless memories."
+                  }
+                ]
+              },
+              {
+                "uid": "0db87d08e32e4d30bf900eeec4f997b2",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Thank you, Yuvraj and family, for trusting us with your story. Wishing you a life filled with wisdom, joy, and endless love."
+                  }
+                ]
+              },
+              {
+                "uid": "b4d1318c59a94773853fbb1566a852bb",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "— "
+                  },
+                  {
+                    "text": "With gratitude,",
+                    "italic": true
+                  },
+                  {
+                    "text": "\n",
+                    "break": true
+                  },
+                  {
+                    "text": "Aamod P. Pisat Photography",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "467608729d944a699ab7726bd5bb1ab4",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          "excerpt": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "29949b4e19b349e78478ec235ed4264e",
+            "children": [
+              {
+                "type": "p",
+                "attrs": {},
+                "uid": "9ac0f7dce8aa493eae36dcde2ead8b93",
+                "children": [
+                  {
+                    "text": "Yuvraj Hatkar’s Upanayanam ceremony was a beautiful celebration of tradition, love, and spiritual beginnings. From early morning rituals to the sacred thread investiture, Aamod P. Pisat Photography captured genuine emotions, happiness, and timeless moments that reflect the heart of this meaningful day."
+                  }
+                ]
+              }
+            ]
+          },
+          "featured_image": {
+            "uid": "blt68cb84a21118e8cb",
+            "parent_uid": "blt4d4a88f44203dde2",
+            "title": "_JYG0435.jpg",
+            "content_type": "image/jpeg",
+            "file_size": "1213916",
+            "filename": "_JYG0435.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt68cb84a21118e8cb/69496b7ecf7459ec9fbc0ab4/_JYG0435.jpg"
+          },
+          "gallery_images": [
+            {
+              "uid": "bltaef5bcb7bf09fa9f",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "_JYG0768.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "2198328",
+              "filename": "_JYG0768.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltaef5bcb7bf09fa9f/69496b7cb6d249004768faaf/_JYG0768.jpg"
+            },
+            {
+              "uid": "blt325bfa058a702a32",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "_JYG0280.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1944733",
+              "filename": "_JYG0280.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt325bfa058a702a32/69496b7cb7c91b7c3ba541f1/_JYG0280.jpg"
+            },
+            {
+              "uid": "blt08a74443b4721650",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "_JYG0155.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1374690",
+              "filename": "_JYG0155.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt08a74443b4721650/69496b7ecedfd50d1b41f2c2/_JYG0155.jpg"
+            },
+            {
+              "uid": "blt96887528398c24d1",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "_JYG0149.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1850150",
+              "filename": "_JYG0149.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt96887528398c24d1/69496b7ee6527e94f67a9a6b/_JYG0149.jpg"
+            },
+            {
+              "uid": "blt3af3e92463c56bb4",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "_JYG0147.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1645365",
+              "filename": "_JYG0147.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3af3e92463c56bb4/69496b7c6ae3813cd151ddf2/_JYG0147.jpg"
+            },
+            {
+              "uid": "blt9b4c875e857452cd",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP04276.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1295274",
+              "filename": "APP04276.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt9b4c875e857452cd/69496bd0f9bda5af6c5548e7/APP04276.jpg"
+            },
+            {
+              "uid": "blt8b40d5865e22a869",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP04235.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1838614",
+              "filename": "APP04235.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8b40d5865e22a869/69496bcee6527e7eda7a9a73/APP04235.jpg"
+            },
+            {
+              "uid": "blt558573e996c55f7e",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP04226.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1664856",
+              "filename": "APP04226.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt558573e996c55f7e/69496bd077fa9f40957516d5/APP04226.jpg"
+            },
+            {
+              "uid": "blt31b3c1f4a107a38d",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP04061.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1632618",
+              "filename": "APP04061.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt31b3c1f4a107a38d/69496bcee6527e79cd7a9a6f/APP04061.jpg"
+            },
+            {
+              "uid": "blt32aca2b30e7b5e2f",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03705.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1699244",
+              "filename": "APP03705.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt32aca2b30e7b5e2f/69496bd08965be2b4fba28be/APP03705.jpg"
+            },
+            {
+              "uid": "bltcb91f1684a0d52bc",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03686.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1868023",
+              "filename": "APP03686.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcb91f1684a0d52bc/69496bce6fc9797b5ff6c353/APP03686.jpg"
+            },
+            {
+              "uid": "bltd5e7695cad832671",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03627.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1374510",
+              "filename": "APP03627.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltd5e7695cad832671/69496bce762a5931ff20b10f/APP03627.jpg"
+            },
+            {
+              "uid": "blt806644b3b90034a5",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03570.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1504394",
+              "filename": "APP03570.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt806644b3b90034a5/69496ba1414d96caef8d7cc4/APP03570.jpg"
+            },
+            {
+              "uid": "blt21f09674ac719a2d",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03495.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1662296",
+              "filename": "APP03495.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt21f09674ac719a2d/69496b9fcf74598955bc0abc/APP03495.jpg"
+            },
+            {
+              "uid": "blt2beab5db07f99a1b",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03399.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1729044",
+              "filename": "APP03399.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2beab5db07f99a1b/69496b9f67fae3841b048dd6/APP03399.jpg"
+            },
+            {
+              "uid": "bltbf971ee734051520",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03284.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1696092",
+              "filename": "APP03284.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltbf971ee734051520/69496b9f80046102c0c9bb65/APP03284.jpg"
+            },
+            {
+              "uid": "blt22540247ddf0253a",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03279.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1776199",
+              "filename": "APP03279.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt22540247ddf0253a/69496ba150dc7c7f95a089e9/APP03279.jpg"
+            },
+            {
+              "uid": "blte3dbb18c09e6ea38",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP03166.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "3369320",
+              "filename": "APP03166.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte3dbb18c09e6ea38/69496b9f0fbf1633e4e0e734/APP03166.jpg"
+            },
+            {
+              "uid": "blt7cfa17123ac731bd",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP02863.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1488737",
+              "filename": "APP02863.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt7cfa17123ac731bd/69496b7c67fae34567048dd2/APP02863.jpg"
+            },
+            {
+              "uid": "blte3a0441942fe61ba",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP02944.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1797876",
+              "filename": "APP02944.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte3a0441942fe61ba/69496ba0cedfd5780f41f2c6/APP02944.jpg"
+            },
+            {
+              "uid": "blt07c5e2d8f1762032",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "title": "APP02868.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1838915",
+              "filename": "APP02868.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt07c5e2d8f1762032/69496b9fcf7459411dbc0ab8/APP02868.jpg"
+            },
+            {
+              "uid": "blt180176702262c54d",
+              "title": "_JYG0032.jpg",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "content_type": "image/jpeg",
+              "file_size": "11228405",
+              "filename": "_JYG0032.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt180176702262c54d/695a9571d0791336340be4cc/_JYG0032.jpg"
+            },
+            {
+              "uid": "bltac9e1cb08b0312d5",
+              "title": "_JYG0560.jpg",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "content_type": "image/jpeg",
+              "file_size": "20516992",
+              "filename": "_JYG0560.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltac9e1cb08b0312d5/695a96a4d10352e7eece7e29/_JYG0560.jpg"
+            },
+            {
+              "uid": "blt1441e5635e742325",
+              "title": "APP03197.jpg",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "content_type": "image/jpeg",
+              "file_size": "18707255",
+              "filename": "APP03197.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt1441e5635e742325/695a96b62ca2bb687aac6a78/APP03197.jpg"
+            },
+            {
+              "uid": "bltc5cca307cd847bde",
+              "title": "APP03391.jpg",
+              "parent_uid": "blt4d4a88f44203dde2",
+              "content_type": "image/jpeg",
+              "file_size": "22304054",
+              "filename": "APP03391.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltc5cca307cd847bde/695a9712b2ca1a18b86d52c5/APP03391.jpg"
+            }
+          ],
+          "is_featured": true,
+          "publish_date": "2025-12-23T16:03:53.000Z",
+          "tags": [],
+          "taxonomies": [
+            {
+              "taxonomy_uid": "events",
+              "term_uid": "upanayanam"
+            }
+          ],
+          "thumbnail_image": {
+            "uid": "blt558573e996c55f7e",
+            "parent_uid": "blt4d4a88f44203dde2",
+            "title": "APP04226.jpg",
+            "content_type": "image/jpeg",
+            "file_size": "1664856",
+            "filename": "APP04226.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt558573e996c55f7e/69496bd077fa9f40957516d5/APP04226.jpg"
+          },
+          "title": "Yuvraj-Hatkar Upanayanam Ceremony",
+          "url": "/yuvraj-hatkar-upanayanam-ceremony"
+        },
+        {
+          "uid": "blt893a452ec6a42859",
+          "locale": "en-us",
+          "body": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "81f6bb742fac462bb1d157f051558e92",
+            "children": [
+              {
+                "uid": "821bfbc62113480cac11b0b7c3f51c11",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "uid": "de8e31fe87234c72b3c8d43e8100c63d",
+                "type": "h2",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Sushmita & Milind – A Love Story Framed by Nature",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "96d771d17efe45af97c1381f69211914",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Pre-Wedding Shoot by Aamod P. Pisat Photography",
+                    "italic": true
+                  }
+                ]
+              },
+              {
+                "uid": "e5ed8a5f8f394440b84b4b5fea2e1e0c",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Some love stories are loud. Some are quiet."
+                  },
+                  {
+                    "text": "\n",
+                    "break": true
+                  },
+                  {
+                    "text": "Sushmita and Milind’s love story",
+                    "bold": true
+                  },
+                  {
+                    "text": " was calm, deep, and beautifully expressive—spoken through smiles, gentle gestures, and moments of togetherness."
+                  }
+                ]
+              },
+              {
+                "uid": "dc0ad6e03cb6490e960b660b19f3aa03",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Their pre-wedding shoot was planned as a journey through nature, emotions, and connection. From the open "
+                  },
+                  {
+                    "text": "beaches with endless skies",
+                    "bold": true
+                  },
+                  {
+                    "text": " to the lush greenery of a "
+                  },
+                  {
+                    "text": "national park",
+                    "bold": true
+                  },
+                  {
+                    "text": ", every location reflected their bond perfectly. It wasn’t just about photographs—it was about "
+                  },
+                  {
+                    "text": "capturing the real emotions",
+                    "bold": true
+                  },
+                  {
+                    "text": " that naturally exist between two people in love."
+                  }
+                ]
+              },
+              {
+                "uid": "e8258a33dc3e4130a884ec52ddf35e4d",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Early Morning by the Beach – Where Romance Began",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "6fb2134afe3b4758b5016c2bd933e2dd",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "We began the shoot with "
+                  },
+                  {
+                    "text": "early morning beach scenes",
+                    "bold": true
+                  },
+                  {
+                    "text": ", when the world feels quiet and the light is soft and magical. The sound of waves, the cool breeze, and the golden sunrise created a peaceful backdrop for Sushmita and Milind’s romantic moments."
+                  }
+                ]
+              },
+              {
+                "uid": "32f317e320424ba0a87f33acd916b222",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Barefoot on the sand, walking hand in hand, sharing laughter, and exchanging kind words—these moments didn’t need direction. They simply happened. Our role was to observe, feel, and capture them as they unfolded naturally."
+                  }
+                ]
+              },
+              {
+                "uid": "d7cd0e0e29aa4b84a9b23e2cd3ec0cdc",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The beach gave us frames full of "
+                  },
+                  {
+                    "text": "love, happiness, and freedom",
+                    "bold": true
+                  },
+                  {
+                    "text": "—where every smile felt genuine and every moment felt timeless."
+                  }
+                ]
+              },
+              {
+                "uid": "7016396b03d84158b66488a51c5b11e8",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Nature’s Embrace – Romance Amid Greenery",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "ae639d6dbd7348bbbd74ea2ea712871e",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "As the day progressed, we moved into the heart of nature—a national park filled with lush greenery, calm paths, and soothing light. This setting brought a different energy—more intimate, more grounded, and deeply emotional."
+                  }
+                ]
+              },
+              {
+                "uid": "350d25b7a4284697a724e65a1cf0b4b2",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Surrounded by green landscapes, Sushmita and Milind looked completely at ease. Their connection felt effortless. A soft smile, a gentle touch, a moment of silence—these were the golden moments that made the shoot special."
+                  }
+                ]
+              },
+              {
+                "uid": "799291a8ca9540c0bedcd4b023ce7c0e",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "The greenery became the perfect background for their "
+                  },
+                  {
+                    "text": "couple shoots",
+                    "bold": true
+                  },
+                  {
+                    "text": ", highlighting not just their love, but also their comfort and trust in each other."
+                  }
+                ]
+              },
+              {
+                "uid": "4029798d38a94607a77db9d5431fbc25",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "A Team That Captures More Than Images",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "c964bd2e5e64426faf4dbee3fc9708c1",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Behind every beautiful frame is a dedicated team working quietly and passionately. Our photography team ensured that every emotion—big or small—was captured with care. From wide scenic shots to close emotional portraits, every image tells a story."
+                  }
+                ]
+              },
+              {
+                "uid": "415ae7d8e6a24ff7946948558b1f65b3",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "At "
+                  },
+                  {
+                    "text": "Aamod P. Pisat Photography",
+                    "bold": true
+                  },
+                  {
+                    "text": ", we believe pre-wedding shoots are not about posing—it’s about letting couples be themselves. Sushmita and Milind trusted us with their story, and that trust allowed us to document their journey honestly and beautifully."
+                  }
+                ]
+              },
+              {
+                "uid": "0ee3bcef77284b1e9b99d7d0d3e15554",
+                "type": "h3",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Moments That Will Last Forever",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "0dd83e6fa3c5470cad122bb93d0f8faa",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "This pre-wedding shoot was a reminder that love doesn’t need grand expressions—it lives in small moments. In laughter shared, in eyes that understand, and in silence that feels comfortable."
+                  }
+                ]
+              },
+              {
+                "uid": "b1fcf6215f7847ea958c5ac6cb2bf254",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Sushmita and Milind’s story is one of warmth, respect, and deep connection. We’re grateful to have captured these moments that will now live on forever through photographs."
+                  }
+                ]
+              },
+              {
+                "uid": "7146dd7c76aa479cbb4b4b3647db1005",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "Here’s to love, nature, and memories that grow more beautiful with time.",
+                    "bold": true
+                  }
+                ]
+              },
+              {
+                "uid": "4d8f94f3f9ef4027baab5eb82efd5ba1",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": "— "
+                  },
+                  {
+                    "text": "Captured with heart by Aamod P. Pisat Photography",
+                    "italic": true
+                  }
+                ]
+              },
+              {
+                "uid": "8f624e1eee2a4e768884bb46c4a3e647",
+                "type": "p",
+                "attrs": {},
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ]
+          },
+          "excerpt": {
+            "type": "doc",
+            "attrs": {},
+            "uid": "c1d366ee907a4a719dbba821d423317d",
+            "children": [
+              {
+                "type": "p",
+                "attrs": {},
+                "uid": "66a843502b29481480985f14ba232223",
+                "children": [
+                  {
+                    "text": "Sushmita & Milind’s pre-wedding shoot was a beautiful blend of beachside romance and serene greenery. From early morning beach moments to intimate couple shoots in nature, Aamod P. Pisat Photography captured real emotions, love, happiness, and timeless memories."
+                  }
+                ]
+              }
+            ]
+          },
+          "featured_image": {
+            "uid": "blteba6047ebfae5d0d",
+            "parent_uid": "bltc068a266b94e3199",
+            "title": "APP05274.jpg",
+            "content_type": "image/jpeg",
+            "file_size": "10378028",
+            "filename": "APP05274.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blteba6047ebfae5d0d/694298aedc686e2019d0fafb/APP05274.jpg"
+          },
+          "gallery_images": [
+            {
+              "uid": "blt6d60db82bb44b897",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05574.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1782028",
+              "filename": "APP05574.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt6d60db82bb44b897/694567aa0f4138ff57c922c9/APP05574.jpg"
+            },
+            {
+              "uid": "blt3cd71de0c6ac4377",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05569.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1673995",
+              "filename": "APP05569.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3cd71de0c6ac4377/694567aa28be5aa4999f387d/APP05569.jpg"
+            },
+            {
+              "uid": "blt514cee8f6f1edc1f",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05565.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1245864",
+              "filename": "APP05565.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt514cee8f6f1edc1f/694567aa1f4bd5dab6935d72/APP05565.jpg"
+            },
+            {
+              "uid": "blt2a67e43200cf55d6",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05516.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1055204",
+              "filename": "APP05516.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2a67e43200cf55d6/694567b228be5a7e579f3885/APP05516.jpg"
+            },
+            {
+              "uid": "blt6c30810c4e2f378f",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05508.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1873811",
+              "filename": "APP05508.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt6c30810c4e2f378f/694567a2c52b641de7e0d9c1/APP05508.jpg"
+            },
+            {
+              "uid": "blta7ba33e322519a47",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05442.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1588044",
+              "filename": "APP05442.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blta7ba33e322519a47/694567a2cf745941f9bc03d2/APP05442.jpg"
+            },
+            {
+              "uid": "blt2355864cda927480",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05421.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1883535",
+              "filename": "APP05421.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2355864cda927480/694567a3cf7459d768bc03d6/APP05421.jpg"
+            },
+            {
+              "uid": "blt1a7aa7f2cae02de1",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05383.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "1509213",
+              "filename": "APP05383.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt1a7aa7f2cae02de1/694567a4b7c91b2307a539c2/APP05383.jpg"
+            },
+            {
+              "uid": "bltb047d1fa11c39b78",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05318.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "482994",
+              "filename": "APP05318.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb047d1fa11c39b78/694567b19f412af7c2edfd43/APP05318.jpg"
+            },
+            {
+              "uid": "blt0ea01c0303a3602e",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05274.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "657760",
+              "filename": "APP05274.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt0ea01c0303a3602e/694567a2908bb1a8a9c74e6b/APP05274.jpg"
+            },
+            {
+              "uid": "blt8a7e5034ee632d52",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05263.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "608446",
+              "filename": "APP05263.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8a7e5034ee632d52/694567a2414d9665dc8d7556/APP05263.jpg"
+            },
+            {
+              "uid": "bltafbf7258cac0247c",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05244.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "695688",
+              "filename": "APP05244.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltafbf7258cac0247c/694567a2d5587fb25f533c7b/APP05244.jpg"
+            },
+            {
+              "uid": "blt7441a4260c897b03",
+              "parent_uid": "blt830d254dde2185e0",
+              "title": "APP05119.jpg",
+              "content_type": "image/jpeg",
+              "file_size": "701411",
+              "filename": "APP05119.jpg",
+              "is_dir": false,
+              "tags": [],
+              "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt7441a4260c897b03/694567a2cedfd5a39c41ebb0/APP05119.jpg"
+            }
+          ],
+          "is_featured": true,
+          "publish_date": "2025-12-20T15:00:24.000Z",
+          "tags": [],
+          "taxonomies": [
+            {
+              "taxonomy_uid": "wedding",
+              "term_uid": "prewedding"
+            }
+          ],
+          "thumbnail_image": {
+            "uid": "blt140399008800659c",
+            "parent_uid": "bltc068a266b94e3199",
+            "title": "APP05383.jpg",
+            "content_type": "image/jpeg",
+            "file_size": "18258895",
+            "filename": "APP05383.jpg",
+            "is_dir": false,
+            "tags": [],
+            "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt140399008800659c/694298b9d5587fe7f7532f71/APP05383.jpg"
+          },
+          "title": "Mrs. Sushmita & Mr. Milind",
+          "url": "/sushmita-and-milind"
+        }
+      ]
+    },
+    "packages_page": {
+      "count": 1,
+      "entries": [
+        {
+          "uid": "blt305979d75424a569",
+          "locale": "en-us",
+          "album_section": {
+            "title": "",
+            "albums": [
+              {
+                "name": "“The Legacy Album”",
+                "description": "Custom premium album",
+                "why_it_connects": "Feels timeless and significant.",
+                "price": "From 15,999/- *"
+              },
+              {
+                "name": "“The Signature Edit”",
+                "description": "Extra premium photo retouches",
+                "why_it_connects": "Sounds exclusive, elegant, and handcrafted.",
+                "price": "From 24,999/- *"
+              }
+            ]
+          },
+          "booking_form_section": {
+            "title": "Book Your Session",
+            "description": "Fill out the form below to reserve your chosen package. We\\'ll get back to you within 24 hours to confirm your booking.",
+            "submit_button_text": "Book Session"
+          },
+          "hero_section": {
+            "title": "Our Packages",
+            "tagline": "Curated experiences for your forever story",
+            "description": "",
+            "background_image": null
+          },
+          "intro_section": {
+            "subtitle": "Packages & Pricing",
+            "title": "Tailored to Your Story",
+            "description": "Every story is unique, and your coverage should be too. Choose from our carefully crafted packages or let us create something custom for you."
+          },
+          "package_categories": [
+            {
+              "category_id": "engagement",
+              "category_name": "Engagement",
+              "category_tagline": "Moments that Begin the Story",
+              "icon": "ring",
+              "packages": [
+                {
+                  "package_name": "The First Frame",
+                  "price": "INR 9,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "11 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Serene Moments",
+                  "price": "INR 18,999/- *",
+                  "features": [
+                    "Traditional Candid Photography",
+                    "15 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Radiant Hearts",
+                  "price": "INR 20,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "Traditional Full video coverage",
+                    "5 ~ 7 minutes video highlights",
+                    "11 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Soul Promise",
+                  "price": "INR 24,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "Cinematic video highlights",
+                    "~1 min video teaser",
+                    "11 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": true,
+                  "badge_text": "Popular"
+                },
+                {
+                  "package_name": "Forever in Motion",
+                  "price": "INR 29,999/- * ",
+                  "features": [
+                    "Traditional Candid Photography",
+                    "Full video coverage",
+                    "5 ~ 7 minutes video highlights",
+                    "15 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Unwritten Vows",
+                  "price": "INR 34,999/- *",
+                  "features": [
+                    "Traditional Candid Photography",
+                    "Cinematic video highlights",
+                    "15 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                }
+              ]
+            },
+            {
+              "category_id": "wedding",
+              "category_name": "Wedding",
+              "category_tagline": "Stories of Love in Motion",
+              "icon": "heart",
+              "packages": [
+                {
+                  "package_name": "Forever Frame",
+                  "price": "INR 32,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "Full traditional video coverage",
+                    "5 ~ 7 minutes video highlights",
+                    "15 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Cinematic Bliss",
+                  "price": "INR 39,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "Cinematic Video Highlight",
+                    "1 minute video teaser and 1 reel",
+                    "15 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Hearts in Harmony",
+                  "price": "INR 47,999/- *",
+                  "features": [
+                    "Traditional Candid Photography",
+                    "Full traditional video coverage",
+                    "5 ~ 7 minutes video highlights",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "The Royal Chapter",
+                  "price": "INR 59,999/- *",
+                  "features": [
+                    "Traditional Candid Photography",
+                    "Cinematic video highlights",
+                    "1 minute video teaser and 1 reel",
+                    "21 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": true,
+                  "badge_text": "Most Popular"
+                },
+                {
+                  "package_name": "Timeless Symphony",
+                  "price": "INR 78,999/- *",
+                  "features": [
+                    "Traditional Candid Photography",
+                    "Full traditional video coverage",
+                    "Cinematic video highlights",
+                    "1 minute video teaser, 2 min video trailer, 2 reels",
+                    "21 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": "Premium "
+                },
+                {
+                  "package_name": "The Palace ",
+                  "price": "INR 1,09,999/- *",
+                  "features": [
+                    "Premium Photography",
+                    "Cinematic video",
+                    "1 minute video teaser, 2 min video trailers, 5 reels",
+                    "40 premium edited photos",
+                    "Online gallery access with all sorted and edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": "Premium"
+                }
+              ]
+            },
+            {
+              "category_id": "pre-wedding",
+              "category_name": "Pre-Wedding",
+              "category_tagline": "Before the Forever",
+              "icon": "camera",
+              "packages": [
+                {
+                  "package_name": "Before the Vows",
+                  "price": "INR 11,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "11 premium edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "The Story Unfolds",
+                  "price": "INR 23,999/- *",
+                  "features": [
+                    "Premium Photography",
+                    "18 premium edited photos"
+                  ],
+                  "is_popular": true,
+                  "badge_text": "Best Value"
+                },
+                {
+                  "package_name": "Moments in Motion",
+                  "price": "INR 42,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "Cinematic video highlights",
+                    "2 reels and 1 video teaser",
+                    "15 premium edited photos"
+                  ],
+                  "is_popular": true,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Endless Beginnings",
+                  "price": "INR 49,999/- *",
+                  "features": [
+                    "Premium Photography",
+                    "Cinematic video highlights",
+                    "5 reels and 1 video teaser",
+                    "11 premium edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                }
+              ]
+            },
+            {
+              "category_id": "maternity",
+              "category_name": "Maternity",
+              "category_tagline": "Celebrating New Beginnings",
+              "icon": "baby",
+              "packages": [
+                {
+                  "package_name": "Glow & Grace",
+                  "price": "INR 8,999/- *",
+                  "features": [
+                    "Traditional Photography",
+                    "8 premium edited photos",
+                    "Online gallery access"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                },
+                {
+                  "package_name": "Tender Bloom",
+                  "price": "INR 14,999/-",
+                  "features": [
+                    "Premium Candid Photography",
+                    "12 premium edited photo",
+                    "Online gallery access"
+                  ],
+                  "is_popular": true,
+                  "badge_text": "Popular"
+                },
+                {
+                  "package_name": "Radiant Journey",
+                  "price": "INR 34,999/-",
+                  "features": [
+                    "Premium Photography",
+                    "Short cinematic video highlight",
+                    "15 premium edited photos"
+                  ],
+                  "is_popular": false,
+                  "badge_text": ""
+                }
+              ]
+            }
+          ],
+          "success_message": {
+            "title": "Booking Confirmed!",
+            "message": "Thank you for your booking. We'll reach out within 24 hours to confirm your session details."
+          },
+          "tags": [],
+          "terms_conditions": [
+            "Pricing Disclaimer (*): Prices mentioned are indicative and subject to change based on availability, season, location, and specific client requirements. Final pricing will be confirmed at the time of booking from the photographer..",
+            "Album Pricing: Albums start at INR 15,999/-, subject to customization based on album size, design preferences, and the total number of photos selected.,",
+            "Packages Pricing: All the prices mentioned above are on a per-day basis.,",
+            "Extra Events: Any additional events beyond the agreed scope will be billed separately as per the applicable rates.,",
+            "Premium Edits: Additional premium-edited photos will be charged at INR 250/- per photo.,",
+            "Reel Videos: Additional reel video requests will be charged at INR 1,499/- per reel.,",
+            "Travel & Stay: Transportation and accommodation charges are not included and will be billed separately (if applicable).,",
+            "Wedding Night Coverage: Coverage for the wedding night will be charged at double the standard rate."
+          ],
+          "title": "Investment in Timeless Memories",
+          "url": "/packages"
+        }
+      ]
+    }
+  },
+  "portfolio_folder": {
+    "uid": "blt6cd508605d5d7cef",
+    "count": 29,
+    "assets": [
+      {
+        "uid": "bltf420377a129a1f64",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "_YG_0116.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "27584912",
+        "filename": "_YG_0116.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltf420377a129a1f64/69afd0237365360008859180/_YG_0116.jpg"
+      },
+      {
+        "uid": "blt5f2c11b2d72d4a70",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP01482.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "6348049",
+        "filename": "APP01482.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt5f2c11b2d72d4a70/69afd020f2eef00008526782/APP01482.jpg"
+      },
+      {
+        "uid": "blt1e8e2c63009471f6",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP01641.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "5337699",
+        "filename": "APP01641.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt1e8e2c63009471f6/69afd01f21e8760008bd15d0/APP01641.jpg"
+      },
+      {
+        "uid": "bltb66274312abe9b77",
+        "is_dir": false,
+        "content_type": "image/jpeg",
+        "file_size": "19212718",
+        "filename": "_G1A0639.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "tags": [],
+        "title": "_G1A0639.jpg",
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb66274312abe9b77/69564ad9d079132aaf0be0d5/_G1A0639.jpg"
+      },
+      {
+        "uid": "blt6a098ddfa6920920",
+        "is_dir": false,
+        "content_type": "image/jpeg",
+        "file_size": "11776940",
+        "filename": "APP00608-2.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "tags": [],
+        "title": "APP00608-2.jpg",
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt6a098ddfa6920920/69564a4cb3d4876ca11fbf66/APP00608-2.jpg"
+      },
+      {
+        "uid": "blte0648cddd301b8cb",
+        "is_dir": false,
+        "content_type": "image/jpeg",
+        "file_size": "7580556",
+        "filename": "DSC07857.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "tags": [],
+        "title": "DSC07857.jpg",
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte0648cddd301b8cb/695644cccedfd54400420d1d/DSC07857.jpg"
+      },
+      {
+        "uid": "bltbdca1b9299cf097a",
+        "is_dir": false,
+        "content_type": "image/jpeg",
+        "file_size": "5621498",
+        "filename": "DSC07396.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "tags": [],
+        "title": "DSC07396.jpg",
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltbdca1b9299cf097a/695644ccd079135b180be0cd/DSC07396.jpg"
+      },
+      {
+        "uid": "bltc81f8f949fb58a95",
+        "is_dir": false,
+        "content_type": "image/jpeg",
+        "file_size": "12481198",
+        "filename": "APP05062-2.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "tags": [],
+        "title": "APP05062-2.jpg",
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltc81f8f949fb58a95/69564289d1035271e4ce79ff/APP05062-2.jpg"
+      },
+      {
+        "uid": "bltaec341bd620f7656",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP04746.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "15474159",
+        "filename": "APP04746.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltaec341bd620f7656/69564285b5904a7b47353c2b/APP04746.jpg"
+      },
+      {
+        "uid": "blt8d9845e2c0e29a6e",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "DSC00093.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "13669027",
+        "filename": "DSC00093.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8d9845e2c0e29a6e/695642853296b838c0c27af0/DSC00093.jpg"
+      },
+      {
+        "uid": "blt571a9519aa691a83",
+        "title": "APP00793.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "16727725",
+        "filename": "APP00793.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt571a9519aa691a83/6953dcabea53f4556865b354/APP00793.jpg"
+      },
+      {
+        "uid": "blt453b2717edd278fa",
+        "title": "APP09891.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "14824383",
+        "filename": "APP09891.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt453b2717edd278fa/6943e0ddca96fc44692ee29e/APP09891.jpg"
+      },
+      {
+        "uid": "blt8562764277e3f142",
+        "title": "APP00775.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "17460565",
+        "filename": "APP00775.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt8562764277e3f142/6943d7b213c8997574e6232a/APP00775.jpg"
+      },
+      {
+        "uid": "bltfcc7e5914fc72a83",
+        "title": "APP00551.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "16770297",
+        "filename": "APP00551.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltfcc7e5914fc72a83/6943d71b7d8e35b88f7115e8/APP00551.jpg"
+      },
+      {
+        "uid": "blt034c02bee0c41514",
+        "title": "APP07029.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "11168274",
+        "filename": "APP07029.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt034c02bee0c41514/6943d446dc686e10d7d100c6/APP07029.jpg"
+      },
+      {
+        "uid": "blt1c31f399331d0216",
+        "is_dir": false,
+        "content_type": "image/jpeg",
+        "file_size": "10767706",
+        "filename": "APP07232.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "tags": [],
+        "title": "APP07232.jpg",
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt1c31f399331d0216/6943d446ca96fc4d0a2ee24d/APP07232.jpg"
+      },
+      {
+        "uid": "bltb848e673423d6621",
+        "title": "APP07591.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "21204033",
+        "filename": "APP07591.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb848e673423d6621/6943d112c47879f7bfbfb6f6/APP07591.jpg"
+      },
+      {
+        "uid": "blt46ad8f82c1fb2e8d",
+        "title": "_03A8573.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "13500141",
+        "filename": "_03A8573.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt46ad8f82c1fb2e8d/6943d07df27a23c486fc199e/_03A8573.jpg"
+      },
+      {
+        "uid": "bltfe8eb532d78a6842",
+        "title": "APP09598.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "22880644",
+        "filename": "APP09598.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltfe8eb532d78a6842/6943d059ab946360f807d317/APP09598.jpg"
+      },
+      {
+        "uid": "blt2147634f5cd38968",
+        "title": "APP09661-2.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "6237809",
+        "filename": "APP09661-2.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt2147634f5cd38968/6943cfe8fdc67a8898810275/APP09661-2.jpg"
+      },
+      {
+        "uid": "blt63529ffad37796fc",
+        "title": "APP00157.jpg",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "content_type": "image/jpeg",
+        "file_size": "16093178",
+        "filename": "APP00157.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt63529ffad37796fc/6943cfd7d9ae2148f2c18331/APP00157.jpg"
+      },
+      {
+        "uid": "blt184550f5c5df2d75",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "_03A8474.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "33245752",
+        "filename": "_03A8474.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt184550f5c5df2d75/694304e213c899728ee62036/_03A8474.jpg"
+      },
+      {
+        "uid": "bltcec99381be0fcf0e",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "_03A9455.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "30381322",
+        "filename": "_03A9455.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltcec99381be0fcf0e/694304e18528d74b242a9bc7/_03A9455.jpg"
+      },
+      {
+        "uid": "blt3cf475f01e28c334",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "_03A8390.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "4104572",
+        "filename": "_03A8390.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3cf475f01e28c334/694304cd1b4aca24d12d06e6/_03A8390.jpg"
+      },
+      {
+        "uid": "blt37987a8c27f6197f",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP05383.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "18258895",
+        "filename": "APP05383.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt37987a8c27f6197f/694303778528d7fe6b2a9bb6/APP05383.jpg"
+      },
+      {
+        "uid": "blte750f3cff33b49fa",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP05265.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "19177187",
+        "filename": "APP05265.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blte750f3cff33b49fa/694303777e86295a7dfd7f25/APP05265.jpg"
+      },
+      {
+        "uid": "blt3590989ef326c8ec",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP07463.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "18916875",
+        "filename": "APP07463.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt3590989ef326c8ec/69430376414d96304e8d6b24/APP07463.jpg"
+      },
+      {
+        "uid": "bltb7a5751684ff85c8",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP08391.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "14542688",
+        "filename": "APP08391.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/bltb7a5751684ff85c8/6943036ddc686ee756d0fd9e/APP08391.jpg"
+      },
+      {
+        "uid": "blt051c5dd3b1d90c54",
+        "parent_uid": "blt6cd508605d5d7cef",
+        "title": "APP05274.jpg",
+        "content_type": "image/jpeg",
+        "file_size": "10378028",
+        "filename": "APP05274.jpg",
+        "is_dir": false,
+        "tags": [],
+        "url": "https://images.contentstack.io/v3/assets/blt6ff8c942275e35cd/blt051c5dd3b1d90c54/69430364ca96fcefac2edf26/APP05274.jpg"
+      }
+    ]
+  }
+}

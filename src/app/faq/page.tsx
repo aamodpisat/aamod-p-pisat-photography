@@ -1,9 +1,5 @@
-'use client';
-
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import Button from '@/components/ui/Button';
+import { PageHero, InquiryBand } from '@/components/editorial';
+import { getPortfolioPageContent } from '@/lib/contentstack';
 
 const faqs = [
   {
@@ -17,7 +13,7 @@ const faqs = [
       {
         question: 'What is required to book?',
         answer:
-          'To secure your date, I require a signed contract and a non-refundable retainer (typically 30% of your package total). The remaining balance is due 30 days before your wedding.',
+          'To secure your date, I require a signed contract and a non-refundable retainer (typically 30% of the agreed coverage total). The remaining balance is due 30 days before your wedding.',
       },
       {
         question: 'Do you travel for weddings?',
@@ -37,12 +33,12 @@ const faqs = [
       {
         question: 'Do you offer engagement sessions?',
         answer:
-          'Yes! Engagement sessions are included in most wedding packages and are a wonderful way for us to get comfortable working together before your big day. They\'re also perfect for save-the-dates and wedding website photos.',
+          'Yes! Engagement sessions are a wonderful way for us to get comfortable working together before your big day. They\'re also perfect for save-the-dates and wedding website photos. We can discuss including one when planning your coverage.',
       },
       {
         question: 'Do you work with a second photographer?',
         answer:
-          'For weddings with more than 75 guests or complex timelines, I highly recommend a second photographer. They\'re included in my Full Day and Destination packages, and can be added to other packages for an additional fee.',
+          'For weddings with more than 75 guests or complex timelines, I highly recommend a second photographer. We can discuss the right team and coverage for your celebration during our consultation.',
       },
     ],
   },
@@ -88,127 +84,12 @@ const faqs = [
   },
 ];
 
-export default function FAQPage() {
-  const [openItems, setOpenItems] = useState<string[]>([]);
-
-  const toggleItem = (id: string) => {
-    setOpenItems((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-  };
-
-  return (
-    <>
-      {/* Page Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=1920&q=80"
-            alt="FAQ hero"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-charcoal-900/50" />
-        </div>
-        <div className="relative z-10 text-center">
-          <h1 className="font-serif text-display text-cream-100 mb-4">
-            FAQ
-          </h1>
-          <p className="font-script text-3xl text-sepia-300">
-            Your questions answered
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Content */}
-      <section className="section bg-cream-100">
-        <div className="container-wide">
-          {/* Intro */}
-          <div className="max-w-2xl mx-auto text-center mb-16 md:mb-20">
-            <p className="text-body-lg text-charcoal-600 font-light">
-              Here are answers to some of the most common questions I receive. 
-              If you don't find what you're looking for, please don't hesitate to reach out.
-            </p>
-          </div>
-
-          {/* FAQ Categories */}
-          <div className="space-y-16">
-            {faqs.map((category) => (
-              <div key={category.category}>
-                <h2 className="font-serif text-2xl text-charcoal-900 mb-8 pb-4 border-b border-charcoal-200">
-                  {category.category}
-                </h2>
-                <div className="space-y-4">
-                  {category.questions.map((item, index) => {
-                    const itemId = `${category.category}-${index}`;
-                    const isOpen = openItems.includes(itemId);
-
-                    return (
-                      <div
-                        key={itemId}
-                        className="border border-charcoal-200 bg-cream-50"
-                      >
-                        <button
-                          onClick={() => toggleItem(itemId)}
-                          className="w-full px-6 py-5 flex items-center justify-between text-left"
-                        >
-                          <span className="font-serif text-lg text-charcoal-900 pr-4">
-                            {item.question}
-                          </span>
-                          <motion.span
-                            animate={{ rotate: isOpen ? 45 : 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="text-sepia-600 text-2xl flex-shrink-0"
-                          >
-                            +
-                          </motion.span>
-                        </button>
-                        <AnimatePresence>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="px-6 pb-6 text-charcoal-600 font-light">
-                                {item.answer}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="section bg-charcoal-900 text-cream-100">
-        <div className="container-narrow text-center">
-          <h2 className="font-serif text-heading-lg mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-cream-300 mb-8">
-            I'm happy to answer any questions you might have about working together.
-          </p>
-          <Button
-            href="/contact"
-            variant="outline"
-            className="border-cream-400 text-cream-400 hover:bg-cream-100 hover:text-charcoal-900 hover:border-cream-100"
-          >
-            Get In Touch
-          </Button>
-        </div>
-      </section>
-    </>
-  );
+export default async function FAQPage() {
+  const portfolio = await getPortfolioPageContent();
+  return <>
+    <PageHero eyebrow="Good to know" title="Your questions, answered" description="A calmer way to plan the details before we work together." image={portfolio?.hero_section?.background_image?.url} tag="Planning with confidence" ctaText="Read the questions" ctaHref="#questions" />
+    <section id="questions" className="section"><div className="inner"><p className="eyebrow">FAQ</p><h2 className="headline">A few things to know</h2><div style={{ maxWidth: 850, margin: 'auto' }}>
+      {faqs.map(category => <div key={category.category}><p className="caption">{category.category}</p>{category.questions.map(item => <details key={item.question} className="faq-item"><summary>{item.question}</summary><p className="copy">{item.answer}</p></details>)}</div>)}
+    </div></div></section><InquiryBand />
+  </>;
 }
-

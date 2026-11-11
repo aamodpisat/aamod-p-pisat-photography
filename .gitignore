@@ -5,6 +5,8 @@ node_modules
 .env
 .env.local
 .env*.local
+.cursor/mcp.json
+.codex/config.toml
 
 # Next.js build output
 .next/

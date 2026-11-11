@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      { source: '/journal', destination: '/stories', permanent: true },
+      { source: '/packages', destination: '/services', permanent: true },
+    ];
+  },
   // Output mode for serverless deployment (Contentstack Launch)
   output: 'standalone',
   

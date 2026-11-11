@@ -175,9 +175,9 @@ export async function getPortfolioItems(options?: {
       .entry()
       .query();
 
-    // For filtering by featured, use equalTo
+    // The Delivery SDK's equalTo accepts only strings and numbers.
     if (options?.featuredOnly) {
-      query = query.equalTo('is_featured', true);
+      query = query.where('is_featured', QueryOperation.EQUALS, true);
     }
 
     // For filtering by category
@@ -422,7 +422,7 @@ export async function getStoryPosts(options?: {
 
     // Filter by featured stories
     if (options?.featuredOnly) {
-      query = query.equalTo('is_featured', true);
+      query = query.where('is_featured', QueryOperation.EQUALS, true);
     }
 
     if (options?.limit) {

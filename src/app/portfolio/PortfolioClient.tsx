@@ -6,7 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { ContentstackAsset, PortfolioPageContent } from '@/lib/types';
-import { ImagePresets, optimizeImage } from '@/lib/image-utils';
+import { ImagePresets } from '@/lib/image-utils';
+import { PageHero, InquiryBand } from '@/components/editorial';
 
 interface PortfolioClientProps {
   content: PortfolioPageContent;
@@ -70,6 +71,9 @@ function LightboxModal({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Portfolio photograph viewer"
           onClick={onClose}
         >
           {/* Close Button */}
@@ -169,61 +173,10 @@ export default function PortfolioClient({ content, galleryImages }: PortfolioCli
 
   return (
     <>
-      {/* Full Page Hero Banner */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center bg-white">
-        <div className="absolute inset-0">
-          <Image
-            src={ImagePresets.hero(heroSection?.background_image?.url || 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')}
-            alt={heroSection?.title || 'Portfolio'}
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-
-        <div className="relative z-10 text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6"
-          >
-            {heroSection?.title || 'Our Portfolio'}
-          </motion.h1>
-          
-          {heroSection?.tagline && (
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-script text-3xl md:text-4xl lg:text-5xl text-sepia-300"
-            >
-              {heroSection.tagline}
-            </motion.p>
-          )}
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-6 h-10 border border-white/50 rounded-full flex justify-center pt-2"
-          >
-            <motion.div className="w-1 h-2 bg-white/50 rounded-full" />
-          </motion.div>
-        </motion.div>
-      </section>
+      <PageHero eyebrow="The portfolio" title={heroSection?.title || 'Our Portfolio'} description={heroSection?.tagline} image={heroSection?.background_image?.url} tag="Real moments. Pure emotions." ctaText="Explore the gallery" ctaHref="#gallery" />
 
       {/* Compact Masonry Gallery */}
-      <section className="py-10 md:py-16 bg-white">
+      <section id="gallery" className="py-10 md:py-16 bg-white">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0 }}
@@ -293,36 +246,7 @@ export default function PortfolioClient({ content, galleryImages }: PortfolioCli
         </div>
       </section>
 
-      {/* Contact CTA */}
-      {ctaSection && (
-        <section className="py-24 md:py-32 bg-charcoal-900">
-          <div className="container-narrow text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-10"
-            >
-              {ctaSection.title || 'Get in touch with us!'}
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <Button 
-                href={ctaSection.cta?.href || '/contact'} 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-charcoal-900"
-              >
-                {ctaSection.cta?.title || 'Contact Us'}
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-      )}
+      <InquiryBand title={ctaSection?.title} button={ctaSection?.cta?.title} />
 
       {/* Lightbox Modal */}
       <LightboxModal

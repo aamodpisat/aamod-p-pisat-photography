@@ -3,7 +3,14 @@
  * Enables real-time preview of content changes in Contentstack CMS
  */
 
-import ContentstackLivePreview from '@contentstack/live-preview-utils';
+// Load the SDK only after hydration. Its module adds preview styles to <head>
+// as a side effect, which otherwise changes the DOM before React hydrates.
+let previewSdkPromise: Promise<typeof import('@contentstack/live-preview-utils')> | null = null;
+
+function getPreviewSdk() {
+  previewSdkPromise ??= import('@contentstack/live-preview-utils');
+  return previewSdkPromise;
+}
 
 // Live Preview configuration
 export const LIVE_PREVIEW_CONFIG = {
@@ -37,7 +44,7 @@ export function isLivePreviewEnabled(): boolean {
 }
 
 // Initialize Live Preview SDK (client-side only)
-export function initLivePreview(): void {
+export async function initLivePreview(): Promise<void> {
   if (typeof window === 'undefined') return;
   
   if (!LIVE_PREVIEW_CONFIG.enable) {
@@ -46,6 +53,7 @@ export function initLivePreview(): void {
   }
 
   try {
+    const { default: ContentstackLivePreview } = await getPreviewSdk();
     ContentstackLivePreview.init({
       ...LIVE_PREVIEW_CONFIG,
       mode: 'builder',
@@ -86,12 +94,18 @@ export function onLivePreviewUpdate(callback: () => void): () => void {
     return () => {};
   }
 
-  ContentstackLivePreview.onEntryChange(callback);
+  let active = true;
+  void getPreviewSdk().then(({ default: ContentstackLivePreview }) => {
+    if (active) ContentstackLivePreview.onEntryChange(callback);
+  }).catch((error) => {
+    console.error('Failed to subscribe to Live Preview:', error);
+  });
   
   // Return unsubscribe function
   return () => {
-    // Live Preview Utils doesn't have a built-in unsubscribe
-    // but we return an empty function for consistency
+    // The SDK has no unsubscribe; prevent registration if the effect unmounts
+    // before the dynamic import finishes.
+    active = false;
   };
 }
 
@@ -121,6 +135,3 @@ export function editableProps(
     'data-cslp': getEditableField(contentTypeUid, entryUid, fieldPath, locale),
   };
 }
-
-export default ContentstackLivePreview;
-

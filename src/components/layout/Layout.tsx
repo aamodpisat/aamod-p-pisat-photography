@@ -14,9 +14,6 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Film Grain Overlay */}
-      <div className="film-grain" aria-hidden="true" />
-      
       {/* Header */}
       <Header siteConfig={siteConfig} />
       

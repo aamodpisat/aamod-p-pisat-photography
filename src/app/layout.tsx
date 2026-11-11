@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import '@/styles/globals.css';
+import '@/styles/editorial.css';
+import '@/styles/home-carousel.css';
+import '@/styles/stories.css';
 import Layout from '@/components/layout/Layout';
 import { SiteConfigProvider } from '@/lib/SiteConfigContext';
 import { getSiteConfig } from '@/lib/contentstack';
@@ -77,7 +80,7 @@ const defaultSiteConfig = {
   ],
   secondary_navigation: [
     { label: 'About', href: '/about' },
-    { label: 'Journal', href: '/journal' },
+    { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
   ],
   footer_left_navigation: [
@@ -88,7 +91,7 @@ const defaultSiteConfig = {
   footer_right_navigation: [
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Films', href: '/films' },
-    { label: 'Journal', href: '/journal' },
+    { label: 'Stories', href: '/stories' },
     { label: 'Contact', href: '/contact' },
   ],
 };
@@ -99,46 +102,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   // Fetch site config from Contentstack
-  const siteConfig = await getSiteConfig();
-  if (!siteConfig) {
-    return (
-      <html lang="en">
-        <head>
-          {/* Google Analytics - only load if configured */}
-          {GA_MEASUREMENT_ID && (
-            <>
-              <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-                strategy="afterInteractive"
-              />
-              <Script id="google-analytics" strategy="afterInteractive">
-                {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_MEASUREMENT_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `}
-              </Script>
-            </>
-          )}
-        </head>
-        <body className="antialiased">
-          <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
-          <LivePreviewProvider>
-            <SiteConfigProvider siteConfig={defaultSiteConfig}>
-              <Layout>{children}</Layout>
-            </SiteConfigProvider>
-          </LivePreviewProvider>
-        </body>
-      </html>
-    );
-  }
+  const siteConfig = (await getSiteConfig()) || defaultSiteConfig;
   return (
     <html lang="en">
-      <head>
-        {/* Google Analytics - only load if configured */}
+      <body className="antialiased">
         {GA_MEASUREMENT_ID && (
           <>
             <Script
@@ -157,8 +124,6 @@ export default async function RootLayout({
             </Script>
           </>
         )}
-      </head>
-      <body className="antialiased">
         <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
         <LivePreviewProvider>
           <SiteConfigProvider siteConfig={siteConfig}>

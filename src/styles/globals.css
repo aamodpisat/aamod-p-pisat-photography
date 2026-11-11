@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 :root {
-  --color-cream: #FBF9F5;
-  --color-cream-dark: #EDE5D8;
-  --color-charcoal: #212121;
+  --color-cream: #FFFFFF;
+  --color-cream-dark: #F5F3EE;
+  --color-charcoal: #24231F;
   --color-charcoal-light: #424242;
-  --color-sepia: #B08B5B;
-  --color-sepia-light: #D4B896;
+  --color-sepia: #6C7154;
+  --color-sepia-light: #B9BEA3;
   
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Josefin Sans', 'Helvetica Neue', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', 'Helvetica Neue', sans-serif;
   --font-script: 'Tangerine', cursive;
   
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
