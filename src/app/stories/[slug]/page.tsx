@@ -6,6 +6,7 @@ import { getStoryBySlug, getStoryPosts } from '@/lib/contentstack';
 import { RichText, safeTextContent } from '@/lib/richtext-renderer';
 import { ImagePresets } from '@/lib/image-utils';
 import { InquiryBand } from '@/components/editorial';
+import StoryGallery from './StoryGallery';
 
 interface Props {
   params: { slug: string };
@@ -61,10 +62,9 @@ export default async function StoryDetailPage({ params }: Props) {
   return <>
     <div className="article-hero"><p className="eyebrow">Stories / Wedding story</p><h1>{story.title}</h1><p className="copy">{story.excerpt ? safeTextContent(story.excerpt) : ''}</p></div>
     {story.featured_image?.url && <div className="article-wide" style={{ position: 'relative' }}><Image src={ImagePresets.hero(story.featured_image.url)} alt={story.title} fill priority sizes="100vw" style={{ objectFit: 'cover' }} /></div>}
-    <article className="article-body"><RichText content={story.body || ''} />
-      {story.gallery_images?.length > 0 && <div className="article-gallery">{story.gallery_images.slice(0, 2).map(image => <div key={image.uid} style={{ position: 'relative', height: 420 }}><Image src={ImagePresets.portfolioCard(image.url)} alt={image.title} fill sizes="(max-width: 680px) 50vw, 40vw" style={{ objectFit: 'cover' }} /></div>)}</div>}
-      <Link className="text-link" href="/stories">← Back to all stories</Link>
-    </article>
+    <article className="article-body story-detail-article"><RichText content={story.body || ''} /></article>
+    {story.gallery_images?.length > 0 && <StoryGallery images={story.gallery_images} />}
+    <div className="story-detail-back"><Link className="text-link" href="/stories">← Back to all stories</Link></div>
     {relatedStories.length > 0 && <section className="section sand"><div className="inner"><p className="eyebrow">More stories</p><div className="editorial-story-grid">{relatedStories.map(item => <Link key={item.uid} href={`/stories${item.url.startsWith('/') ? item.url : `/${item.url}`}`}><div className="editorial-photo">{item.thumbnail_image?.url && <Image src={ImagePresets.portfolioCard(item.thumbnail_image.url)} alt={item.title} fill sizes="(max-width: 680px) 100vw, 33vw" style={{ objectFit: 'cover' }} />}</div><h3>{item.title}</h3></Link>)}</div></div></section>}
     <InquiryBand />
   </>;

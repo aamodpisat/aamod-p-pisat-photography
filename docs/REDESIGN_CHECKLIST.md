@@ -106,3 +106,13 @@ The Stories listing now has three equal portrait frames, consistent card spacing
 - [x] Run the production build and leave the local preview ready for review.
 
 At 1440px with a 2× display density, the homepage hero now receives a 2560px WebP image instead of a 1920px image processed a second time. The four homepage cards receive 750px WebP variants instead of 800px images that were enlarged and re-encoded. On first load, measured homepage image transfer dropped from 1.95 MB to 1.13 MB on desktop and from 0.66 MB to 0.43 MB on mobile. All 13 routes passed the browser checks at desktop and mobile widths, including the new high density image checks; the production build passed.
+
+## Complete story galleries
+
+- [x] Confirm the image counts published for each story in Contentstack development.
+- [x] Replace the two-image story preview with all published gallery images.
+- [x] Add a full-photo viewer with arrows and keyboard controls.
+- [x] Review desktop and mobile gallery layouts and run the browser checks.
+- [x] Run the production build and leave the local preview ready.
+
+The development entry now displays all 25 Yuvraj photos, all 21 Trushang and Vaishnavi photos, and all 13 Sushmita and Milind photos. Every thumbnail shows the full image and loads lazily; the viewer supports next, previous, and Escape. All 13 routes passed the desktop and mobile browser checks, the production build passed, and each restarted story URL responds with HTTP 200 and the expected gallery count.

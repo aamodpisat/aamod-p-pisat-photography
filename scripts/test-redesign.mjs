@@ -153,6 +153,28 @@ try {
           try { await dialog.waitFor({ state: 'hidden', timeout: 3000 }); } catch { failures.push(`${viewport.name} /films: Escape did not close player`); }
         }
       }
+      if (route.startsWith('/stories/')) {
+        const gallery = page.getByRole('region', { name: 'Story photograph gallery' });
+        const publishedCount = Number(await gallery.getAttribute('data-gallery-count'));
+        const tiles = gallery.getByRole('button', { name: /^Open photograph / });
+        check(publishedCount > 2 && await tiles.count() === publishedCount, `${viewport.name} ${route}: the full published story gallery is not displayed`);
+        if (publishedCount > 2) {
+          await tiles.last().scrollIntoViewIfNeeded();
+          try { await tiles.last().locator('img').evaluate(image => image.decode()); }
+          catch { failures.push(`${viewport.name} ${route}: last story image failed to load`); }
+          await tiles.last().click();
+          const viewer = page.getByRole('dialog', { name: 'Story photograph viewer' });
+          check(await viewer.isVisible(), `${viewport.name} ${route}: photograph viewer did not open`);
+          check(await viewer.getByText(`${publishedCount} / ${publishedCount}`).count() === 1, `${viewport.name} ${route}: last photograph is not shown`);
+          await viewer.getByRole('button', { name: 'Next photograph' }).click();
+          check(await viewer.getByText(`1 / ${publishedCount}`).count() === 1, `${viewport.name} ${route}: next arrow did not wrap to the first photograph`);
+          await page.keyboard.press('ArrowLeft');
+          check(await viewer.getByText(`${publishedCount} / ${publishedCount}`).count() === 1, `${viewport.name} ${route}: previous keyboard arrow failed`);
+          await page.keyboard.press('Escape');
+          try { await viewer.waitFor({ state: 'hidden', timeout: 3000 }); }
+          catch { failures.push(`${viewport.name} ${route}: Escape did not close photograph viewer`); }
+        }
+      }
       if (route === '/faq') {
         const detail = page.locator('details').first();
         await detail.locator('summary').click();
