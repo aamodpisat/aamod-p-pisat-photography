@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  agentRules: false,
   async redirects() {
     return [
       { source: '/journal', destination: '/stories', permanent: true },
@@ -38,9 +39,6 @@ const nextConfig = {
       },
     ],
   },
-  
-  // Production optimizations
-  swcMinify: true,
   
   // Strict mode for better React practices
   reactStrictMode: true,

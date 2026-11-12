@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:preview": "CONTENTSTACK_LIVE_PREVIEW=true next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
     "test:redesign": "node scripts/test-redesign.mjs"
@@ -15,10 +15,10 @@
     "@contentstack/live-preview-utils": "^4.1.3",
     "contentstack": "^3.26.3",
     "framer-motion": "^11.0.0",
-    "next": "^14.2.35",
+    "next": "^16.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
