@@ -142,3 +142,13 @@ The development entry now displays all 25 Yuvraj photos, all 21 Trushang and Vai
 - [x] Run the production build and leave the local preview ready.
 
 The published Kunal and Bhagyashree film has no Contentstack thumbnail, so its card now displays that video's 1280 × 720 YouTube image. Other film cards keep their published Contentstack thumbnails. The browser script passed all 13 routes at desktop and mobile widths, including film image loading and in-page playback; an unavailable maximum-resolution image correctly fell back to the HQ YouTube image. The production build passed, and `http://localhost:3000/films` responds with HTTP 200.
+
+## Security upgrade verification (12 November 2026)
+
+- [x] Run the self-starting redesign suite with the published `development` environment at desktop and mobile sizes.
+- [x] Review captured homepage, portfolio, films, Stories, About, Contact, and story detail screenshots against the approved layouts.
+- [x] Crawl every active route and internal destination; scroll through lazy images and check for image failures, browser errors, and horizontal overflow.
+- [x] Compare page and image loading against `origin/main` under the same local development content and browser settings.
+- [x] Run TypeScript and the production build with development content.
+
+The redesign suite passed all 13 active routes at both viewport sizes, including interactions and responsive image checks. A separate crawl visited 26 desktop/mobile pages, checked 260 image elements and 11 internal destinations, and found no broken images, browser exceptions, overflow, or broken links. Paired development measurements showed identical image transfer on the sampled routes; six repeated homepage measurements gave median page times of 779 → 725 ms on desktop and 763 → 702 ms on mobile from `origin/main` to the security branch. The production build and TypeScript check passed. The test server now binds to `127.0.0.1` so Next.js 16 can hydrate controls in the same origin used by the browser suite.

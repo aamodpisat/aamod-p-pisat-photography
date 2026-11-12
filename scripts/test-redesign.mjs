@@ -30,10 +30,12 @@ function check(condition, message) { if (!condition) failures.push(message); }
 try {
   if (!process.env.REDESIGN_BASE_URL) {
     if (!process.env.CONTENTSTACK_API_KEY || !process.env.CONTENTSTACK_DELIVERY_TOKEN) throw new Error('Set CONTENTSTACK_API_KEY and CONTENTSTACK_DELIVERY_TOKEN for the development environment.');
-    server = spawn('npm', ['run', 'dev', '--', '-p', String(port)], { env: { ...process.env, CONTENTSTACK_ENVIRONMENT: 'development' }, stdio: ['ignore', 'pipe', 'pipe'] });
+    server = spawn('npm', ['run', 'dev', '--', '--hostname', '127.0.0.1', '--port', String(port)], { env: { ...process.env, CONTENTSTACK_ENVIRONMENT: 'development' }, stdio: ['ignore', 'pipe', 'pipe'] });
     for (const stream of [server.stdout, server.stderr]) stream.on('data', chunk => { serverLogs.push(String(chunk)); if (serverLogs.length > 30) serverLogs.shift(); });
   }
   await waitForServer();
+  // Let Next compile every route before checking client interactions in development.
+  for (const route of routes) await fetch(base + route, { signal: AbortSignal.timeout(45000) });
   for (const [oldPath, newPath] of [['/journal', '/stories'], ['/packages', '/services']]) {
     const redirect = await fetch(base + oldPath, { redirect: 'manual' });
     const destination = new URL(redirect.headers.get('location') || '', base).pathname;
@@ -85,10 +87,14 @@ try {
         const heroHeight = await carousel.evaluate(element => element.getBoundingClientRect().height);
         check(heroHeight >= viewport.height - 120, `${viewport.name} /: carousel does not fill the screen`);
         check(await page.locator('.home-carousel + .editorial-award').count() === 1, `${viewport.name} /: award feature is not below the carousel`);
+        await page.waitForLoadState('networkidle');
         await carousel.getByRole('button', { name: 'Next featured image' }).click();
-        check(await carousel.locator('.home-carousel-count').innerText() === `02 / ${total}`, `${viewport.name} /: next carousel image failed`);
+        try {
+          await page.waitForFunction(expected => document.querySelector('.home-carousel-count')?.textContent?.trim() === expected && [...document.querySelectorAll('.home-carousel-slide.is-active img')].some(image => image.complete && image.naturalWidth > 0), `02 / ${total}`, { timeout: 15000 });
+        } catch { failures.push(`${viewport.name} /: next carousel image failed`); }
         await page.keyboard.press('ArrowLeft');
-        check(await carousel.locator('.home-carousel-count').innerText() === `01 / ${total}`, `${viewport.name} /: carousel keyboard navigation failed`);
+        try { await page.waitForFunction(expected => document.querySelector('.home-carousel-count')?.textContent?.trim() === expected, `01 / ${total}`, { timeout: 3000 }); }
+        catch { failures.push(`${viewport.name} /: carousel keyboard navigation failed`); }
         const gallery = page.locator('#work .editorial-home-gallery');
         const photos = gallery.locator('.editorial-photo');
         check(await photos.count() === 4, `${viewport.name} /: expected four curated portfolio photographs`);
@@ -105,17 +111,22 @@ try {
       if (route === '/portfolio') {
         const tiles = page.locator('section#gallery button');
         check(await tiles.count() >= 20, `${viewport.name} /portfolio: expected published image tiles`);
+        await page.waitForLoadState('networkidle');
         await tiles.first().click();
         const dialog = page.getByRole('dialog');
-        check(await dialog.isVisible(), `${viewport.name} /portfolio: lightbox did not open`);
-        const counter = dialog.getByText(/1 \/ \d+/);
-        check(await counter.count() > 0, `${viewport.name} /portfolio: image counter missing`);
-        await dialog.getByRole('button', { name: 'Next' }).click();
-        check(await dialog.getByText(/2 \/ \d+/).count() > 0, `${viewport.name} /portfolio: next arrow failed`);
-        await page.keyboard.press('ArrowLeft');
-        check(await dialog.getByText(/1 \/ \d+/).count() > 0, `${viewport.name} /portfolio: previous arrow failed`);
-        await page.keyboard.press('Escape');
-        try { await dialog.waitFor({ state: 'hidden', timeout: 3000 }); } catch { failures.push(`${viewport.name} /portfolio: Escape did not close lightbox`); }
+        try { await dialog.waitFor({ state: 'visible', timeout: 5000 }); }
+        catch { failures.push(`${viewport.name} /portfolio: lightbox did not open`); }
+        if (await dialog.isVisible()) {
+          check(await dialog.getByText(/1 \/ \d+/).count() > 0, `${viewport.name} /portfolio: image counter missing`);
+          await dialog.getByRole('button', { name: 'Next' }).click();
+          try { await dialog.getByText(/2 \/ \d+/).waitFor({ state: 'visible', timeout: 3000 }); }
+          catch { failures.push(`${viewport.name} /portfolio: next arrow failed`); }
+          await page.keyboard.press('ArrowLeft');
+          try { await dialog.getByText(/1 \/ \d+/).waitFor({ state: 'visible', timeout: 3000 }); }
+          catch { failures.push(`${viewport.name} /portfolio: previous arrow failed`); }
+          await page.keyboard.press('Escape');
+          try { await dialog.waitFor({ state: 'hidden', timeout: 3000 }); } catch { failures.push(`${viewport.name} /portfolio: Escape did not close lightbox`); }
+        }
       }
       if (route === '/stories') {
         const cards = page.locator('#stories .stories-gallery-card');
