@@ -24,6 +24,7 @@ function FilmThumbnail({ film, alt, sizes }: { film?: Film; alt: string; sizes: 
     alt={alt}
     fill
     sizes={sizes}
+    unoptimized={!contentstackImage}
     style={{ objectFit: 'cover' }}
     onError={!contentstackImage && !useStandardThumbnail ? () => setUseStandardThumbnail(true) : undefined}
   /> : null;

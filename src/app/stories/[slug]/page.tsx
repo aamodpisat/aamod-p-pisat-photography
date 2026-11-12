@@ -9,7 +9,7 @@ import { InquiryBand } from '@/components/editorial';
 import StoryGallery from './StoryGallery';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 // Generate static params for all stories
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for each story
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const story = await getStoryBySlug(params.slug);
+  const { slug } = await params;
+  const story = await getStoryBySlug(slug);
   
   if (!story) {
     return {
@@ -47,7 +48,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export const revalidate = 3600;
 
 export default async function StoryDetailPage({ params }: Props) {
-  const story = await getStoryBySlug(params.slug);
+  const { slug } = await params;
+  const story = await getStoryBySlug(slug);
 
   if (!story) {
     notFound();

@@ -49,8 +49,8 @@ function isPreviewMode(): boolean {
 
 // Stack configuration
 const stackConfig = {
-  apiKey: process.env.CONTENTSTACK_API_KEY || process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY || '',
-  deliveryToken: process.env.CONTENTSTACK_DELIVERY_TOKEN || process.env.NEXT_PUBLIC_CONTENTSTACK_DELIVERY_TOKEN || '',
+  apiKey: process.env.CONTENTSTACK_API_KEY || '',
+  deliveryToken: process.env.CONTENTSTACK_DELIVERY_TOKEN || '',
   environment: process.env.CONTENTSTACK_ENVIRONMENT || process.env.NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT || 'development',
   region: getRegion(process.env.CONTENTSTACK_REGION || process.env.NEXT_PUBLIC_CONTENTSTACK_REGION || 'us'),
 };
