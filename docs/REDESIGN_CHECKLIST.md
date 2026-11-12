@@ -10,6 +10,13 @@
 
 The automated layout check measures overflow, heading bounds, and header CTA placement. Screenshots support human review; it cannot reliably judge every design detail or safely repair production code unattended. Red flags fail the run for prompt follow-up. The email credential must remain in GitHub Secrets.
 
+### Visual report upgrade
+
+- [x] Add a styled HTML dashboard with severity and page-speed charts, detailed tables, and desktop/mobile screenshot previews.
+- [x] Include each affected production package, installed version, linked advisories, and upgrade guidance.
+- [x] Send the dashboard as the email body; keep a self-contained HTML report and full screenshots in the workflow artifact.
+- [ ] Verify the dashboard in a cloud workflow run and review its email rendering.
+
 Approved reference: `docs/design-prototype.html` and `docs/prototypes/`.
 
 - [x] Review existing routes, Contentstack delivery fields, and approved prototypes.

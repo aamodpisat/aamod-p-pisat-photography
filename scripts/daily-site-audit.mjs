@@ -6,6 +6,7 @@ const routes = ['/', '/portfolio', '/films', '/stories', '/about', '/contact', '
 const viewports = [{ name: 'desktop', width: 1440, height: 900 }, { name: 'mobile', width: 390, height: 844 }];
 const result = { checked_at: new Date().toISOString(), origin, pages: [], errors: [] };
 await mkdir('audit/screenshots', { recursive: true });
+await mkdir('audit/previews', { recursive: true });
 
 let browser;
 try {
@@ -47,7 +48,11 @@ try {
         if (!measurements.brand || !measurements.cta || measurements.cta.left < measurements.brand.right - 2 || measurements.cta.right > viewport.width + 2) entry.issues.push('Header CTA alignment');
         for (const image of measurements.images.filter(i => !i.loaded)) entry.issues.push(`Broken image: ${image.url}`);
         for (const error of pageErrors) entry.issues.push(`JavaScript: ${error}`);
-        await page.screenshot({ path: `audit/screenshots/${viewport.name}-${route.replaceAll('/', '_') || 'home'}.png`, fullPage: true, animations: 'disabled', timeout: 30000 });
+        const screenshotName = `${viewport.name}-${route.replaceAll('/', '_') || 'home'}`;
+        entry.screenshot = `screenshots/${screenshotName}.png`;
+        entry.preview = `previews/${screenshotName}.jpg`;
+        await page.screenshot({ path: `audit/${entry.screenshot}`, fullPage: true, animations: 'disabled', timeout: 30000 });
+        await page.screenshot({ path: `audit/${entry.preview}`, type: 'jpeg', quality: 55, animations: 'disabled', timeout: 30000 });
       } catch (error) {
         entry.issues.push(`Audit failed: ${error.message}`);
       } finally {

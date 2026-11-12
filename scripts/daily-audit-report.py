@@ -1,5 +1,6 @@
 import datetime as dt
 import json
+import os
 from pathlib import Path
 
 root = Path('audit')
@@ -14,6 +15,7 @@ pages = load('pages.json', {'pages': [], 'errors': ['Live browser audit did not 
 security = load('security.json', {'errors': ['Security audit did not produce a result']})
 dependencies = load('npm-audit.json', {})
 vulnerabilities = dependencies.get('metadata', {}).get('vulnerabilities', {})
+affected_packages = dependencies.get('vulnerabilities', {})
 red = []
 improve = []
 good = []
@@ -26,7 +28,7 @@ days = security.get('certificate', {}).get('days_left')
 if days is not None:
     (red if days < 14 else improve if days < 30 else good).append(f'TLS certificate expires in {days} days')
 for level in ('critical', 'high'):
-    if vulnerabilities.get(level, 0): red.append(f'{vulnerabilities[level]} {level} production dependency vulnerabilities')
+    if vulnerabilities.get(level, 0): red.append(f'{vulnerabilities[level]} {level} affected production dependency packages')
 if vulnerabilities.get('moderate', 0): improve.append(f'{vulnerabilities["moderate"]} moderate production dependency vulnerabilities')
 
 checked = pages.get('pages', [])
@@ -59,5 +61,14 @@ for page in checked:
     image_kb = round(sum(item.get('bytes', 0) for item in page.get('resources', [])) / 1024)
     lines.append(f'| {page.get("viewport", "?")} | {page.get("route", "?")} | {page.get("load_ms", 0)} ms | {page.get("first_byte_ms", 0)} ms | {page.get("dom_content_loaded_ms", 0)} ms | {len(page.get("images", []))} | {image_kb} KB | {len(page.get("issues", []))} |')
 lines += ['', '## Security and network', '', f'Certificate: {report["certificate"]}', f'DNS addresses: {", ".join(report["dns_addresses"])}', f'Observed hosts: {", ".join(report["hosts_seen"])}', '', 'These are automated signals, not a penetration test or visual judgement of every element. Screenshots and raw JSON are in the workflow artifact. Inspect any red flag before changing production code.']
+run_id = os.environ.get('GITHUB_RUN_ID')
+if run_id: lines.append(f'Full report and screenshots: https://github.com/aamodpisat/aamod-p-pisat-photography/actions/runs/{run_id}')
+lines += ['', '## Affected production packages', '', 'These counts refer to packages. One package may have several advisories.']
+for name, item in sorted(affected_packages.items(), key=lambda pair: (['critical', 'high', 'moderate', 'low'].index(pair[1].get('severity', 'low')), pair[0])):
+    fix = item.get('fixAvailable')
+    solution = f'Upgrade {fix.get("name", name)} to {fix.get("version", "a patched version")} and retest' if isinstance(fix, dict) else 'Run npm audit fix and retest' if fix else 'Review the linked advisory for a mitigation'
+    lines += ['', f'### {name} — {item.get("severity", "unknown")}', f'- Solution: {solution}']
+    for advisory in item.get('via', []):
+        if isinstance(advisory, dict): lines.append(f'- {advisory.get("title", "Advisory")}: {advisory.get("url", "")}')
 (root / 'report.md').write_text('\n'.join(lines) + '\n')
 print('\n'.join(lines[:30]))
