@@ -1,5 +1,15 @@
 # Website redesign checklist
 
+## Daily cloud audit setup
+
+- [x] Add a GitHub Actions job scheduled for 9:00 pm India time, with a manual run option.
+- [x] Add live desktop/mobile page and image checks, screenshots, source secret pattern checks, dependency advisories, and DNS/TLS checks.
+- [x] Generate a detailed good/improve/red-flag report and upload the full results as a workflow artifact.
+- [ ] Add `GMAIL_APP_PASSWORD` as a GitHub Actions repository secret and run the workflow once to verify email delivery.
+- [ ] Commit and push the workflow to the default branch to activate its schedule.
+
+The automated layout check measures overflow, heading bounds, and header CTA placement. Screenshots support human review; it cannot reliably judge every design detail or safely repair production code unattended. Red flags fail the run for prompt follow-up. The email credential must remain in GitHub Secrets.
+
 Approved reference: `docs/design-prototype.html` and `docs/prototypes/`.
 
 - [x] Review existing routes, Contentstack delivery fields, and approved prototypes.

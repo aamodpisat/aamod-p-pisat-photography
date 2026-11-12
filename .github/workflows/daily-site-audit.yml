@@ -1,0 +1,54 @@
+name: Daily website audit
+
+on:
+  schedule:
+    # 21:00 Asia/Kolkata, every day.
+    - cron: '30 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-site-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Audit live pages and images
+        run: node scripts/daily-site-audit.mjs
+      - name: Audit dependencies
+        if: always()
+        run: npm audit --omit=dev --json > audit/npm-audit.json || true
+      - name: Audit source, hosts, and certificate
+        if: always()
+        run: python3 scripts/daily-security-audit.py
+      - name: Build report
+        if: always()
+        run: python3 scripts/daily-audit-report.py
+      - name: Save report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-audit-${{ github.run_id }}
+          path: audit/
+          retention-days: 30
+      - name: Email report
+        if: always()
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          AUDIT_EMAIL: aamodpisat@gmail.com
+        run: python3 scripts/email-audit-report.py
+      - name: Mark urgent findings as failed
+        if: always()
+        run: python3 -c 'import json,sys; d=json.load(open("audit/report.json")); sys.exit(1 if d["red_flags"] else 0)'
