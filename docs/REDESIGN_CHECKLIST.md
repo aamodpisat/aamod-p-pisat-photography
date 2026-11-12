@@ -116,3 +116,12 @@ At 1440px with a 2× display density, the homepage hero now receives a 2560px We
 - [x] Run the production build and leave the local preview ready.
 
 The development entry now displays all 25 Yuvraj photos, all 21 Trushang and Vaishnavi photos, and all 13 Sushmita and Milind photos. Every thumbnail shows the full image and loads lazily; the viewer supports next, previous, and Escape. All 13 routes passed the desktop and mobile browser checks, the production build passed, and each restarted story URL responds with HTTP 200 and the expected gallery count.
+
+## Film card thumbnails
+
+- [x] Inspect the published film entries and identify cards without a Contentstack thumbnail.
+- [x] Use each film's YouTube thumbnail when its Contentstack thumbnail is absent.
+- [x] Verify thumbnail loading and on-page playback at desktop and mobile widths.
+- [x] Run the production build and leave the local preview ready.
+
+The published Kunal and Bhagyashree film has no Contentstack thumbnail, so its card now displays that video's 1280 × 720 YouTube image. Other film cards keep their published Contentstack thumbnails. The browser script passed all 13 routes at desktop and mobile widths, including film image loading and in-page playback; an unavailable maximum-resolution image correctly fell back to the HQ YouTube image. The production build passed, and `http://localhost:3000/films` responds with HTTP 200.

@@ -140,6 +140,16 @@ try {
       }
       if (route === '/films') {
         check(await page.getByRole('button', { name: 'Play film teaser' }).isVisible(), `${viewport.name} /films: film teaser play button missing`);
+        const kunalFilm = page.getByRole('button', { name: /Watch Mr\. Kunal & Mrs\. Bhagyashree.*film on this page/ });
+        check(await kunalFilm.count() === 1, `${viewport.name} /films: published film without a CMS thumbnail is missing`);
+        if (await kunalFilm.count() === 1) {
+          await kunalFilm.scrollIntoViewIfNeeded();
+          const kunalImage = kunalFilm.locator('img');
+          try { await kunalImage.evaluate(image => image.decode()); }
+          catch { failures.push(`${viewport.name} /films: YouTube thumbnail failed to load`); }
+          const imageUrl = await kunalImage.evaluate(image => image.currentSrc);
+          check(imageUrl.startsWith('https://i.ytimg.com/vi/_QqeCxV98bw/') && !imageUrl.includes('fallback'), `${viewport.name} /films: film without a CMS thumbnail reused the fallback image`);
+        }
         const filmCard = page.getByRole('button', { name: /Watch .+ film on this page/ }).first();
         check(await filmCard.count() > 0, `${viewport.name} /films: embedded film card missing`);
         if (await filmCard.count() > 0) {
