@@ -10,23 +10,53 @@ function generateInquiryId(): string {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
-    
-    const {
-      name,
-      email,
-      phone,
-      eventDate,
-      eventType,
-      location,
-      howDidYouHear,
-      message,
-    } = body;
+    const origin = request.headers.get('origin');
+    if (origin && (!URL.canParse(origin) || new URL(origin).host !== request.headers.get('host'))) {
+      return NextResponse.json({ error: 'Invalid request origin' }, { status: 403 });
+    }
+    if (!request.headers.get('content-type')?.toLowerCase().startsWith('application/json')) {
+      return NextResponse.json({ error: 'JSON required' }, { status: 415 });
+    }
 
-    // Validate required fields
-    if (!name || !email) {
+    const maxBodyBytes = 16_384;
+    if (Number(request.headers.get('content-length')) > maxBodyBytes) {
+      return NextResponse.json({ error: 'Inquiry is too large' }, { status: 413 });
+    }
+    const reader = request.body?.getReader();
+    if (!reader) return NextResponse.json({ error: 'Invalid inquiry' }, { status: 400 });
+    const chunks: Uint8Array[] = [];
+    let bodyBytes = 0;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      bodyBytes += value.byteLength;
+      if (bodyBytes > maxBodyBytes) {
+        await reader.cancel();
+        return NextResponse.json({ error: 'Inquiry is too large' }, { status: 413 });
+      }
+      chunks.push(value);
+    }
+    const rawBody = new TextDecoder().decode(Buffer.concat(chunks));
+    let body: Record<string, unknown>;
+    try { body = JSON.parse(rawBody); }
+    catch { return NextResponse.json({ error: 'Invalid inquiry' }, { status: 400 }); }
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return NextResponse.json({ error: 'Invalid inquiry' }, { status: 400 });
+    }
+    
+    const limits: Record<string, number> = { name: 120, email: 254, phone: 40, eventDate: 40, eventType: 120, location: 200, howDidYouHear: 120, message: 4000 };
+    for (const [field, limit] of Object.entries(limits)) {
+      const value = body[field];
+      if (value !== undefined && (typeof value !== 'string' || value.length > limit)) {
+        return NextResponse.json({ error: `Invalid ${field}` }, { status: 400 });
+      }
+    }
+    const {
+      name, email, phone, eventDate, eventType, location, howDidYouHear, message,
+    } = body as Record<string, string>;
+    if (!name?.trim() || !email?.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
-        { error: 'Name and email are required' },
+        { error: 'A name and valid email are required' },
         { status: 400 }
       );
     }

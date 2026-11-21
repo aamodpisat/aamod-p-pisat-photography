@@ -1,5 +1,14 @@
 # Website redesign checklist
 
+## Security audit follow-up — 20 November 2026
+
+- [x] Bound contact API request and field sizes, validate JSON and email, and reject cross-origin submissions before Contentstack writes.
+- [x] Run the development-content redesign suite on all 13 active routes at desktop and mobile widths; review contact screenshots against the approved layout.
+- [x] Crawl the built site for broken internal links, failed images, browser errors, and horizontal overflow.
+- [x] Confirm homepage image transfer is unchanged before and after the contact API change.
+
+The contact API's negative-path checks returned 403 for cross-origin, 413 for oversized, 415 for non-JSON, and 400 for invalid email or JSON. The API still depends on Contentstack publishing for inquiry email automation; production abuse controls and delivery access for published inquiries should be reviewed in the hosting and Contentstack configuration.
+
 ## Daily cloud audit setup
 
 - [x] Add a GitHub Actions job scheduled for 9:00 pm India time, with a manual run option.
